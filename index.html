@@ -1,11 +1,887 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mahmoud Shehata - Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Mahmoud Shehata – Project Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Mahmoud Ahmed Shehata, Civil / Project Engineer based in Abu Dhabi, UAE. Specialised in site management, high-end finishing, and car showroom projects." />
+
+  <style>
+    :root {
+      --bg: #05070b;
+      --bg-alt: #0c1118;
+      --accent: #4f9cff;
+      --accent-soft: rgba(79,156,255,0.12);
+      --accent-strong: #71b3ff;
+      --text: #f5f7fb;
+      --muted: #a3afc4;
+      --border: #1b2230;
+      --card: #0d141f;
+      --danger: #ff4b5c;
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --shadow-soft: 0 22px 45px rgba(0,0,0,0.55);
+      --max-width: 1080px;
+      --transition-fast: 0.18s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020309 52%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 22px 18px 40px;
+    }
+
+    /* Header */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(5,7,11,0.96), rgba(5,7,11,0.78), transparent);
+      border-bottom: 1px solid rgba(36,49,79,0.7);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 20% 0, #ffffff, #4f9cff 40%, #111827 100%);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 0 22px rgba(79,156,255,0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-circle::after {
+      content: "MS";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #020617;
+      mix-blend-mode: screen;
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 3px;
+      cursor: pointer;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-chip {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(75,85,99,0.7);
+      color: var(--muted);
+    }
+
+    .nav-chip span {
+      color: var(--accent-strong);
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      border-radius: 999px;
+      border: none;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      color: #020617;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 12px 30px rgba(37,99,235,0.6);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(37,99,235,0.8);
+    }
+
+    .btn-primary span.icon {
+      font-size: 14px;
+    }
+
+    /* Layout */
+
+    main {
+      flex: 1;
+    }
+
+    section {
+      margin-top: 42px;
+    }
+
+    /* Hero */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 32px;
+      align-items: center;
+      padding-top: 26px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: radial-gradient(circle at 0 0, rgba(79,156,255,0.35), transparent 58%);
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34,197,94,0.9);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 5vw, 38px);
+      font-weight: 650;
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #e5e7eb, #9ca3af, #60a5fa);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 18px;
+      max-width: 540px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(51,65,85,0.7);
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: 12px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.9);
+      color: var(--muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15,23,42,1);
+      border-color: rgba(148,163,184,0.95);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .hero-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      color: var(--accent-strong);
+      font-weight: 500;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at 10% 0, rgba(56,189,248,0.16), transparent 55%), radial-gradient(circle at 90% 0, rgba(99,102,241,0.22), transparent 55%), #020617;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(51,65,85,0.9);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(75,85,99,0.9);
+      margin-bottom: 14px;
+    }
+
+    .hero-badge span.emp {
+      color: var(--accent-strong);
+    }
+
+    .hero-project-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.19em;
+      color: rgba(148,163,184,0.9);
+      margin-bottom: 8px;
+    }
+
+    .hero-project-main {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .hero-project-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-stat-row {
+      display: flex;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-stat-pill {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(75,85,99,0.8);
+    }
+
+    .hero-highlight {
+      margin-top: 10px;
+      padding: 10px 11px;
+      border-radius: 13px;
+      background: rgba(15,23,42,0.95);
+      border: 1px dashed rgba(148,163,184,0.5);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-highlight strong {
+      color: var(--accent-strong);
+      font-weight: 600;
+    }
+
+    /* Sections */
+
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .section-card {
+      background: rgba(10,16,27,0.98);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 18px 18px 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.8fr);
+      gap: 22px;
+    }
+
+    .about-text {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .about-text p + p {
+      margin-top: 10px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .about-list li {
+      display: flex;
+      gap: 7px;
+      margin-bottom: 6px;
+    }
+
+    .about-list span.bullet {
+      font-size: 14px;
+      color: var(--accent-strong);
+      margin-top: 1px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.92);
+      color: var(--muted);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      background: linear-gradient(145deg, rgba(15,23,42,0.98), rgba(15,23,42,0.96));
+      border-radius: 16px;
+      border: 1px solid rgba(55,65,81,0.9);
+      padding: 14px 13px 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-tag {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .project-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .project-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .project-note {
+      font-size: 11px;
+      color: rgba(148,163,184,0.95);
+    }
+
+    .project-badge {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      border: 1px solid rgba(96,165,250,0.7);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
+      gap: 22px;
+    }
+
+    .contact-text {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .contact-items {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.92);
+      margin-bottom: 8px;
+    }
+
+    .contact-item span.label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .contact-item span.value {
+      font-size: 12px;
+    }
+
+    .contact-item a {
+      color: var(--accent-strong);
+    }
+
+    footer {
+      border-top: 1px solid rgba(31,41,55,0.9);
+      padding: 16px 18px 26px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      background: radial-gradient(circle at top, rgba(30,64,175,0.3), transparent 55%);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card {
+        order: -1;
+      }
+      .about-grid,
+      .projects-grid,
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .shell {
+        padding-inline: 14px;
+      }
+      .section-card {
+        padding-inline: 14px;
+      }
+      .hero-card {
+        padding-inline: 14px;
+      }
+    }
+  </style>
+
+  <script>
+    // Smooth scroll for in-page links
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("a[data-scroll]").forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const id = this.getAttribute("href");
+          const el = document.querySelector(id);
+          if (!el) return;
+          window.scrollTo({
+            top: el.offsetTop - 70,
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+  </script>
 </head>
 <body>
-    <h1>Welcome to Mahmoud Shehata's Portfolio</h1>
-    <p>This site is under construction.</p>
+  <div class="page">
+    <header>
+      <div class="shell">
+        <nav class="nav">
+          <div class="logo-mark">
+            <div class="logo-circle"></div>
+            <div>
+              <div class="logo-text-main">Mahmoud Shehata</div>
+              <div class="logo-text-sub">Project Engineer · Abu Dhabi</div>
+            </div>
+          </div>
+
+          <div class="nav-links">
+            <a href="#about" data-scroll>About</a>
+            <a href="#projects" data-scroll>Projects</a>
+            <a href="#contact" data-scroll>Contact</a>
+          </div>
+
+          <div class="nav-cta">
+            <div class="nav-chip">Open to <span>new roles</span></div>
+            <a href="#contact" data-scroll class="btn-primary">
+              <span class="icon">⬤</span>
+              <span>Let’s connect</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="shell">
+        <!-- Hero -->
+        <section id="top" class="hero">
+          <div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              <span>Project Engineer · Civil | Finishing | Site Management</span>
+            </div>
+
+            <h1 class="hero-title">
+              Delivering <span>high-end projects</span> across UAE, Egypt & Kenya.
+            </h1>
+
+            <p class="hero-subtitle">
+              I’m Mahmoud Ahmed Shehata, a Civil / Project Engineer based in Abu Dhabi with 6+ years of experience in
+              car showrooms, residential towers, and luxury villa finishing – focused on quality, coordination, and on-time delivery.
+            </p>
+
+            <div class="hero-tags">
+              <div class="tag">Car Showrooms · Villas · Towers</div>
+              <div class="tag">High-End Finishing &amp; Cladding</div>
+              <div class="tag">Site Management &amp; QA/QC</div>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn-primary" href="mailto:mahmoud.ahmed.official@gmail.com">
+                <span class="icon">✉</span>
+                <span>Email for opportunities</span>
+              </a>
+
+              <a class="btn-ghost" href="https://wa.me/971509952788?text=Hello%20Mahmoud%2C%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you." target="_blank" rel="noopener">
+                <span>WhatsApp from portfolio</span> <span>↗</span>
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <strong>Current:</strong> Project Engineer – URUK Construction, Abu Dhabi ·
+              <strong>Experience:</strong> 6+ years · UAE · Egypt · Kenya
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-badge">
+              Recent Highlight
+              <span class="emp">Car Showroom – Baniyas, Abu Dhabi</span>
+            </div>
+
+            <div class="hero-project-title">Flagship project</div>
+            <div class="hero-project-main">Baniyas Car Showroom · 50M+ AED</div>
+            <div class="hero-project-meta">
+              Hybrid RC &amp; steel structure with custom aluminium &amp; glass façades, 16,000 m² solar shading and advanced stormwater systems.
+            </div>
+
+            <div class="hero-stat-row">
+              <div class="hero-stat-pill">Role: Project Engineer – Site &amp; Coordination</div>
+              <div class="hero-stat-pill">Scope: Structure · Finishing · MEP coordination</div>
+            </div>
+
+            <div class="hero-highlight">
+              <strong>What I bring:</strong> solid site leadership, clear communication with consultants and subcontractors, and a hands-on focus
+              on executing details exactly as designed – especially in high-end finishing and complex coordination.
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+          <div class="section-title">About</div>
+          <div class="section-card">
+            <div class="about-grid">
+              <div class="about-text">
+                <p>
+                  Civil Engineer (B.Sc., 2019) with 6+ years of experience delivering structural and finishing works for
+                  residential towers, car showrooms and luxury villas across Egypt, Kenya and the UAE.
+                </p>
+                <p>
+                  I specialise in <strong>site management, high-end interior &amp; exterior finishes, coordination with consultants 
+                  and subcontractors, and QA/QC</strong>. I’m comfortable managing drawings, RFIs, WIRs/MIRs, as well as day-to-day site
+                  logistics and short-term planning.
+                </p>
+
+                <ul class="about-list">
+                  <li>
+                    <span class="bullet">•</span>
+                    <span>Currently based in <strong>Abu Dhabi, UAE</strong>, working with URUK Construction.</span>
+                  </li>
+                  <li>
+                    <span class="bullet">•</span>
+                    <span>Experience in <strong>36 towers (Egypt)</strong>, <strong>6 towers (Kenya)</strong>, and private villa projects in the UAE.</span>
+                  </li>
+                  <li>
+                    <span class="bullet">•</span>
+                    <span>Comfortable coordinating civil, MEP and finishing trades to resolve site conflicts quickly.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="pill-row">
+                  <div class="pill">AutoCAD</div>
+                  <div class="pill">Revit</div>
+                  <div class="pill">SAP2000</div>
+                  <div class="pill">ETABS</div>
+                  <div class="pill">SAFE</div>
+                  <div class="pill">SP Column</div>
+                  <div class="pill">MS Project</div>
+                  <div class="pill">Primavera P6</div>
+                  <div class="pill">Quantity Surveying</div>
+                  <div class="pill">QA/QC</div>
+                  <div class="pill">Shop Drawings</div>
+                  <div class="pill">Site Supervision</div>
+                </div>
+
+                <div style="margin-top:14px;font-size:13px;color:var(--muted);">
+                  <strong>Languages:</strong> Arabic (native), English (fluent)  
+                  <br />
+                  <strong>Licences:</strong> UAE Driving License · Member, Egyptian Engineers Syndicate
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+          <div class="section-title">Key Projects</div>
+          <div class="section-card">
+            <div class="projects-grid">
+              <div class="project-card">
+                <div class="project-badge">Abu Dhabi</div>
+                <div class="project-tag">Car showroom</div>
+                <div class="project-title">Baniyas Car Showroom · 50M+ AED</div>
+                <div class="project-meta">URUK Construction · Project Engineer</div>
+                <div class="project-note">
+                  Managed overall site activities, drawings, BOQs, inspections, QA/QC, material approvals and coordination
+                  across structural, finishing and MEP works. Led installation of 16,000 m² solar shading and stormwater systems.
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-badge">Abu Dhabi</div>
+                <div class="project-tag">Private villa</div>
+                <div class="project-title">Eissa Al Fahim Private Villa</div>
+                <div class="project-meta">URUK Construction · Project Engineer</div>
+                <div class="project-note">
+                  Supervised high-end interior finishes (marble, stone, wood, porcelain), exterior cladding, and structural
+                  strengthening for a new post-tensioned upper floor – coordinating closely with civil, MEP and finishing trades.
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-badge">Egypt</div>
+                <div class="project-tag">Residential towers</div>
+                <div class="project-title">36 Towers – 10th of Ramadan City</div>
+                <div class="project-meta">Makkah Constructions · Site Engineer</div>
+                <div class="project-note">
+                  Oversaw daily site activities, labour and subcontractors, inspections and reporting, making sure execution
+                  aligned with consultant requirements and approvals.
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-badge">Kenya</div>
+                <div class="project-tag">Residential towers</div>
+                <div class="project-title">6 Towers – Eldoret City</div>
+                <div class="project-meta">Smarkit Company · Site Engineer</div>
+                <div class="project-note">
+                  Led site setup, setting-out and quality control for structural works, with daily and weekly reporting to
+                  project management and consultants.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+          <div class="section-title">Contact</div>
+          <div class="section-card">
+            <div class="contact-layout">
+              <div class="contact-text">
+                <p>
+                  If you’d like to discuss a role, project, or collaboration, feel free to reach out via email, LinkedIn or WhatsApp.
+                  I’m particularly interested in <strong>Project Engineer / Site Engineer</strong> roles in the UAE.
+                </p>
+                <p style="margin-top:10px;">
+                  Please mention that you reached me <strong>through my portfolio website</strong> so I can track opportunities coming
+                  from this site.
+                </p>
+              </div>
+
+              <div class="contact-items">
+                <div class="contact-item">
+                  <div>
+                    <span class="label">Email</span><br />
+                    <span class="value">
+                      <a href="mailto:mahmoud.ahmed.official@gmail.com">mahmoud.ahmed.official@gmail.com</a>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div>
+                    <span class="label">WhatsApp</span><br />
+                    <span class="value">
+                      <a href="https://wa.me/971509952788?text=Hello%20Mahmoud%2C%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you." target="_blank" rel="noopener">
+                        Chat via portfolio link
+                      </a>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div>
+                    <span class="label">LinkedIn</span><br />
+                    <span class="value">
+                      <a href="https://www.linkedin.com/in/Mahmoud-Ahmed-Linked" target="_blank" rel="noopener">
+                        linkedin.com/in/Mahmoud-Ahmed-Linked
+                      </a>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div>
+                    <span class="label">Location</span><br />
+                    <span class="value">Abu Dhabi, United Arab Emirates</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Mahmoud Ahmed Shehata · Project Engineer – Civil Engineering Portfolio
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
