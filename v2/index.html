@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Mahmoud Shehata – Project Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Mahmoud Shehata, Project Engineer based in Abu Dhabi, UAE, specialising in high-end finishing, site management and project execution.">
+  <meta name="description" content="Portfolio of Mahmoud Shehata, Civil / Project Engineer based in Abu Dhabi, UAE, specialising in high-end finishing, site management and QA/QC.">
 
   <style>
     :root {
@@ -77,17 +77,17 @@
     }
 
     .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
+      width: 40px;
+      height: 40px;
+      border-radius: 16px;
       background:
         radial-gradient(circle at 20% 0, #ffffff, #60a5fa 40%, #020617 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       color: #020617;
       box-shadow: 0 0 0 1px rgba(255,255,255,0.08),
                   0 0 24px rgba(37,99,235,0.7);
@@ -138,127 +138,66 @@
       width: 100%;
     }
 
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .nav-cta span.highlight {
-      color: var(--accent-strong);
-      font-weight: 500;
-    }
-
     main { flex: 1; }
 
     section { margin-top: 52px; }
 
-    /* HERO */
+    /* HOME BANNER */
 
-    .hero {
+    .home-banner {
       position: relative;
       border-radius: 24px;
       overflow: hidden;
       min-height: 320px;
       box-shadow: var(--shadow-soft);
-      background-color: #020617;
     }
 
-    .hero-bg {
+    .home-banner-bg {
       position: absolute;
       inset: 0;
-      background-image: url("https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&w=1400&q=80");
+      background-image: url("https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1600&q=80");
       background-size: cover;
       background-position: center;
-      filter: brightness(0.65);
+      filter: brightness(0.8);
     }
 
-    .hero-overlay {
+    .home-banner-overlay {
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top left, rgba(37,99,235,0.6), transparent 50%),
-                  radial-gradient(circle at bottom, rgba(15,23,42,0.95), rgba(15,23,42,1));
+      background:
+        linear-gradient(to top, rgba(15,23,42,0.95), rgba(15,23,42,0.2));
     }
 
-    .hero-content {
+    .home-banner-content {
       position: relative;
       z-index: 2;
-      padding: 28px 24px 26px;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-      gap: 26px;
-      align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      padding: 4px 11px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.7);
-      color: var(--muted);
-      margin-bottom: 10px;
-      background: rgba(15,23,42,0.9);
-    }
-
-    .hero-badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 12px rgba(34,197,94,0.9);
-    }
-
-    .hero-title {
-      font-size: clamp(30px, 5.4vw, 40px);
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      margin-bottom: 4px;
-    }
-
-    .hero-title span {
-      display: block;
-      font-size: 0.9em;
-      font-weight: 600;
-      background: linear-gradient(120deg, #e5e7eb, #9ca3af, #60a5fa);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 6px;
-      margin-bottom: 16px;
+      padding: 26px 24px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
       max-width: 520px;
     }
 
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
+    .home-banner-location {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(209,213,219,0.9);
+      margin-bottom: 6px;
     }
 
-    .tag {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.96);
-      border: 1px solid rgba(55,65,81,0.9);
-      color: var(--muted);
+    .home-banner-text {
+      font-size: 16px;
+      font-weight: 500;
+      color: #f9fafb;
+      margin-bottom: 14px;
     }
 
-    .hero-actions {
+    .home-banner-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      align-items: center;
-      margin-bottom: 10px;
     }
 
     .btn-primary {
@@ -301,6 +240,97 @@
       background: rgba(15,23,42,1);
       border-color: rgba(148,163,184,0.95);
       color: var(--text);
+    }
+
+    /* HERO (NAME) */
+
+    .hero {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      background: radial-gradient(circle at top left, rgba(37,99,235,0.5), transparent 55%),
+                  radial-gradient(circle at bottom, #020617, #020617 60%, #000 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 28px 24px 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
+      gap: 26px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      color: var(--muted);
+      margin-bottom: 10px;
+      background: rgba(15,23,42,0.9);
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34,197,94,0.9);
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 5.6vw, 40px);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+    }
+
+    .hero-title span {
+      display: block;
+      font-size: 0.5em;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 8px;
+      margin-bottom: 16px;
+      max-width: 520px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.96);
+      border: 1px solid rgba(55,65,81,0.9);
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
     }
 
     .hero-meta {
@@ -420,7 +450,7 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.5fr);
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
       gap: 22px;
       align-items: center;
     }
@@ -452,10 +482,10 @@
     }
 
     .about-photo {
-      border-radius: 999px;
-      width: 220px;
-      height: 220px;
-      background-image: url("https://via.placeholder.com/400x480?text=Profile+Photo");
+      border-radius: 20px;
+      width: 240px;
+      height: 240px;
+      background-image: url("https://via.placeholder.com/480x480?text=Profile+Photo");
       background-size: cover;
       background-position: center;
       border: 3px solid rgba(59,130,246,0.8);
@@ -691,6 +721,7 @@
       .expertise-grid { grid-template-columns: minmax(0, 1fr); }
       .skills-grid { grid-template-columns: minmax(0, 1fr); }
       .hero-content { padding: 22px 16px 18px; }
+      .home-banner-content { padding: 22px 16px 20px; }
     }
   </style>
 </head>
@@ -708,16 +739,11 @@
           </div>
 
           <div class="nav-links">
-            <a href="#top">Home</a>
+            <a href="#home-banner">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
-          </div>
-
-          <div class="nav-cta">
-            <span>Open to</span>
-            <span class="highlight">Project Engineer roles</span>
           </div>
         </nav>
       </div>
@@ -725,10 +751,24 @@
 
     <main>
       <div class="shell">
-        <!-- HOME / HERO -->
+        <!-- HOME BANNER -->
+        <section id="home-banner" class="home-banner">
+          <div class="home-banner-bg"></div>
+          <div class="home-banner-overlay"></div>
+          <div class="home-banner-content">
+            <div class="home-banner-location">Abu Dhabi, UAE</div>
+            <div class="home-banner-text">
+              Civil &amp; Project Engineer specialising in high-end finishing, QA/QC and day-to-day site management.
+            </div>
+            <div class="home-banner-actions">
+              <a class="btn-primary" href="#projects">Discover projects</a>
+              <a class="btn-ghost" href="#about">About me</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- HERO (NAME) -->
         <section id="top" class="hero">
-          <div class="hero-bg"></div>
-          <div class="hero-overlay"></div>
           <div class="hero-content">
             <div>
               <div class="hero-badge">
@@ -738,7 +778,7 @@
 
               <h1 class="hero-title">
                 Mahmoud Shehata
-                <span>Project Engineer delivering clean, high-quality execution in the UAE.</span>
+                <span>Civil / Project Engineer – Abu Dhabi, UAE</span>
               </h1>
 
               <p class="hero-subtitle">
@@ -773,7 +813,7 @@
                 <div class="hero-card-label">Featured project</div>
                 <div class="hero-card-title">Baniyas Car Showroom · Abu Dhabi</div>
                 <div class="hero-card-meta">
-                  Large showroom with complex façade, structural and finishing coordination — executed with careful attention to details and on-site inspections.
+                  Large showroom with RC and steel structure, aluminium &amp; glass façades, solar shading and carefully coordinated finishing.
                 </div>
                 <div class="hero-card-tagrow">
                   <div class="hero-card-pill">Role: Project Engineer</div>
@@ -793,27 +833,17 @@
             <div class="about-grid">
               <div class="about-text">
                 <p>
-                  I’m a Civil / Project Engineer based in Abu Dhabi, focused on delivering clean, reliable site execution with a
-                  strong eye for finishing details and coordination.
+                  I’m a Civil / Project Engineer based in Abu Dhabi, focused on delivering clean, reliable and well-coordinated site execution.
+                  My approach is practical and detail-driven — especially in high-end finishing, structural coordination and day-to-day supervision on site.
                 </p>
                 <p>
-                  Over the past 6+ years I’ve contributed to projects across the UAE, Egypt and Kenya – including car showrooms,
-                  private villas and residential towers – supporting both structural and finishing works on site.
+                  Over the past 6+ years, I’ve contributed to projects across the UAE, including car showrooms, luxury private villas and residential towers.
+                  I work closely with consultants, subcontractors and suppliers to keep the workflow aligned with the design intent and to ensure high-quality workmanship.
                 </p>
-                <ul class="about-list">
-                  <li>
-                    <span class="bullet">•</span>
-                    <span>Comfortable managing drawings, RFIs, WIRs/MIRs, site inspections and short-term planning.</span>
-                  </li>
-                  <li>
-                    <span class="bullet">•</span>
-                    <span>Hands-on with subcontractors, consultants and suppliers to keep work moving smoothly on site.</span>
-                  </li>
-                  <li>
-                    <span class="bullet">•</span>
-                    <span>Focused on clear communication, safe execution and delivering work aligned with design intent.</span>
-                  </li>
-                </ul>
+                <p>
+                  I’m comfortable managing shop drawings, RFIs, WIRs/MIRs, site inspections and short-term planning, with a strong focus on communication,
+                  accuracy and timely delivery.
+                </p>
               </div>
               <div>
                 <div class="about-photo"></div>
@@ -910,12 +940,36 @@
                 <div class="skill-pill">MS Project</div>
                 <div class="skill-pill">Primavera P6</div>
                 <div class="skill-pill">B.Sc. Civil Engineering (2019)</div>
-                <div class="skill-pill">Benaa Project Management</div>
-                <div class="skill-pill">Benaa Structural Design</div>
                 <div class="skill-pill">UAE driving licence</div>
                 <div class="skill-pill">Egyptian Engineers Syndicate</div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications">
+          <div class="section-title">Certifications</div>
+          <div class="section-subtitle">Certifications &amp; training</div>
+          <p class="section-subtext">
+            Key certifications and training programs that support my work in design, execution and project management.
+          </p>
+
+          <div class="section-card-dark">
+            <ul class="about-list">
+              <li>
+                <span class="bullet">•</span>
+                <span>Benaa Training Diploma – Project management, site supervision and technical office.</span>
+              </li>
+              <li>
+                <span class="bullet">•</span>
+                <span>Structural Design Diploma – High-rise buildings, villas and water tanks.</span>
+              </li>
+              <li>
+                <span class="bullet">•</span>
+                <span>Professional courses on AutoCAD, SAP2000, ETABS, SAFE and SP Column.</span>
+              </li>
+            </ul>
           </div>
         </section>
 
