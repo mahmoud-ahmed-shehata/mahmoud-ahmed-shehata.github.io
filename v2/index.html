@@ -149,14 +149,14 @@
       position: relative;
       border-radius: 24px;
       overflow: hidden;
-      min-height: 380px;
+      min-height: 420px;
       box-shadow: var(--shadow-soft);
     }
 
     .home-banner-bg {
       position: absolute;
       inset: 0;
-      background-image: url("https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1600&q=80");
+      background-image: url("assets/home1.jpg");
       background-size: cover;
       background-position: center;
       filter: brightness(0.78);
@@ -172,7 +172,7 @@
     .home-banner-content {
       position: relative;
       z-index: 2;
-      padding: 22px 24px 30px;
+      padding: 24px 24px 18px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -199,6 +199,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-bottom: 4px;
     }
 
     .btn-primary {
@@ -243,47 +244,7 @@
       color: var(--text);
     }
 
-    /* HERO (NAME) */
-
-    .hero {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      background: radial-gradient(circle at top left, rgba(37,99,235,0.5), transparent 55%),
-                  radial-gradient(circle at bottom, #020617, #020617 60%, #000 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 28px 24px 24px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 20px;
-      align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      padding: 4px 11px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.7);
-      color: var(--muted);
-      margin-bottom: 10px;
-      background: rgba(15,23,42,0.9);
-    }
-
-    .hero-badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 12px rgba(34,197,94,0.9);
-    }
+    /* HERO (تم حذف القسم من الصفحة، بس سايبين نفس الستايل للثيم) */
 
     .hero-title {
       font-size: clamp(34px, 6vw, 42px);
@@ -353,7 +314,8 @@
     }
 
     .section-card-dark {
-      background: rgba(10,16,27,0.98);
+      background: var(--card-dark);
+      color: var(--text);
       border-radius: var(--radius-lg);
       border: 1px solid var(--border-dark);
       padding: 18px 18px 16px;
@@ -399,7 +361,7 @@
       border-radius: 20px;
       width: 240px;
       height: 240px;
-      background-image: url("https://via.placeholder.com/480x480?text=Profile+Photo");
+      background-image: url("assets/about1.jpg");
       background-size: cover;
       background-position: center;
       border: 3px solid rgba(59,130,246,0.8);
@@ -428,41 +390,6 @@
     .about-meta-value {
       color: var(--muted);
       text-align: right;
-    }
-
-    /* Expertise / Sectors */
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      font-size: 13px;
-    }
-
-    .expertise-item {
-      padding: 10px 10px 9px;
-      border-radius: 12px;
-      border: 1px solid rgba(148,163,184,0.5);
-      background: #ffffff;
-      color: #111827;
-    }
-
-    .expertise-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #6b7280;
-      margin-bottom: 3px;
-    }
-
-    .expertise-name {
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
-
-    .expertise-note {
-      font-size: 11px;
-      color: #6b7280;
     }
 
     /* Projects */
@@ -650,7 +577,6 @@
     /* Responsive */
 
     @media (max-width: 980px) {
-      .expertise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .about-grid,
@@ -665,10 +591,8 @@
       .nav { flex-wrap: wrap; gap: 8px; }
       .nav-links { flex-wrap: wrap; justify-content: flex-start; }
       .projects-grid { grid-template-columns: minmax(0, 1fr); }
-      .expertise-grid { grid-template-columns: minmax(0, 1fr); }
       .skills-grid { grid-template-columns: minmax(0, 1fr); }
-      .hero-content { padding: 22px 16px 18px; }
-      .home-banner-content { padding: 20px 16px 26px; }
+      .home-banner-content { padding: 20px 16px 16px; }
     }
   </style>
 </head>
@@ -711,31 +635,6 @@
             <div class="home-banner-actions">
               <a class="btn-primary" href="#projects">Discover projects</a>
               <a class="btn-ghost" href="#about">About me</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- HERO (NAME) -->
-        <section id="top" class="hero">
-          <div class="hero-content">
-            <div>
-              <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                <span>Civil / Project Engineer · Site execution &amp; finishing</span>
-              </div>
-
-              <h1 class="hero-title">
-                Mahmoud Shehata
-                <span>Civil / Project Engineer – Abu Dhabi, UAE</span>
-              </h1>
-
-              <p class="hero-subtitle">
-                Focused on site management, high-end finishing, structural coordination and practical, day-to-day supervision on site.
-              </p>
-
-              <div class="hero-meta">
-                <strong>Based in:</strong> Abu Dhabi, UAE · <strong>Experience:</strong> 6+ years
-              </div>
             </div>
           </div>
         </section>
@@ -787,46 +686,63 @@
           <div class="section-title">Projects</div>
           <div class="section-subtitle">Selected work</div>
           <p class="section-subtext">
-            Below is a sample of projects I’ve worked on. Real project photos can replace these placeholders later to fully match my portfolio.
+            Below is a sample of projects I’ve worked on. Each project links to a dedicated page with more details, photos and video (where available).
           </p>
 
           <div class="projects-grid">
+            <!-- PR4 – Latest: Private Villa Abu Dhabi -->
             <div class="project-card">
-              <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80');"></div>
-              <div class="project-body">
-                <div class="project-tag">Car showroom</div>
-                <div class="project-title">Baniyas Car Showroom</div>
-                <div class="project-meta">Project Engineer – Abu Dhabi</div>
-                <div class="project-note">
-                  Large showroom project with RC and steel structure, aluminium &amp; glass façades, solar shading and carefully coordinated finishing.
-                </div>
-                <a class="project-more" href="/projects/baniyas-car-showroom.html">More details</a>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=900&q=80');"></div>
+              <div class="project-image" style="background-image:url('assets/pr4.jpg');"></div>
               <div class="project-body">
                 <div class="project-tag">Private villa</div>
                 <div class="project-title">High-end private villa</div>
                 <div class="project-meta">Project Engineer – Abu Dhabi</div>
                 <div class="project-note">
-                  High-end finishing including marble, stone, wood and cladding; structural strengthening and detailed on-site coordination.
+                  High-end private villa with detailed finishing, cladding, structural strengthening and close on-site coordination.
                 </div>
-                <a class="project-more" href="#">More details</a>
+                <a class="project-more" href="pr/pr4.html">More details</a>
               </div>
             </div>
 
+            <!-- PR3 – Baniyas Car Showroom -->
             <div class="project-card">
-              <div class="project-image" style="background-image:url('https://images.unsplash.com/photo-1529420705456-indo0xqv984?auto=format&fit=crop&w=900&q=80');"></div>
+              <div class="project-image" style="background-image:url('assets/pr3.jpg');"></div>
+              <div class="project-body">
+                <div class="project-tag">Car showroom</div>
+                <div class="project-title">Baniyas Car Showroom</div>
+                <div class="project-meta">Project Engineer – Abu Dhabi</div>
+                <div class="project-note">
+                  Large showroom with RC and steel structure, aluminium &amp; glass façades, solar shading and coordinated finishing.
+                </div>
+                <a class="project-more" href="pr/pr3.html">More details</a>
+              </div>
+            </div>
+
+            <!-- PR2 – 36 Towers Egypt -->
+            <div class="project-card">
+              <div class="project-image" style="background-image:url('assets/pr2.jpg');"></div>
               <div class="project-body">
                 <div class="project-tag">Residential towers</div>
-                <div class="project-title">Residential towers portfolio</div>
-                <div class="project-meta">Site Engineer – previous roles</div>
+                <div class="project-title">36 residential towers</div>
+                <div class="project-meta">Site Engineer – 10th of Ramadan City, Egypt</div>
                 <div class="project-note">
-                  Supervision and QA/QC for multi-storey residential developments, including daily checks, coordination and reporting.
+                  Supervision and QA/QC for a large group of residential towers, including daily checks, coordination and reporting.
                 </div>
-                <a class="project-more" href="#">More details</a>
+                <a class="project-more" href="pr/pr2.html">More details</a>
+              </div>
+            </div>
+
+            <!-- PR1 – 6 Towers Kenya -->
+            <div class="project-card">
+              <div class="project-image" style="background-image:url('assets/pr1.jpg');"></div>
+              <div class="project-body">
+                <div class="project-tag">Residential towers</div>
+                <div class="project-title">6 residential towers</div>
+                <div class="project-meta">Site Engineer – Kenya</div>
+                <div class="project-note">
+                  Site engineer role including surveying, site supervision, quality control and coordination with local teams.
+                </div>
+                <a class="project-more" href="pr/pr1.html">More details</a>
               </div>
             </div>
           </div>
@@ -968,7 +884,7 @@
               <a class="btn-download" href="#" title="Add CV PDF link here later">
                 <span>Download CV (PDF)</span>
               </a>
-              <a class="btn-download" href="#" title="Add portfolio PDF link here later">
+              <a class="btn-download" href="#" title="Add portfolio (PDF) link here later">
                 <span>Download portfolio (PDF)</span>
               </a>
             </div>
