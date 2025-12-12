@@ -558,6 +558,61 @@
       text-align:center;
       background:radial-gradient(circle at top, rgba(30,64,175,0.3), transparent 55%);
     }
+/* =========================
+   ✅ Responsive styles for mobile only (max-width: 640px)
+   ========================= */
+@media (max-width: 640px) {
+  /* ✅ إخفاء تبويب Downloads من الهيدر */
+  .nav-links a[href="#downloads"] {
+    display: none;
+  }
+
+  /* ✅ تصغير خطوط الهيرو */
+  .home-title {
+    font-size: 22px;
+  }
+
+  .home-desc {
+    font-size: 13px;
+  }
+
+  .home-btn {
+    font-size: 12px;
+    padding: 7px 13px;
+  }
+
+  /* ✅ تصغير مربعات الإحصائيات + وضعها في سطر واحد */
+  .home-stats {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+  }
+
+  .stat {
+    min-width: 120px;
+    font-size: 12px;
+  }
+
+  .stat-num {
+    font-size: 14px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  /* ✅ رفع زر المشروع */
+  .project-footer {
+    margin-top: auto;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .project-bottom {
+    height: 160px;
+    padding-bottom: 18px;
+  }
+}
 
     @media (max-width: 980px){
       .about-grid{grid-template-columns:1fr}
