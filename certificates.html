@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Certificates – Mahmoud Shehata</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Certificates and training documents of Mahmoud Shehata, Civil / Project Engineer based in Abu Dhabi, UAE.">
+
+  <!--
+    CERTIFICATES PAGE
+    - Uses the same design system as the main index.html
+    - Only content is focused on certificates, diplomas and license
+  -->
+  <style>
+    :root {
+      --bg: #05070b;
+      --bg-alt: #0b1018;
+      --bg-light: #f8fafc;
+      --accent: #1f6fff;
+      --accent-soft: rgba(31,111,255,0.12);
+      --accent-strong: #5ba4ff;
+      --text: #f9fafb;
+      --muted: #a3afc4;
+      --border-dark: #1f2937;
+      --border-light: #e5e7eb;
+      --card-dark: #0f172a;
+      --card-light: #ffffff;
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --shadow-soft: 0 22px 45px rgba(0,0,0,0.45);
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background:
+        radial-gradient(circle at top, rgba(37,99,235,0.28), transparent 60%),
+        radial-gradient(circle at bottom, rgba(15,23,42,1), #020617 50%, #000 100%);
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 22px 18px 40px;
+    }
+
+    /* HEADER / NAV (same as index, but links go back to index.html sections) */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(3,7,18,0.96), rgba(3,7,18,0.88), transparent);
+      border-bottom: 1px solid rgba(31,41,55,0.9);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .logo-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background-image: url("assets/logo1.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.05),
+        0 0 26px rgba(37,99,235,0.6);
+    }
+
+    .logo-text-main {
+      font-weight: 700;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+
+    .logo-text-sub {
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .logo-text-sub span {
+      color: #e5e7eb;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 3px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transition: width 0.18s ease-out;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    main { flex: 1; }
+    section { margin-top: 52px; }
+
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 20px;
+      font-weight: 550;
+      margin-bottom: 6px;
+    }
+
+    .section-subtext {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      max-width: 620px;
+    }
+
+    .section-card-dark {
+      background: var(--card-dark);
+      color: var(--text);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-dark);
+      padding: 18px 18px 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .cert-card {
+      background: #020617;
+      border-radius: 16px;
+      border: 1px solid rgba(55,65,81,0.9);
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .cert-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .cert-meta {
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .cert-desc {
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .cert-actions {
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-download {
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 12px;
+      border: 1px solid rgba(148,163,184,0.8);
+      background: rgba(15,23,42,0.96);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: background 0.18s ease-out, border-color 0.18s, color 0.18s;
+    }
+
+    .btn-download:hover {
+      background: rgba(15,23,42,1);
+      border-color: rgba(148,163,184,1);
+      color: var(--text);
+    }
+
+    footer {
+      border-top: 1px solid rgba(31,41,55,0.9);
+      padding: 16px 18px 26px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      background: radial-gradient(circle at top, rgba(30,64,175,0.3), transparent 55%);
+    }
+
+    @media (max-width: 880px) {
+      .certs-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell { padding-inline: 14px; }
+      .nav { flex-wrap: wrap; gap: 8px; }
+      .nav-links { flex-wrap: wrap; justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER for certificates page -->
+    <header>
+      <div class="shell">
+        <nav class="nav">
+          <!-- Logo + name; clicking logo returns to main home banner on index.html -->
+          <a href="index.html#home-banner" class="logo-wrap">
+            <div class="logo-mark"></div>
+            <div>
+              <div class="logo-text-main">Mahmoud Shehata</div>
+              <div class="logo-text-sub">
+                <span>Civil / Project Engineer</span> · Abu Dhabi, UAE
+              </div>
+            </div>
+          </a>
+
+          <!-- Navigation links pointing back to main sections in index.html -->
+          <div class="nav-links">
+            <a href="index.html#home-banner">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#downloads">Downloads</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="shell">
+        <!-- MAIN CERTIFICATIONS SECTION -->
+        <section id="certifications">
+          <div class="section-title">Certifications</div>
+          <div class="section-subtitle">Certificates &amp; documents</div>
+          <p class="section-subtext">
+            This page lists the main certificates, diplomas and documents related to my engineering career. Each card can be linked to a PDF or image
+            of the document stored inside the <code>assets/certificates</code> folder.
+          </p>
+
+          <div class="section-card-dark">
+            <div class="certs-grid">
+              <!--
+                CERT 1 – University degree
+                - Place your degree file in:
+                  assets/certificates/degree.pdf
+              -->
+              <article class="cert-card">
+                <h3 class="cert-title">B.Sc. in Civil Engineering</h3>
+                <p class="cert-meta">New Cairo Academy, Cairo, Egypt – 2019</p>
+                <p class="cert-desc">
+                  Bachelor’s degree in Civil Engineering with graduation grade "Good" and project grade "Excellent".
+                </p>
+                <div class="cert-actions">
+                  <a
+                    class="btn-download"
+                    href="assets/certificates/degree.pdf"
+                    download
+                    title="Place your degree PDF in assets/certificates/degree.pdf"
+                  >
+                    View / download degree (PDF)
+                  </a>
+                </div>
+              </article>
+
+              <!--
+                CERT 2 – Benaa Training Diploma
+                - Place your training file in:
+                  assets/certificates/benaa-training.pdf
+              -->
+              <article class="cert-card">
+                <h3 class="cert-title">Benaa Training Diploma</h3>
+                <p class="cert-meta">Benaa Academy – Site, Technical Office &amp; Project Management</p>
+                <p class="cert-desc">
+                  Comprehensive training program covering site supervision, technical office work and project management tools and procedures.
+                </p>
+                <div class="cert-actions">
+                  <a
+                    class="btn-download"
+                    href="assets/certificates/benaa-training.pdf"
+                    download
+                    title="Place your Benaa Diploma PDF in assets/certificates/benaa-training.pdf"
+                  >
+                    View / download diploma (PDF)
+                  </a>
+                </div>
+              </article>
+
+              <!--
+                CERT 3 – Structural Design Diploma
+                - Place your diploma file in:
+                  assets/certificates/structural-design.pdf
+              -->
+              <article class="cert-card">
+                <h3 class="cert-title">Structural Design Diploma</h3>
+                <p class="cert-meta">Benaa Academy – High-rise buildings, villas &amp; tanks</p>
+                <p class="cert-desc">
+                  Structural design training focusing on high-rise buildings, villas and water tanks using modern analysis and design software.
+                </p>
+                <div class="cert-actions">
+                  <a
+                    class="btn-download"
+                    href="assets/certificates/structural-design.pdf"
+                    download
+                    title="Place your Structural Design Diploma PDF in assets/certificates/structural-design.pdf"
+                  >
+                    View / download diploma (PDF)
+                  </a>
+                </div>
+              </article>
+
+              <!--
+                CERT 4 – UAE Driving License
+                - Place a scan of your license here:
+                  assets/certificates/uae-driving-license.pdf
+                - Could also be a JPG/PNG instead of PDF if preferred.
+              -->
+              <article class="cert-card">
+                <h3 class="cert-title">UAE Driving License</h3>
+                <p class="cert-meta">United Arab Emirates – Since 2024</p>
+                <p class="cert-desc">
+                  Valid UAE driving license supporting site mobility and supervision across different project locations.
+                </p>
+                <div class="cert-actions">
+                  <a
+                    class="btn-download"
+                    href="assets/certificates/uae-driving-license.pdf"
+                    download
+                    title="Place your license PDF/image in assets/certificates/uae-driving-license.pdf"
+                  >
+                    View / download license
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      © <span id="year"></span> Mahmoud Shehata. All rights reserved. · Certificates
+    </footer>
+  </div>
+
+  <!-- Footer year script -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
