@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mahmoud Shehata – Project Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Mahmoud Shehata, Civil / Project Engineer based in Abu Dhabi, UAE, specialising in high-end finishing, site management and QA/QC.">
+
+  <style>
+
+html{
+  scroll-padding-top: 70px;
+  scroll-behavior: smooth;
+}
+
+section,
+[id]{
+  scroll-margin-top: 70px;
+}
+
+@media (max-width: 640px){
+  html{
+    scroll-padding-top: 80px;
+  }
+  section,
+  [id]{
+    scroll-margin-top: 80px;
+  }
+}
+
+    :root{
+      --bg:#020617;
+      --accent:#1f6fff;
+      --accent-strong:#5ba4ff;
+      --success:#22c55e;
+      --success-soft:#4ade80;
+      --text:#f9fafb;
+      --muted:#a3afc4;
+      --card:#0f172a;
+      --border:rgba(55,65,81,0.9);
+      --radius:18px;
+      --shadow:0 22px 45px rgba(0,0,0,0.45);
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      font-size:15px;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+
+    .page{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      background:
+        radial-gradient(circle at top, rgba(37,99,235,0.28), transparent 60%),
+        radial-gradient(circle at bottom, rgba(15,23,42,1), #020617 50%, #000 100%);
+    }
+    .shell{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:22px 18px 40px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter:blur(14px);
+      background:linear-gradient(to bottom, rgba(3,7,18,0.96), rgba(3,7,18,0.88), transparent);
+      border-bottom:1px solid rgba(31,41,55,0.9);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .logo-wrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+    }
+    .logo-mark{
+      width:46px;height:46px;border-radius:50%;
+      background:url("assets/logo1.png") center/cover no-repeat;
+      flex-shrink:0;
+      box-shadow:0 0 0 1px rgba(255,255,255,0.05), 0 0 26px rgba(37,99,235,0.6);
+    }
+    .logo-text-main{font-weight:700;font-size:18px;white-space:nowrap}
+    .logo-text-sub{font-size:13px;color:var(--muted);white-space:nowrap}
+    .logo-text-sub span{color:#e5e7eb}
+
+    .nav-links{
+      display:flex;
+      gap:18px;
+      font-size:13px;
+      color:var(--muted);
+      flex-wrap:wrap;
+    }
+    .nav-links a{
+      position:relative;
+      padding-bottom:3px;
+      white-space:nowrap;
+    }
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;bottom:0;
+      width:0;height:2px;
+      border-radius:999px;
+      background:linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transition:width .18s ease-out;
+    }
+    .nav-links a:hover{color:var(--text)}
+    .nav-links a:hover::after{width:100%}
+
+    main{flex:1}
+    section{margin-top:52px}
+
+    .section-title{
+      font-size:20px;
+      font-weight:600;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin-bottom:4px;
+    }
+    .section-subtitle{
+      font-size:14px;
+      font-weight:400;
+      color:var(--muted);
+      margin-bottom:8px;
+    }
+    .section-subtext{
+      font-size:15px;
+      color:var(--muted);
+      margin-bottom:16px;
+      max-width:720px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:9px 16px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:600;
+      border:1px solid rgba(148,163,184,0.55);
+      background:rgba(15,23,42,0.75);
+      color:rgba(226,232,240,0.92);
+      white-space:nowrap;
+      transition:transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease, box-shadow .16s ease;
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      background:rgba(15,23,42,0.92);
+      border-color:rgba(226,232,240,0.7);
+      color:var(--text);
+    }
+    .btn.primary{
+      border:none;
+      background:linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color:#020617;
+      box-shadow:0 18px 38px rgba(37,99,235,0.55);
+    }
+    .btn.primary:hover{
+      box-shadow:0 22px 46px rgba(37,99,235,0.75);
+    }
+
+    .home-banner{
+      position:relative;
+      border-radius:24px;
+      overflow:hidden;
+      min-height:clamp(520px, 65vh, 680px);
+      box-shadow:var(--shadow);
+    }
+    .home-banner-bg{
+      position:absolute;inset:0;
+      background:url("assets/home1.jpg") center/cover no-repeat;
+      filter:brightness(.78);
+    }
+    .home-banner-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(to top, rgba(15,23,42,0.96), rgba(15,23,42,0.2));
+    }
+    .home-banner-content{
+      position:absolute;
+      left:28px; right:28px;
+      bottom:70px;
+      z-index:2;
+      max-width:620px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .home-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 12px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.55);
+      background:rgba(15,23,42,0.65);
+      color:rgba(226,232,240,0.95);
+      font-size:12px;
+      letter-spacing:.06em;
+      width:fit-content;
+    }
+    .home-title{
+      font-size:34px;
+      line-height:1.15;
+      font-weight:800;
+      color:#f8fafc;
+      text-shadow:0 10px 28px rgba(0,0,0,0.55);
+    }
+    .home-desc{
+      font-size:15px;
+      color:rgba(226,232,240,0.88);
+      max-width:600px;
+    }
+    .home-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:4px;
+    }
+    .home-stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:6px;
+    }
+    .stat{
+      padding:10px 10px;
+      border-radius:14px;
+      border:1px solid rgba(148,163,184,0.35);
+      background:rgba(15,23,42,0.58);
+      backdrop-filter:blur(8px);
+      min-width:100px;
+    }
+    .stat-num{
+      font-size:16px;
+      font-weight:900;
+      color:#f8fafc;
+    }
+    .stat-label{
+      font-size:12px;
+      color:rgba(203,213,225,0.85);
+    }
+
+    .about-wrap{
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .about-card{
+      background:rgba(15,23,42,0.92);
+      border:1px solid rgba(31,41,55,0.9);
+      padding:22px;
+    }
+    .about-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 2.1fr) minmax(0, 1.2fr);
+      gap:22px;
+      align-items:center;
+    }
+    .about-text{
+      font-size:16px;
+      line-height:1.85;
+      color:var(--muted);
+    }
+    .about-text p + p{margin-top:10px}
+    .pills{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .pill{
+      font-size:13px;
+      padding:7px 16px;
+      border-radius:999px;
+      background:rgba(30,41,59,0.55);
+      border:1px solid rgba(99,102,241,0.55);
+      color:#e5e7eb;
+      font-weight:500;
+      transition:transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .pill:hover{
+      background:rgba(99,102,241,0.28);
+      border-color:rgba(99,102,241,0.9);
+      transform:translateY(-2px);
+    }
+    .about-right{
+      text-align:center;
+    }
+    .about-photo{
+      width:340px;height:340px;
+      margin:0 auto 10px;
+      border-radius:22px;
+      background:url("assets/about1.jpg") center/cover no-repeat;
+      border:3px solid rgba(59,130,246,0.8);
+      box-shadow:0 20px 40px rgba(15,23,42,0.9);
+    }
+    .about-more-btn{
+      margin-top:10px;
+      padding:7px 14px;
+      font-size:12px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.7);
+      background:rgba(15,23,42,0.9);
+      color:#cbd5e1;
+      cursor:pointer;
+      transition:transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease;
+    }
+    .about-more-btn:hover{
+      transform:translateY(-1px);
+      background:rgba(15,23,42,1);
+      border-color:rgba(226,232,240,0.7);
+      color:#f8fafc;
+    }
+    .about-more-box{
+      display:none;
+      margin-top:14px;
+      text-align:left;
+      background:rgba(15,23,42,0.92);
+      border:1px solid rgba(148,163,184,0.35);
+      padding:14px;
+      border-radius:14px;
+      font-size:13px;
+      line-height:1.65;
+      color:#cbd5e1;
+    }
+    .about-more-box strong{color:#fff}
+
+    .projects-grid{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:18px;
+      width:100%;
+    }
+    .project-card{
+      position:relative;
+      width:100%;
+      max-width:900px;
+      height:500px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(148,163,184,0.35);
+      box-shadow:0 22px 40px rgba(0,0,0,0.6);
+      background:transparent;
+      display:block;
+      cursor:pointer;
+    }
+    .project-media{
+      position:absolute;
+      left:0;right:0;top:0;
+      height:calc(500px - 150px);
+      background-size:cover;
+      background-position:center;
+      filter:brightness(.78);
+    }
+    .project-media::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(2,6,23,0.55), rgba(2,6,23,0.05));
+    }
+    .project-body{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:flex-end;
+      justify-content:flex-start;
+    }
+    .project-bottom{
+      width:100%;
+      height:150px;
+      padding:14px 18px 12px;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:4px;
+      background:rgba(15,23,42,0.50);
+      backdrop-filter:blur(10px);
+      border-top:1px solid rgba(148,163,184,0.22);
+    }
+    .project-tag{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.15em;
+      color:#e5e7eb;
+      opacity:.92;
+    }
+    .project-title{
+      font-size:16px;
+      font-weight:700;
+      margin:0;
+    }
+    .project-meta{
+      font-size:13px;
+      color:#cbd5f5;
+    }
+    .project-line{
+      font-size: 12.5px;
+      color: rgba(226,232,240,0.92);
+      opacity: 0.95;
+      margin-top: 1px;
+    }
+    .project-note{
+      font-size:13px;
+      color:#e5e7eb;
+      max-width:720px;
+      overflow:hidden;
+      margin-top: 1px;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+    }
+    .project-footer{
+      margin-top:0px;
+      width:100%;
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+    }
+    .project-more{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+      font-weight:600;
+      color:#0f172a;
+      padding:7px 14px;
+      border-radius:999px;
+      border:1px solid #d1d5db;
+      background:#f9fafb;
+      transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .project-more:hover{
+      background:#e5e7eb;
+      border-color:#9ca3af;
+      transform:translateY(-1px);
+    }
+    .project-more.in-media{
+      position:absolute;
+      right:12px;
+      bottom:18px;
+      z-index:3;
+      box-shadow:0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .skills-grid{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      max-width:900px;
+    }
+    .skills-card{
+      background:#0f172a;
+      color:#e5e7eb;
+      border-radius:14px;
+      border:1px solid var(--border);
+      padding:14px;
+      box-shadow:0 18px 36px rgba(15,23,42,0.9);
+    }
+    .skills-title{font-weight:700;margin-bottom:8px;font-size:15px}
+    .skills-subtext{font-size:13px;color:#9ca3af;margin-bottom:8px}
+    .skills-list{display:flex;flex-wrap:wrap;gap:6px}
+    .skill-pill{
+      font-size:12px;
+      padding:4px 9px;
+      border-radius:999px;
+      background:rgba(15,23,42,0.85);
+      border:1px solid #1f2937;
+      color:#e5e7eb;
+      transition:transform .16s ease, background .16s ease, border-color .16s ease;
+      white-space:nowrap;
+    }
+    .skill-pill:hover{
+      background:rgba(37,99,235,0.28);
+      border-color:var(--accent-strong);
+      transform:translateY(-1px) scale(1.03);
+    }
+
+    .extras-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:start;
+    }
+
+    .about-list{
+      list-style:none;
+      margin-top:6px;
+      font-size:13.5px;
+      line-height:1.75;
+      color:var(--muted);
+    }
+    .about-list li{display:flex;gap:8px;margin-bottom:6px}
+    .bullet{color:var(--accent-strong);margin-top:1px}
+
+    .downloads-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+
+    .contact-text{font-size:15px;color:var(--muted);margin-bottom:10px}
+    .contact-items{font-size:14px}
+
+    .contact-item{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      padding:9px 11px;
+      margin-bottom:8px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(15,23,42,0.95);
+      color:var(--muted);
+    }
+    .contact-left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:0;
+    }
+    .contact-icon{
+      width:32px;height:32px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.8);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(15,23,42,1);
+      flex-shrink:0;
+      overflow:hidden;
+    }
+    .contact-icon img{width:70%;height:70%;object-fit:contain;display:block}
+    .contact-labels{display:flex;flex-direction:column;gap:2px}
+    .contact-caption{font-size:11px;color:#9ca3af}
+    .contact-main{font-size:13px;color:#e5e7eb;word-break:break-all}
+
+    .contact-action{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,0.8);
+      background:rgba(15,23,42,0.96);
+      color:var(--text);
+      font-size:12px;
+      white-space:nowrap;
+      transition:transform .16s ease, background .18s ease, border-color .18s ease, color .18s ease;
+    }
+    .contact-action:hover{
+      background:var(--success);
+      border-color:var(--success-soft);
+      color:#020617;
+      transform:translateY(-1px);
+    }
+
+    footer{
+      border-top:1px solid rgba(31,41,55,0.9);
+      padding:16px 18px 26px;
+      font-size:11px;
+      color:var(--muted);
+      text-align:center;
+      background:radial-gradient(circle at top, rgba(30,64,175,0.3), transparent 55%);
+    }
+
+    @media (max-width: 640px) {
+
+      .home-title { font-size: 22px; }
+      .home-desc { font-size: 13px; }
+      .home-btn { font-size: 12px; padding: 7px 13px; }
+      .home-stats { flex-wrap: nowrap; overflow-x: auto; gap: 2px; }
+      .stat { min-width: 80px; font-size: 11px; }
+      .stat-num { font-size: 14px; }
+      .stat-label { font-size: 11px; }
+      .project-footer { margin-top: auto; justify-content: flex-end; align-items: center; }
+      .project-bottom { height: 150px; padding-bottom: 10px; }
+    }
+   .nav-download{ display:inline-flex; align-items:center; gap:8px; }
+
+.nav-download-icon{
+  width:16px; height:16px;
+  background-color: currentColor; /* اللون = لون النص */
+  -webkit-mask: url("assets/icons/download.svg") no-repeat center / contain;
+          mask: url("assets/icons/download.svg") no-repeat center / contain;
+}
+
+@media (max-width:640px){
+  .nav-download-text{ display:none; }
+  .nav-download-icon{ width:18px; height:18px; }
+}
+
+    @media (max-width: 980px){
+      .about-grid{grid-template-columns:1fr}
+      .extras-grid{grid-template-columns:1fr}
+      .about-photo{width:300px;height:300px}
+    }
+
+    @media (max-width: 640px){
+      .shell{padding-inline:14px}
+      .nav{flex-wrap:wrap;gap:8px}
+      .nav-links{flex-wrap:wrap;justify-content:flex-start}
+      .home-title{font-size:26px}
+      .home-banner-content{left:16px;right:16px;bottom:56px}
+      .stat{min-width:140px}
+      .about-photo{width:260px;height:260px}
+      .project-card{height:550px}
+      .project-media{height:calc(550px - 150px)}
+      .project-bottom{height:150px}
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPF1KMJK9D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NPF1KMJK9D');
+  </script>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="shell">
+        <nav class="nav">
+          <a href="#home-banner" class="logo-wrap">
+            <div class="logo-mark"></div>
+            <div>
+              <div class="logo-text-main">Mahmoud Shehata</div>
+              <div class="logo-text-sub"><span>Civil / Project Engineer</span> · Abu Dhabi, UAE</div>
+            </div>
+          </a>
+
+          <div class="nav-links">
+            <a href="#home-banner">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+           <a href="#downloads" class="nav-download" title="Downloads" aria-label="Downloads">
+              <span class="nav-download-text">Downloads</span>
+              <span class="nav-download-icon" aria-hidden="true"></span>
+            </a>
+
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="shell">
+        <section id="home-banner" class="home-banner">
+          <div class="home-banner-bg"></div>
+          <div class="home-banner-overlay"></div>
+
+          <div class="home-banner-content">
+            <div class="home-pill">Project Engineer | Civil Engineer</div>
+
+            <h1 class="home-title">Delivering high-end finishing &amp; site execution with strict QA/QC.</h1>
+
+            <p class="home-desc">
+              6+ years across UAE, Egypt &amp; Kenya. Strong in subcontractor coordination, shop drawing review,
+              inspections (WIR/MIR), reporting, and schedule follow-up for residential, commercial and luxury projects.
+            </p>
+
+            <div class="home-actions">
+              <a class="btn primary" href="#projects">View Projects</a>
+              <a class="btn" href="assets/cv/Mahmoud-Shehata-CV.pdf" download>Download CV</a>
+              <a class="btn" href="#contact">Contact</a>
+            </div>
+
+            <div class="home-stats">
+              <div class="stat">
+                <div class="stat-num">6+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">105M+</div>
+                <div class="stat-label">AED Projects Value</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">UAE • EG • KE</div>
+                <div class="stat-label">Project Locations</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about">
+          <div class="section-title">About</div>
+          <div class="section-subtitle">About Mahmoud</div>
+
+          <div class="about-wrap">
+            <div class="about-card">
+              <div class="about-grid">
+                <div class="about-text">
+                  <p>
+                    I’m a Civil / Project Engineer based in Abu Dhabi, with 6+ years of experience in site execution, high-end finishing,
+                    structural coordination and QA/QC follow-up. I focus on delivering clean, well-coordinated work with clear reporting
+                    and strong day-to-day control on site.
+                  </p>
+                  <p>
+                    I’ve contributed to commercial, residential and luxury villa projects across the UAE, Egypt and Kenya—supporting
+                    subcontractor coordination, shop drawing review, inspections (WIR/MIR), technical problem-solving and handover readiness.
+                  </p>
+                  <p>
+                    My strength is bridging the gap between drawings and execution—ensuring details are built correctly, issues are closed quickly,
+                    and quality stays consistent from start to finish.
+                  </p>
+
+                  <div class="pills">
+                    <span class="pill">High-end finishing</span>
+                    <span class="pill">Luxury villas</span>
+                    <span class="pill">Car showrooms</span>
+                    <span class="pill">Residential towers</span>
+                    <span class="pill">QA/QC inspections</span>
+                  </div>
+                </div>
+
+                <div class="about-right">
+                  <div class="about-photo"></div>
+                  <button class="about-more-btn" id="more-info-btn" type="button">More information</button>
+
+                  <div class="about-more-box" id="more-info-box">
+                    <strong>Personal Details:</strong><br><br>
+                    • Nationality: Egyptian<br>
+                    • Based in: Abu Dhabi, UAE<br>
+                    • Education: BSc Civil Engineering – New Cairo Academy (2019)<br>
+                    • Certifications: Benaa Diploma, Structural Design Diploma<br>
+                    • Languages: Arabic (Native), English (Fluent)<br>
+                    • UAE Driving License: Yes<br>
+                    • Membership: Egyptian Engineers Syndicate
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <div class="section-title">Projects</div>
+          <div class="section-subtitle">Selected work</div>
+          <p class="section-subtext">
+            A selection of projects I’ve worked on. Each project links to a dedicated page with more details, photos and video (where available).
+          </p>
+
+          <div class="projects-grid">
+            <a class="project-card" id="project-villa" href="projects/villa.html?from=project-villa"
+             aria-label="Open project: High-end private villa">
+              <div class="project-media" style="background-image:url('assets/pr4.webp');">
+                <span class="project-more in-media">More details</span>
+              </div>
+              <div class="project-body">
+                <div class="project-bottom">
+                  <div class="project-tag">Private villa · Abu Dhabi</div>
+                  <h3 class="project-title">High-end private villa</h3>
+                  <div class="project-meta">Project Engineer – URUK Construction</div>
+                  <div class="project-line">Luxury finishing, cladding coordination, and QA/QC inspections for premium handover.</div>
+                  <div class="project-footer"></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-card" id="project-showroom" href="projects/showroom.html?from=project-showroom"
+             aria-label="Open project: Baniyas Cars – Rahayl Cars City">
+              <div class="project-media" style="background-image:url('assets/pr3.webp');">
+                <span class="project-more in-media">More details</span>
+              </div>
+              <div class="project-body">
+                <div class="project-bottom">
+                  <div class="project-tag">Car showroom · Abu Dhabi</div>
+                  <h3 class="project-title">Baniyas Cars – Rahayl Cars City</h3>
+                  <div class="project-meta">Project Engineer – URUK Construction</div>
+                  <div class="project-line">RC + steel structure, façade coordination, and controlled progress reporting for delivery.</div>
+                  <div class="project-footer"></div>
+                </div>
+              </div>
+            </a>
+
+           <a class="project-card"
+   id="project-36-towers"
+   href="projects/36-towers.html?from=project-36-towers"
+   aria-label="Open project: 36 residential towers">
+
+  <div class="project-media" style="background-image:url('assets/pr2.webp');">
+    <span class="project-more in-media">More details</span>
+  </div>
+
+  <div class="project-body">
+    <div class="project-bottom">
+      <div class="project-tag">Residential towers · 10th of Ramadan</div>
+      <h3 class="project-title">36 residential towers</h3>
+      <div class="project-meta">Site Engineer – Makkah Constructions</div>
+      <div class="project-line">
+        Daily site supervision, QA/QC checks, and subcontractor follow-up across multiple towers.
+      </div>
+      <div class="project-footer"></div>
+    </div>
+  </div>
+</a>
+
+            <a class="project-card" id="project-6-towers" href="projects/6-towers.html?from=project-6-towers"
+             aria-label="Open project: 6 residential towers">
+              <div class="project-media" style="background-image:url('assets/pr1.webp');">
+                <span class="project-more in-media">More details</span>
+              </div>
+              <div class="project-body">
+                <div class="project-bottom">
+                  <div class="project-tag">Residential towers · Eldoret</div>
+                  <h3 class="project-title">6 residential towers</h3>
+                  <div class="project-meta">Site Engineer – Smarkit Company</div>
+                  <div class="project-line">Surveying support, execution follow-up, and quality reporting with local teams.</div>
+                  <div class="project-footer"></div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section id="skills">
+          <div class="section-title">Skills</div>
+          <div class="section-subtitle">Skills &amp; tools</div>
+          <p class="section-subtext">
+            A mix of technical software skills, practical site capabilities and personal skills that support my work as a Project Engineer.
+          </p>
+
+          <div class="skills-grid">
+            <div class="skills-card">
+              <div class="skills-title">Technical &amp; software skills</div>
+              <div class="skills-subtext">Design and engineering tools used across structural and finishing works.</div>
+              <div class="skills-list">
+                <span class="skill-pill">AutoCAD</span>
+                <span class="skill-pill">SAP2000</span>
+                <span class="skill-pill">ETABS</span>
+                <span class="skill-pill">SAFE</span>
+                <span class="skill-pill">SP Column</span>
+                <span class="skill-pill">Structural detailing</span>
+                <span class="skill-pill">Shop drawing</span>
+                <span class="skill-pill">Quantity take-off &amp; BOQ preparation (PlanSwift)</span>
+                <span class="skill-pill">Shop drawing review &amp; coordination</span>
+                <span class="skill-pill">Microsoft Excel (reports, tracking, logs)</span>
+                <span class="skill-pill">Microsoft Word &amp; PDF documentation</span>
+                <span class="skill-pill">Basic PowerPoint for presentations</span>
+              </div>
+            </div>
+
+            <div class="skills-card">
+              <div class="skills-title">Site &amp; project skills</div>
+              <div class="skills-subtext">Practical capabilities applied on site to keep work coordinated and on track.</div>
+              <div class="skills-list">
+                <span class="skill-pill">Site supervision &amp; coordination</span>
+                <span class="skill-pill">High-end finishing supervision</span>
+                <span class="skill-pill">QA/QC inspections</span>
+                <span class="skill-pill">RFIs, WIRs &amp; MIRs</span>
+                <span class="skill-pill">Structural strengthening &amp; jacketing follow-up</span>
+                <span class="skill-pill">Coordination with consultants &amp; client reps</span>
+                <span class="skill-pill">Subcontractor management &amp; follow-up</span>
+                <span class="skill-pill">Short-term (weekly) planning &amp; tracking</span>
+                <span class="skill-pill">Quantity surveying &amp; material requests</span>
+                <span class="skill-pill">Material submittals &amp; approvals</span>
+                <span class="skill-pill">Monitoring manpower &amp; daily progress</span>
+                <span class="skill-pill">Preparing daily &amp; weekly reports</span>
+                <span class="skill-pill">Safety follow-up &amp; site housekeeping</span>
+                <span class="skill-pill">Snagging &amp; de-snagging for handover</span>
+              </div>
+            </div>
+
+            <div class="skills-card">
+              <div class="skills-title">Personal &amp; soft skills</div>
+              <div class="skills-subtext">Behaviours and attitudes that support project delivery and teamwork.</div>
+              <div class="skills-list">
+                <span class="skill-pill">Attention to detail</span>
+                <span class="skill-pill">Ownership &amp; accountability</span>
+                <span class="skill-pill">Problem solving on site</span>
+                <span class="skill-pill">Clear communication (Arabic &amp; English)</span>
+                <span class="skill-pill">Working under pressure</span>
+                <span class="skill-pill">Client &amp; consultant interface</span>
+                <span class="skill-pill">Team coordination &amp; support</span>
+                <span class="skill-pill">Time management &amp; prioritisation</span>
+                <span class="skill-pill">Fast learning &amp; adaptability</span>
+                <span class="skill-pill">Positive attitude on site</span>
+                <span class="skill-pill">Flexibility with different cultures (Egypt, Kenya, UAE)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="extras-grid">
+            <div>
+              <div id="certifications">
+                <div class="section-title">Certifications</div>
+                <div class="section-subtitle">Certifications &amp; licenses</div>
+                <p class="section-subtext">
+                  Key certifications and documents that support my work in design, execution and project management.
+                </p>
+
+                <div class="card">
+                  <ul class="about-list">
+                    <li><span class="bullet">•</span><span>B.Sc. in Civil Engineering – New Cairo Academy (2019)</span></li>
+                    <li><span class="bullet">•</span><span>Benaa Training Diploma – Site &amp; Project Management</span></li>
+                    <li><span class="bullet">•</span><span>Structural Design Diploma – Buildings &amp; Villas</span></li>
+                    <li><span class="bullet">•</span><span>UAE Driving License</span></li>
+                  </ul>
+
+                  <div class="downloads-row">
+                    <a class="btn" href="certificates.html">View detailed certificates</a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="downloads" style="margin-top:18px;">
+                <div class="section-title">Downloads</div>
+                <div class="section-subtitle">CV &amp; portfolio</div>
+                <p class="section-subtext">
+                  Download a PDF copy of my CV and a PDF export of this portfolio .
+                </p>
+
+                <div class="card" style="padding:14px;">
+                  <div class="downloads-row">
+                    <a class="btn" href="assets/cv/Mahmoud-Shehata-CV.pdf" download>Download CV (PDF)</a>
+                    <a class="btn" href="assets/cv/Mahmoud-Shehata-Portfolio.pdf" download>Download Portfolio (PDF)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="contact">
+              <div class="section-title">Contact</div>
+              <div class="section-subtitle">Let’s connect</div>
+              <p class="section-subtext">
+                If you’d like to discuss a role, project or collaboration in the UAE or abroad, feel free to reach out.
+              </p>
+
+              <div class="card">
+                <div class="contact-text">
+                  I’m particularly interested in Project Engineer and Site Engineer roles where I can support site execution,
+                  finishing, coordination and QA/QC.
+                </div>
+
+                <div class="contact-items">
+                  <div class="contact-item">
+                    <div class="contact-left">
+                      <div class="contact-icon"><img src="assets/icons/email.svg" alt="Email" /></div>
+                      <div class="contact-labels">
+                        <div class="contact-caption">Email</div>
+                        <div class="contact-main">m@mahmoudshehata.com</div>
+                      </div>
+                    </div>
+                    <a class="contact-action" href="mailto:m@mahmoudshehata.com">Send email</a>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-left">
+                      <div class="contact-icon"><img src="assets/icons/linkedin.svg" alt="LinkedIn" /></div>
+                      <div class="contact-labels">
+                        <div class="contact-caption">LinkedIn</div>
+                        <div class="contact-main">linkedin.com/in/Mahmoud-Ahmed-Linked</div>
+                      </div>
+                    </div>
+                    <a class="contact-action" href="https://www.linkedin.com/in/Mahmoud-Ahmed-Linked" target="_blank" rel="noopener">View profile</a>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-left">
+                      <div class="contact-icon"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" /></div>
+                      <div class="contact-labels">
+                        <div class="contact-caption">WhatsApp (UAE)</div>
+                        <div class="contact-main">Direct message from this portfolio</div>
+                      </div>
+                    </div>
+                    <a class="contact-action" href="https://wa.me/971509952788?text=Hello%20Mahmoud%2C%20I%20visited%20your%20portfolio%20website%20and%20reviewed%20your%20summary%20and%20projects.%20I%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you." target="_blank" rel="noopener">Open chat</a>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-left">
+                      <div class="contact-icon"><img src="assets/icons/phone.svg" alt="Phone" /></div>
+                      <div class="contact-labels">
+                        <div class="contact-caption">Phone (UAE)</div>
+                        <div class="contact-main">+971 50 995 2788</div>
+                      </div>
+                    </div>
+                    <a class="contact-action" href="tel:+971509952788">Call</a>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-left">
+                      <div class="contact-icon"><img src="assets/icons/phone.svg" alt="Phone" /></div>
+                      <div class="contact-labels">
+                        <div class="contact-caption">Phone (Egypt)</div>
+                        <div class="contact-main">+20 101 352 8174</div>
+                      </div>
+                    </div>
+                    <a class="contact-action" href="tel:+201013528174">Call</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Mahmoud Shehata · Civil / Project Engineer. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const moreBtn = document.getElementById("more-info-btn");
+    const moreBox = document.getElementById("more-info-box");
+
+    if (moreBtn && moreBox) {
+      moreBtn.addEventListener("click", () => {
+        const isOpen = moreBox.style.display === "block";
+        moreBox.style.display = isOpen ? "none" : "block";
+        moreBtn.textContent = isOpen ? "More information" : "Hide information";
+      });
+    }
+  </script>
+  <script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const fromId = params.get("from");
+  if (!fromId) return;
+
+  const el = document.getElementById(fromId);
+  if (!el) return;
+
+  const yOffset = 70;
+  const y =
+    el.getBoundingClientRect().top +
+    window.pageYOffset -
+    yOffset;
+
+  window.scrollTo({ top: y, behavior: "smooth" });
+})();
+</script>
+
+</body>
+</html>
