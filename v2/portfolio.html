@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mahmoud Shehata — Civil | Project Engineer — Portfolio</title>
+<style>
+  :root{
+    --bg:#070A12;
+    --panel:#0B1020;
+    --panel2:#0C1328;
+    --ink:#EAF0FF;
+    --muted:#B8C2E6;
+    --muted2:#8F9AC7;
+    --line:rgba(255,255,255,.08);
+    --line2:rgba(255,255,255,.12);
+    --accent:#7C5CFF;
+    --accent2:#2BE4A7;
+    --warn:#FFB84D;
+    --shadow: 0 18px 60px rgba(0,0,0,.45);
+    --r:18px;
+    --r2:26px;
+  }
+
+  /* Print sizing: A4 only (portrait + landscape) */
+  @page { size: A4 portrait; margin: 0; }
+  @page landscape { size: A4 landscape; margin: 0; }
+
+html,body{height:100%;}
+  body{
+    margin:0;
+    background: radial-gradient(1200px 700px at 18% 10%, rgba(124,92,255,.22), transparent 55%),
+                radial-gradient(1100px 680px at 78% 18%, rgba(43,228,167,.14), transparent 50%),
+                radial-gradient(900px 520px at 55% 80%, rgba(255,184,77,.10), transparent 55%),
+                var(--bg);
+    color:var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+  }
+
+  /* Pages */
+  .page{
+    --w:210mm; --h:297mm;
+    --ps:1; --px:0mm; --py:0mm;
+    position: relative;
+    page-break-after: always;
+    break-after: page;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+    box-shadow: var(--shadow);
+  }
+  .page.a4l{ page: landscape; 
+    --w:297mm; --h:210mm;
+}
+
+.pad{ padding: 22px; }
+  .pad-lg{ padding: 28px; }
+  .grid{ display:grid; gap:16px; }
+  .two{ grid-template-columns: 1.15fr .85fr; }
+  .three{ grid-template-columns: 1fr 1fr 1fr; }
+  .split{ grid-template-columns: .9fr 1.1fr; }
+  .col{ display:flex; flex-direction:column; gap:14px; }
+
+  /* Global UI */
+  .topline{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:12px; padding: 14px 18px;
+    border-bottom:1px solid var(--line);
+    background: linear-gradient(90deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .dot{
+    width:12px; height:12px; border-radius:999px;
+    background: radial-gradient(circle at 30% 30%, #fff, rgba(255,255,255,.25) 34%, rgba(255,255,255,.05) 60%),
+                linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 0 0 3px rgba(124,92,255,.14), 0 14px 34px rgba(124,92,255,.20);
+  }
+  .kicker{ letter-spacing:.22em; text-transform:uppercase; font-size:11px; color:var(--muted2); }
+  .meta{ display:flex; flex-wrap:wrap; gap:10px 14px; color:var(--muted); font-size:12px; }
+  .meta span{ display:inline-flex; align-items:center; gap:8px; }
+  .pill{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:8px 12px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+    color:var(--muted);
+    font-size:12px;
+  }
+  .pill strong{ color:var(--ink); font-weight:650; }
+  .h1{
+    margin:0;
+    font-size: 44px;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+  .h2{
+    margin:0;
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .h3{
+    margin:0;
+    font-size: 15px;
+    line-height:1.25;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .lead{
+    margin:10px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 80ch;
+  }
+  .strongline{
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .strongline em{
+    font-style: normal;
+    color: var(--accent2);
+    font-weight: 700;
+  }
+
+  .card{
+    border:1px solid var(--line);
+    border-radius: var(--r);
+    background: linear-gradient(180deg, rgba(11,16,32,.78), rgba(11,16,32,.48));
+    box-shadow: 0 18px 40px rgba(0,0,0,.25);
+    overflow:hidden;
+  }
+  .card .hd{
+    padding: 14px 16px;
+    display:flex; align-items:center; justify-content:space-between;
+    border-bottom:1px solid var(--line);
+    background: linear-gradient(90deg, rgba(124,92,255,.10), rgba(43,228,167,.06), rgba(255,184,77,.06));
+  }
+  .tag{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid var(--line2);
+    background: rgba(0,0,0,.12);
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .card .bd{ padding: 14px 16px; }
+  .list{
+    margin:0; padding:0 0 0 16px;
+    color:var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .list li{ margin: 6px 0; }
+  .metric-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; }
+  .metric{
+    padding:14px;
+    border:1px solid var(--line);
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  }
+  .metric .n{
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing:-0.02em;
+  }
+  .metric .t{
+    margin-top:6px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+
+  /* Visual blocks */
+  .hero{
+    position: relative;
+    min-height: 420px;
+    border-radius: var(--r2);
+    border:1px solid var(--line);
+    overflow:hidden;
+    background:#0A0F1F;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(900px 520px at 18% 15%, rgba(124,92,255,.35), transparent 55%),
+      radial-gradient(900px 520px at 78% 10%, rgba(43,228,167,.22), transparent 55%),
+      radial-gradient(800px 520px at 60% 88%, rgba(255,184,77,.14), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-img{
+    position:absolute; inset:0;
+    background-position:center;
+    background-size: cover;
+    filter: saturate(1.05) contrast(1.03);
+    transform: scale(1.02);
+  }
+  .hero-shade{
+    position:absolute; inset:0;
+    background: linear-gradient(90deg, rgba(7,10,18,.92), rgba(7,10,18,.55) 45%, rgba(7,10,18,.25) 70%, rgba(7,10,18,.78));
+  }
+  .hero-inner{
+    position: relative;
+    z-index: 2;
+    padding: 26px;
+    display:grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 18px;
+    min-height: 420px;
+  }
+
+  .portrait{
+    border-radius: 22px;
+    border:1px solid var(--line);
+    overflow:hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+    min-height: 310px;
+    position:relative;
+  }
+  .portrait .img{
+    position:absolute; inset:0;
+    background-size: cover;
+    background-position: center;
+    filter: contrast(1.03) saturate(1.05);
+  }
+  .portrait .shade{
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(7,10,18,.15), rgba(7,10,18,.72));
+  }
+  .portrait .cap{
+    position:absolute; left:16px; right:16px; bottom:14px;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .cap .name{ font-weight:750; letter-spacing:-0.02em; }
+  .cap .role{ color:var(--muted); font-size:12px; }
+
+  .collage{
+    display:grid;
+    grid-template-columns: 1.4fr .6fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    min-height: 360px;
+  }
+  .imgbox{
+    position:relative;
+    border-radius: 20px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:#0A0F1F;
+  }
+  .imgbox .img{
+    position:absolute; inset:0;
+    background-size: cover;
+    background-position:center;
+  }
+  .imgbox .shade{
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.55));
+  }
+  .imgbox .lbl span{display:none;}
+  .lbl{
+    position:absolute; left:14px; bottom:12px; right:14px;
+    display:flex; justify-content:space-between; align-items:flex-end; gap:12px;
+    color: rgba(234,240,255,.92);
+    font-size: 12px;
+  }
+  .lbl b{ font-size: 13px; letter-spacing:-0.01em; }
+  .lbl span{ color: var(--muted); font-size: 11px; }
+
+  /* Project system */
+  .project-banner{
+    display:flex; align-items:flex-end; justify-content:space-between;
+    gap:14px;
+  }
+  .project-title{
+    font-size: 30px;
+    letter-spacing:-0.03em;
+    margin:0;
+    line-height:1.05;
+  }
+  .project-sub{
+    margin-top:8px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 72ch;
+  }
+  .proj-badges{
+    display:flex; flex-wrap:wrap; gap:10px;
+    justify-content:flex-end;
+  }
+
+  .grid-photos{
+    display:grid;
+    grid-template-columns: 1.35fr .65fr;
+    gap: 12px;
+  }
+  .stack{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .hi{
+    display:grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .hi .metric{ background: linear-gradient(180deg, rgba(124,92,255,.08), rgba(11,16,32,.45)); }
+  .hi .metric:nth-child(2){ background: linear-gradient(180deg, rgba(43,228,167,.07), rgba(11,16,32,.45)); }
+  .hi .metric:nth-child(3){ background: linear-gradient(180deg, rgba(255,184,77,.08), rgba(11,16,32,.45)); }
+  .hi .metric:nth-child(4){ background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(11,16,32,.45)); }
+
+  /* Tools grid */
+  .tools{ display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; }
+  .tool{
+    padding:12px 12px;
+    border:1px solid var(--line);
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .tool b{ color:var(--ink); font-weight:650; }
+  .tool small{ display:block; color:var(--muted2); margin-top:4px; line-height:1.25; }
+
+  /* Footer */
+  .foot{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    padding: 12px 18px;
+    border-top:1px solid var(--line);
+    color: var(--muted2);
+    font-size: 11px;
+    background: linear-gradient(90deg, rgba(255,255,255,.015), rgba(255,255,255,.01));
+  }
+
+  /* Typography for print */
+  .page{ box-shadow:none; border-radius: 0; }
+    .h1{ font-size: 46px; }
+    .lead{ font-size: 13.2px; }
+    a{ color: inherit; text-decoration:none; }
+
+
+  /* Small helpers */
+  .muted{ color: var(--muted); }
+  .muted2{ color: var(--muted2); }
+  .accent{ color: var(--accent2); font-weight:750; }
+  .rule{ height:1px; background:var(--line); margin: 10px 0; }
+/* Print hardening: lock page boxes to A4 and prevent browser scaling quirks */
+body{
+    margin:0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page{
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .page.a4l{
+    width: 297mm;
+    height: 210mm;
+    page: landscape;
+  }
+
+
+
+.page.is-landscape{ --w:297mm; --h:210mm; }
+
+
+  /* ========= PRINT ENGINE (A4 + per-page tuning) ========= */
+  @media print{
+    @page { size: A4 portrait; margin: 0; }
+    @page landscape { size: A4 landscape; margin: 0; }
+
+    html, body{
+      margin:0 !important;
+      padding:0 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      background: var(--bg) !important;
+    }
+
+    /* Each printed page box */
+    .page{
+      width: var(--w);
+      height: var(--h);
+      margin: 0 !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      overflow: hidden;
+      box-sizing: border-box;
+
+      page-break-after: always;
+      break-after: page;
+
+      transform-origin: top left;
+      transform: translate(var(--px), var(--py)) scale(var(--ps));
+    }
+
+    /* Landscape pages (still A4) */
+    .page.a4l, .page.is-landscape{
+      page: landscape;
+    }
+
+    /* Clean print: remove shadows inside */
+    .page *{ box-shadow: none !important; }
+
+    /* Links */
+    a{ color: inherit !important; text-decoration: none !important; }
+  }
+
+  /* ========= SCREEN ONLY: center pages in browser (no print impact) ========= */
+  @media screen{
+    body{ padding:18px 0; }
+    .page{ margin:18px auto; }
+  }
+
+.site{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      padding:18px 0;
+      width: fit-content;
+    }
+  
+
+</style>
+</head>
+
+<body>
+
+
+<!-- PAGE 1 — A4 Landscape Cover -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <div class="kicker">Portfolio</div>
+        <div class="muted2" style="font-size:12px; letter-spacing:-0.01em;">Civil | Project Engineer</div><div class="muted" style="font-size:9px; letter-spacing:-0.005em;">Abu Dhabi, UAE</div>
+      </div>
+    </div>
+    <div class="meta">
+      <span>+971 50 995 2788</span>
+      <span>m@mahmoudshehata.com</span>
+      <span>mahmoudshehata.com</span>
+      <span>linkedin.com/in/Mahmoud-Ahmed-Linked</span>
+    </div>
+  </div>
+
+  <div class="pad-lg">
+    <div class="hero" style="min-height:520px;">
+      <div class="hero-img" style="background-image:url('assets/pr3-hero.webp');"></div>
+      <div class="hero-shade"></div>
+
+      <div class="hero-inner" style="min-height:520px;">
+        <div>
+          <h1 class="h1">Mahmoud Shehata</h1>
+          <div class="strongline">Execution-driven <em>Civil / Project Engineer</em> delivering premium finishes, disciplined site control, and confident handovers.</div>
+
+          <p class="lead">
+            6+ years across UAE, Egypt, and Kenya — managing site execution, subcontractor coordination, QA/QC, technical submissions, and schedule-driven delivery for residential, commercial, and high-end villa projects.
+          </p>
+
+          <div class="rule"></div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="n">6+ Years</div>
+              <div class="t">Construction delivery across multi-market projects</div>
+            </div>
+            <div class="metric">
+              <div class="n">4 Flagships</div>
+              <div class="t">Showroom · Towers · Towers · Private Villa</div>
+            </div>
+            <div class="metric">
+              <div class="n">QA/QC</div>
+              <div class="t">WIR/MIR coordination & site compliance mindset</div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:10px;">
+            <span class="pill"><strong>Site Management</strong></span>
+            <span class="pill"><strong>Finishing Works</strong></span>
+            <span class="pill"><strong>Technical Submittals</strong></span>
+            <span class="pill"><strong>BOQ & Quantity Takeoff</strong></span>
+            <span class="pill"><strong>Contractor Control</strong></span>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="portrait">
+            <div class="img" style="background-image:url('assets/mahmoud1.webp');"></div>
+            <div class="shade"></div>
+            <div class="cap">
+              <div class="name">Mahmoud Shehata</div>
+              <div class="role">Civil | Project Engineer — On-site execution & delivery</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="hd">
+              <span class="tag">Profile Snapshot</span>
+              <span class="muted2" style="font-size:12px;">2025</span>
+            </div>
+            <div class="bd">
+              <ul class="list" style="margin:0;">
+                <li>Luxury finishing supervision: cladding, façade coordination, and high-end details.</li>
+                <li>Site leadership: subcontractors, materials, daily tracking, and issue closure.</li>
+                <li>Documentation discipline: RFIs, WIRs/MIRs, approvals, and progress reporting.</li>
+                <li>Engineering readiness: shop drawings review, clashes resolution, and structural repairs/strengthening support.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>© <span id="year"></span> Mahmoud Shehata · Project Engineer</div>
+</div>
+  </div>
+</section>
+
+<!-- PAGE 2 — A4 Landscape: Core Value & Responsibilities -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">How I Work</div><div class="muted2" style="font-size:12px;">Execution mindset & responsibilities</div></div></div>
+    <div class="meta"><span>Delivery · Quality · Coordination</span></div>
+  </div>
+
+  <div class="pad grid two">
+    <div class="col">
+      <div class="card">
+        <div class="hd"><span class="tag">Core Value</span><span class="muted2">On-time, on-spec delivery</span></div>
+        <div class="bd">
+          <h2 class="h2">Structured delivery under real site pressure.</h2>
+          <p class="lead">
+            I translate drawings into controlled execution — sequencing works, aligning subcontractors, closing technical queries,
+            and protecting quality through inspections and approvals.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+            <span class="pill"><strong>Daily Planning</strong> · look-ahead & constraints</span>
+            <span class="pill"><strong>Quality Gates</strong> · inspections & checklists</span>
+            <span class="pill"><strong>Coordination</strong> · civil/arch/MEP interfaces</span>
+            <span class="pill"><strong>Reporting</strong> · progress & risks</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="hd"><span class="tag">Key Responsibilities</span><span class="muted2">Site + Technical</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Manage subcontractors, sequences, and deliverables to protect milestones.</li>
+            <li>Inspect works, prepare/check WIRs & MIRs, and track NCR closure where needed.</li>
+            <li>Review drawings & shop drawings; raise RFIs and resolve conflicts on site.</li>
+            <li>Quantity takeoff, BOQ coordination, material requests, and basic cost control support.</li>
+            <li>Coordinate MEP interfaces and finishing details to avoid rework.</li>
+            <li>Deliver weekly updates with risks, progress, and action-driven plans.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="hd"><span class="tag">Highlights</span><span class="muted2">What I’m known for</span></div>
+        <div class="bd">
+          <div class="hi">
+            <div class="metric"><div class="n">Finishing</div><div class="t">High-end execution, details, and approvals</div></div>
+            <div class="metric"><div class="n">QA/QC</div><div class="t">Inspection readiness & systematic closure</div></div>
+            <div class="metric"><div class="n">Coordination</div><div class="t">Subcontractors + consultant alignment</div></div>
+            <div class="metric"><div class="n">Reporting</div><div class="t">Clear progress and action plans</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero" style="min-height: 420px;">
+        <div class="hero-img" style="background-image:url('assets/pr4-hero.webp');"></div>
+        <div class="hero-shade"></div>
+        <div class="pad" style="position:relative; z-index:2;">
+          <div class="tag">Recent work</div>
+          <h2 class="h2" style="margin-top:10px;">Luxury Private Villa — Abu Dhabi</h2>
+          <p class="lead">Finishing works, cladding coordination, approvals cycle, and disciplined site follow-up.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>© <span class="year"></span> Mahmoud Shehata</div>
+    <div>Core responsibilities · delivery system</div>
+  </div>
+</section>
+
+<!-- PAGE 3 — A4 Landscape: Skills (Rhythm Break) -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Skills</div><div class="muted2" style="font-size:12px;">Technical + delivery capabilities</div></div></div>
+    <div class="meta"><span>Site · QA/QC · Takeoff · Coordination</span></div>
+  </div>
+
+  <div class="pad grid three">
+    <div class="card">
+      <div class="hd"><span class="tag">Site & Delivery</span><span class="muted2">Execution control</span></div>
+      <div class="bd">
+        <ul class="list">
+          <li>Work sequencing & daily planning (look-ahead mindset)</li>
+          <li>Subcontractor coordination & performance follow-up</li>
+          <li>Materials requests, delivery tracking, and readiness checks</li>
+          <li>Snagging & handover readiness (punch list closure)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="hd"><span class="tag">Quality & Documentation</span><span class="muted2">No surprises</span></div>
+      <div class="bd">
+        <ul class="list">
+          <li>WIR / MIR preparation, tracking, and approvals follow-up</li>
+          <li>RFIs for clashes/clarifications + consultant coordination</li>
+          <li>QA/QC checks aligned with specs & drawings</li>
+          <li>Progress reporting: risks, actions, and next steps</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="hd"><span class="tag">Technical</span><span class="muted2">Engineering readiness</span></div>
+      <div class="bd">
+        <ul class="list">
+          <li>Shop drawings review for constructability</li>
+          <li>Rebar checks, interface resolution, and site adjustments</li>
+          <li>Structural repairs/strengthening support (as required)</li>
+          <li>Quantity takeoff & BOQ coordination (Excel-based)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="pad" style="padding-top:0;">
+    <div class="card">
+      <div class="hd"><span class="tag">Software & Tools</span><span class="muted2">Focused set</span></div>
+      <div class="bd">
+        <div class="tools">
+          <div class="tool"><b>AutoCAD</b><small>Plans · details · coordination</small></div>
+          <div class="tool"><b>PlanSwift</b><small>Quantity Take-off</small></div>
+          <div class="tool"><b>SAP2000</b><small>Structural analysis support</small></div>
+          <div class="tool"><b>ETABS</b><small>Structural modelling support</small></div>
+          <div class="tool"><b>SAFE</b><small>Slabs · foundations support</small></div>
+          <div class="tool"><b>SP Column</b><small>Column design checks</small></div>
+          <div class="tool"><b>Microsoft Excel</b><small>BOQ · takeoff · tracking</small></div>
+          <div class="tool"><b>Microsoft Office</b><small>Reports · presentations</small></div>
+          <div class="tool"><b>Outlook / Email</b><small>Professional correspondence</small></div>
+          <div class="tool"><b>Microsoft Word</b><small>Submittals · letters</small></div>
+          <div class="tool"><b>PDF Tools</b><small>Markups · reviews</small></div>
+          <div class="tool"><b>Site Reporting</b><small>Daily/weekly logs</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>© <span class="year"></span> Mahmoud Shehata</div>
+    <div>Skills & tools</div>
+  </div>
+</section>
+
+<!-- PAGE 4 — A4 Portrait: Career Timeline -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Experience</div><div class="muted2" style="font-size:12px;">Roles & project delivery</div></div></div>
+    <div class="meta"><span>UAE · Egypt · Kenya</span></div>
+  </div>
+
+  <div class="pad grid two">
+    <div class="col">
+      <div class="card">
+        <div class="hd"><span class="tag">Current</span><span class="muted2">URUK Construction — Abu Dhabi</span></div>
+        <div class="bd">
+          <h3 class="h3">Project Engineer — Private Villa (Luxury Finishing)</h3>
+          <p class="lead">High-end finishing execution, cladding coordination, approvals workflow, and multi-trade site management.</p>
+          <ul class="list">
+            <li>Coordinate subcontractors across finishes and façade-related works.</li>
+            <li>Drive approvals: samples, WIR/MIR cycles, and technical clarifications.</li>
+            <li>Support structural repairs/strengthening works as required and coordinate MEP interfaces.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="hd"><span class="tag">Previous</span><span class="muted2">URUK Construction — Abu Dhabi</span></div>
+        <div class="bd">
+          <h3 class="h3">Project Engineer — Baniyas Car Showroom (≈ 50M AED)</h3>
+          <p class="lead">Site delivery for a commercial flagship with complex façade, steel/RC coordination, and external works.</p>
+          <ul class="list">
+            <li>Manage site execution, inspections, progress tracking, and handover readiness.</li>
+            <li>Coordinate technical submissions and consultant requirements.</li>
+            <li>Support procurement coordination and site reporting.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="hd"><span class="tag">Egypt</span><span class="muted2">Makkah Constructions</span></div>
+        <div class="bd">
+          <h3 class="h3">Site Engineer — 36 Residential Towers (10th of Ramadan)</h3>
+          <p class="lead">Multi-tower site supervision with QA/QC checks and subcontractor follow-up.</p>
+          <ul class="list">
+            <li>Daily supervision and execution tracking across multiple towers.</li>
+            <li>Quality checks, material requests, and coordination with consultant/site team.</li>
+            <li>Support sequencing and trade interfaces to reduce rework.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="hd"><span class="tag">Kenya</span><span class="muted2">Smarkit Company</span></div>
+        <div class="bd">
+          <h3 class="h3">Site Engineer — 6 Residential Towers</h3>
+          <p class="lead">Field supervision with surveying support, QA/QC tracking, and daily/weekly reporting.</p>
+          <ul class="list">
+            <li>Assist setting-out and on-site control with measurement checks.</li>
+            <li>Track progress and quality observations with clear reports.</li>
+            <li>Coordinate site execution with multiple teams and constraints.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>© <span class="year"></span> Mahmoud Shehata</div>
+    <div>Experience timeline</div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ORDER: NEWEST → OLDEST ===== -->
+
+<!-- PROJECT 4 (Newest) — A3 Landscape Hero (Villa) -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Project 4</div><div class="muted2" style="font-size:12px;">High-end finishing</div></div></div>
+    <div class="meta"><span>Abu Dhabi · Private Villa</span></div>
+  </div>
+
+  <div class="pad-lg">
+    <div class="project-banner">
+      <div>
+        <h2 class="project-title">Private Villa — Luxury Finishing</h2>
+        <div class="project-sub">High-end finishes and coordination across cladding, interiors, approvals, and multi-trade interfaces — protecting quality and delivery confidence.</div>
+      </div>
+      <div class="proj-badges">
+        <span class="pill"><strong>Role:</strong> Project Engineer</span>
+        <span class="pill"><strong>Focus:</strong> Finishes + Approvals</span>
+        <span class="pill"><strong>Region:</strong> UAE</span>
+      </div>
+    </div>
+
+    <div style="height:12px;"></div>
+
+    <div class="collage">
+      <div class="imgbox" style="grid-row:1 / span 2;">
+        <div class="img" style="background-image:url('assets/pr4-hero.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl">
+          <div><b>Finishing-focused delivery</b><div class="muted" style="margin-top:4px;">Cladding & premium details</div></div>
+
+        </div>
+      </div>
+      <div class="imgbox">
+        <div class="img" style="background-image:url('assets/pr4-1.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Detail readiness</b></div></div>
+      </div>
+      <div class="imgbox">
+        <div class="img" style="background-image:url('assets/pr4-2.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Execution quality</b></div></div>
+      </div>
+    </div>
+
+    <div style="height:14px;"></div>
+
+    <div class="grid two">
+      <div class="card">
+        <div class="hd"><span class="tag">Responsibilities</span><span class="muted2">Finishing delivery</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Manage finishing subcontractors and align sequences to protect quality.</li>
+            <li>Coordinate approvals: materials, mockups, WIR/MIR cycles and consultant feedback.</li>
+            <li>Resolve site clashes and coordinate MEP interfaces in tight finishing zones.</li>
+            <li>Track progress, risks, and actions to maintain handover readiness.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd"><span class="tag">Key Takeaway</span><span class="muted2">High-end execution</span></div>
+        <div class="bd">
+          <p class="lead" style="margin:0;">
+            Premium finishing requires controlled sequencing and strict inspection readiness — the core of my current delivery style.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>© <span class="year"></span> Mahmoud Shehata</div>
+      <div>Project 4 — Private Villa</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 4 — A4 Portrait Photos -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Project 4</div><div class="muted2" style="font-size:12px;">Site visuals</div></div></div>
+    <div class="meta"><span>Private Villa</span></div>
+  </div>
+
+  <div class="pad grid-photos">
+    <div class="imgbox" style="min-height: 560px;">
+      <div class="img" style="background-image:url('assets/pr4-3.webp');"></div>
+      <div class="shade"></div>
+      <div class="lbl">
+        <div><b>Finishing execution</b><div class="muted" style="margin-top:4px;">Quality-focused supervision</div></div>
+
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="imgbox" style="min-height: 270px;">
+        <div class="img" style="background-image:url('assets/pr4-4.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Detail control</b></div></div>
+      </div>
+      <div class="card">
+        <div class="hd"><span class="tag">Delivery note</span><span class="muted2">Handover readiness</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Inspection-ready work fronts with clear closure tracking.</li>
+            <li>Approvals-driven finishing to avoid rework.</li>
+            <li>Coordination-first approach to protect premium details.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>© <span class="year"></span> Mahmoud Shehata</div>
+    <div>Project 4 — Visuals</div>
+  </div>
+</section>
+
+<!-- PROJECT 3 — A3 Landscape Hero (Showroom) -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Project 3</div><div class="muted2" style="font-size:12px;">Commercial flagship</div></div></div>
+    <div class="meta"><span>Abu Dhabi · Car Showroom</span></div>
+  </div>
+
+  <div class="pad-lg">
+    <div class="project-banner">
+      <div>
+        <h2 class="project-title">Baniyas Car Showroom (≈ 50M AED)</h2>
+        <div class="project-sub">Commercial project delivery with steel/RC coordination, façade integration, external works, and inspection-ready execution.</div>
+      </div>
+      <div class="proj-badges">
+        <span class="pill"><strong>Role:</strong> Project Engineer</span>
+        <span class="pill"><strong>Focus:</strong> Delivery + QA/QC</span>
+        <span class="pill"><strong>Region:</strong> UAE</span>
+      </div>
+    </div>
+
+    <div style="height:12px;"></div>
+
+    <div class="collage">
+      <div class="imgbox" style="grid-row:1 / span 2;">
+        <div class="img" style="background-image:url('assets/pr3-hero.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl">
+          <div><b>Night exterior</b><div class="muted" style="margin-top:4px;">Façade lighting and glass integration</div></div>
+
+        </div>
+      </div>
+      <div class="imgbox">
+        <div class="img" style="background-image:url('assets/pr3-2.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Façade detail</b></div></div>
+      </div>
+      <div class="imgbox">
+        <div class="img" style="background-image:url('assets/pr3-3.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>External works</b></div></div>
+      </div>
+    </div>
+
+    <div style="height:14px;"></div>
+
+    <div class="grid two">
+      <div class="card">
+        <div class="hd"><span class="tag">Responsibilities</span><span class="muted2">Delivery scope</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Site management and subcontractor coordination across trades.</li>
+            <li>QA/QC checks, inspections coordination, and approvals follow-up.</li>
+            <li>Shop drawings review, RFIs, and resolving site conflicts.</li>
+            <li>BOQ support, material requests, and progress reporting.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd"><span class="tag">Project Highlights</span><span class="muted2">Impact</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Complex façade + lighting integration readiness.</li>
+            <li>Commercial presentation quality with controlled finishes.</li>
+            <li>Clear coordination through documentation and follow-ups.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>© <span class="year"></span> Mahmoud Shehata</div>
+      <div>Project 3 — Car Showroom</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 3 — A4 Landscape Photos (Rhythm Break) -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Project 3</div><div class="muted2" style="font-size:12px;">Key visuals</div></div></div>
+    <div class="meta"><span>Baniyas Car Showroom</span></div>
+  </div>
+
+  <div class="pad grid" style="grid-template-columns: 1fr 1fr; gap:14px;">
+    <div class="imgbox" style="min-height: 380px;">
+      <div class="img" style="background-image:url('assets/pr3-4.webp');"></div>
+      <div class="shade"></div>
+      <div class="lbl"><div><b>Glazed façade</b><div class="muted" style="margin-top:4px;">Steel + glass coordination</div></div></div>
+    </div>
+    <div class="imgbox" style="min-height: 380px;">
+      <div class="img" style="background-image:url('assets/pr3-8.webp');"></div>
+      <div class="shade"></div>
+      <div class="lbl"><div><b>Night lighting lines</b><div class="muted" style="margin-top:4px;">Architectural lighting execution</div></div></div>
+    </div>
+  </div>
+
+  <div class="pad" style="padding-top:0;">
+    <div class="grid two">
+      <div class="card">
+        <div class="hd"><span class="tag">Execution Notes</span><span class="muted2">What mattered</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Protecting finishes through sequencing and inspections.</li>
+            <li>Maintaining alignment between drawings, approvals, and on-site outputs.</li>
+            <li>Closing punch points and preparing for handover presentation quality.</li>
+            <li>Managing multi-discipline interfaces (RC, steel, façade, MEP) without rework</li>
+            <li>Controlling external works sequencing to protect finished façades and pavements</li>
+            <li>Maintaining inspection-ready areas despite parallel trades and tight deadlines</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd"><span class="tag">Key Takeaway</span><span class="muted2">Commercial delivery</span></div>
+        <div class="bd">
+          <p class="lead" style="margin:0;">
+            Delivered a commercial flagship experience through disciplined coordination, inspection readiness, and finish protection.
+          </p>
+          <p class="lead" style="margin:0; margin-top:8px;">
+            Managed complex façade and structural interfaces while maintaining quality and schedule adherence.
+          </p>
+          <p class="lead" style="margin:8;">
+            Successfully managed complex systems, interfaces, and external works to achieve a high-quality, client-facing handover.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>© <span class="year"></span> Mahmoud Shehata</div>
+    <div>Project 3 — Visuals</div>
+  </div>
+</section>
+
+<!-- PROJECT 2 — A3 Landscape Hero -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Project 2</div><div class="muted2" style="font-size:12px;">Scale & repetition control</div></div></div>
+    <div class="meta"><span>Egypt · Residential</span></div>
+  </div>
+
+  <div class="pad-lg">
+    <div class="project-banner">
+      <div>
+        <h2 class="project-title">36 Residential Towers</h2>
+        <div class="project-sub">Multi-tower supervision with QA/QC checks and subcontractor follow-up — keeping consistency across repeated units and parallel fronts.</div>
+      </div>
+      <div class="proj-badges">
+        <span class="pill"><strong>Role:</strong> Site Engineer</span>
+        <span class="pill"><strong>Focus:</strong> Multi-front control</span>
+        <span class="pill"><strong>Region:</strong> Egypt</span>
+      </div>
+    </div>
+
+    <div style="height:12px;"></div>
+
+    <div class="collage">
+      <div class="imgbox" style="grid-row:1 / span 2;">
+        <div class="img" style="background-image:url('assets/pr2-hero.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl">
+          <div><b>Residential blocks</b><div class="muted" style="margin-top:4px;">Consistency across towers</div></div>
+
+        </div>
+      </div>
+      <div class="imgbox">
+        <div class="img" style="background-image:url('assets/pr2-2.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Façade progress</b></div></div>
+      </div>
+      <div class="imgbox">
+        <div class="img" style="background-image:url('assets/pr2-3.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Building elevation</b></div></div>
+      </div>
+    </div>
+
+    <div style="height:14px;"></div>
+
+    <div class="grid two">
+      <div class="card">
+        <div class="hd"><span class="tag">Responsibilities</span><span class="muted2">On-site</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Daily supervision across multiple towers and teams.</li>
+            <li>QA/QC checks and coordination for inspections and approvals.</li>
+            <li>Material requests, site readiness, and subcontractor follow-up.</li>
+            <li>Consultant coordination and site issue closure.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd"><span class="tag">Value Delivered</span><span class="muted2">What it proves</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Ability to control repeated scopes and standardize quality.</li>
+            <li>Multi-front discipline: progress, resources, and coordination.</li>
+            <li>Clear field reporting and action-based follow-up.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>© <span class="year"></span> Mahmoud Shehata</div>
+      <div>Project 2 — 36 Towers</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 2 — A4 Portrait Photos -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Project 2</div><div class="muted2" style="font-size:12px;">Site visuals</div></div></div>
+    <div class="meta"><span>36 Residential Towers</span></div>
+  </div>
+
+  <div class="pad grid-photos">
+    <div class="imgbox" style="min-height: 560px;">
+      <div class="img" style="background-image:url('assets/pr2-1.webp');"></div>
+      <div class="shade"></div>
+      <div class="lbl">
+        <div><b>Multi-block view</b><div class="muted" style="margin-top:4px;">Scale management across towers</div></div>
+
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="imgbox" style="min-height: 270px;">
+        <div class="img" style="background-image:url('assets/pr2-4.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Finishing progress</b></div></div>
+      </div>
+      <div class="card">
+        <div class="hd"><span class="tag">Key Takeaway</span><span class="muted2">Consistency</span></div>
+        <div class="bd">
+          <p class="lead" style="margin:0;">
+            Repeatable execution and quality consistency across multiple units — a core skill for large residential delivery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>© <span class="year"></span> Mahmoud Shehata</div>
+    <div>Project 2 — Visuals</div>
+  </div>
+</section>
+
+<!-- PROJECT 1 (Oldest) — A3 Landscape Hero Spread -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Project 1</div><div class="muted2" style="font-size:12px;">Early career — International exposure</div></div></div>
+    <div class="meta"><span>Kenya · Residential</span></div>
+  </div>
+
+  <div class="pad-lg">
+    <div class="project-banner">
+      <div>
+        <h2 class="project-title">6 Residential Towers</h2>
+        <div class="project-sub">Site supervision with surveying support, QA/QC observations, and progress reporting across a multi-tower environment.</div>
+      </div>
+      <div class="proj-badges">
+        <span class="pill"><strong>Role:</strong> Site Engineer</span>
+        <span class="pill"><strong>Focus:</strong> QA/QC + Reporting</span>
+        <span class="pill"><strong>Region:</strong> Kenya</span>
+      </div>
+    </div>
+
+    <div style="height:12px;"></div>
+
+    <div class="collage">
+      <div class="imgbox" style="grid-row:1 / span 2;">
+        <div class="img" style="background-image:url('assets/pr1-hero.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl">
+          <div><b>Site delivery view</b><div class="muted" style="margin-top:4px;">Execution tracking & coordination</div></div>
+
+        </div>
+      </div>
+      <div class="imgbox">
+        <div class="img" style="background-image:url('assets/pr1-1.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Progress control</b></div></div>
+      </div>
+      <div class="imgbox">
+        <div class="img" style="background-image:url('assets/pr1-2.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Site coordination</b></div></div>
+      </div>
+    </div>
+
+    <div style="height:14px;"></div>
+
+    <div class="grid two">
+      <div class="card">
+        <div class="hd"><span class="tag">Responsibilities</span><span class="muted2">On-site</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Daily supervision, progress tracking, and reporting.</li>
+            <li>Assist setting-out and measurement checks to support execution accuracy.</li>
+            <li>Quality observations, corrective follow-up, and documentation.</li>
+            <li>Coordinate site requirements with teams and resolve day-to-day constraints.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd"><span class="tag">Delivery Notes</span><span class="muted2">What it shows</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Ability to deliver under unfamiliar conditions and new teams.</li>
+            <li>Clear reporting discipline and execution focus.</li>
+            <li>Strong field coordination to protect daily outputs.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>© <span class="year"></span> Mahmoud Shehata</div>
+      <div>Project 1 — 6 Towers</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 1 — A4 Portrait Photos -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Project 1</div><div class="muted2" style="font-size:12px;">Site visuals</div></div></div>
+    <div class="meta"><span>6 Residential Towers</span></div>
+  </div>
+
+  <div class="pad grid-photos">
+    <div class="imgbox" style="min-height: 560px;">
+      <div class="img" style="background-image:url('assets/pr1-3.webp');"></div>
+      <div class="shade"></div>
+      <div class="lbl">
+        <div><b>Execution monitoring</b><div class="muted" style="margin-top:4px;">Daily follow-up and progress checks</div></div>
+
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="imgbox" style="min-height: 270px;">
+        <div class="img" style="background-image:url('assets/pr1-4.webp');"></div>
+        <div class="shade"></div>
+        <div class="lbl"><div><b>Quality follow-up</b></div></div>
+      </div>
+      <div class="card">
+        <div class="hd"><span class="tag">Key Takeaway</span><span class="muted2">Field discipline</span></div>
+        <div class="bd">
+          <p class="lead" style="margin:0;">
+            Strong field coordination and reporting habits developed early — supporting controlled execution and consistent daily outputs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>© <span class="year"></span> Mahmoud Shehata</div>
+    <div>Project 1 — Visuals</div>
+  </div>
+</section>
+
+<!-- FINAL — A4 Portrait Closing -->
+<section class="page a4l" style="--ps:1.5;--px:0mm;--py:0mm;">
+  <div class="topline">
+    <div class="brand"><span class="dot"></span><div><div class="kicker">Close</div><div class="muted2" style="font-size:12px;">Availability & contact</div></div></div>
+    <div class="meta"><span>Ready for interviews</span></div>
+  </div>
+
+  <div class="pad grid two">
+    <div class="col">
+      <div class="card">
+        <div class="hd"><span class="tag">What you can expect</span><span class="muted2">Working style</span></div>
+        <div class="bd">
+          <ul class="list">
+            <li>Clear daily control and realistic planning.</li>
+            <li>Quality gates and inspection readiness as a default.</li>
+            <li>Strong coordination to prevent rework and delays.</li>
+            <li>Professional communication and documentation discipline.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="hd"><span class="tag">Contact</span><span class="muted2">Direct</span></div>
+        <div class="bd">
+          <div class="meta" style="font-size:13px;">
+            <span><b>Email:</b> m@mahmoudshehata.com</span>
+            <span><b>Phone:</b> +971 50 995 2788</span>
+            <span><b>Location:</b> Abu Dhabi, UAE</span>
+            <span><b>website:</b> mahmoudshehata.com</span>
+            <span><b>LinkedIn:</b> linkedin.com/in/Mahmoud-Ahmed-Linked</span>
+          </div>
+          <div class="rule"></div>
+          <p class="lead" style="margin:0;">
+            Open to Project Engineer / Site Engineer opportunities where execution quality, coordination, and disciplined delivery matter.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="hero" style="min-height: 520px;">
+        <div class="hero-img" style="background-image:url('assets/pr3.webp');"></div>
+        <div class="hero-shade"></div>
+        <div class="pad" style="position:relative; z-index:2;">
+          <div class="tag">Signature line</div>
+          <h2 class="h2" style="margin-top:10px;">Build it right. Track it daily. Hand it over with confidence.</h2>
+          <p class="lead">Execution is the product — and I protect it from day one to handover.</p>
+          <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:10px;">
+            <span class="pill"><strong>Quality</strong></span>
+            <span class="pill"><strong>Coordination</strong></span>
+            <span class="pill"><strong>Documentation</strong></span>
+            <span class="pill"><strong>Delivery</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>© <span class="year"></span> Mahmoud Shehata · Project Engineer</div>
+    <div>End of portfolio</div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    const y = new Date().getFullYear();
+    document.getElementById('year') && (document.getElementById('year').textContent = y);
+    document.querySelectorAll('.year').forEach(el=>el.textContent = y);
+  })();
+</script>
+
+</body>
+</html>
