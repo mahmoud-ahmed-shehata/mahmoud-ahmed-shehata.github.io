@@ -61,7 +61,7 @@
       border-bottom: 1px solid rgba(31,41,55,0.9);
     }
 
-    .nav {
+      .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -103,10 +103,11 @@
 
     .logo-text-sub span { color: #e5e7eb; }
 
+   
     .nav-links {
       display: flex;
       gap: 18px;
-      font-size: 14px;
+      font-size: 14px;  /* حجم مناسب للّينكات في الهيدر */
       color: var(--muted);
       flex-wrap: wrap;
     }
@@ -130,11 +131,13 @@
       transition: width 0.18s ease-out;
     }
 
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover {
+      color: var(--text);
+    }
 
-    main { flex: 1; }
-
+    .nav-links a:hover::after {
+      width: 100%;
+    }
     .hero-card {
       border-radius: 24px;
       background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.22), transparent 60%),
@@ -368,8 +371,7 @@
 
     .project-gallery-wrapper {
       margin-top: 12px;
-      max-height: 420px;
-      overflow-y: auto;
+      
       padding-right: 4px;
     }
 
@@ -537,13 +539,28 @@
       transform: translateY(-1px);
     }
 
-    footer {
-      margin-top: auto;
-      padding: 20px 16px 26px;
-      font-size: 12px;
-      text-align: center;
-      color: var(--muted);
+     footer{
+      border-top:1px solid rgba(31,41,55,0.9);
+      padding:16px 18px 26px;
+      font-size:11px;
+      color:var(--muted);
+      text-align:center;
+      background:radial-gradient(circle at top, rgba(30,64,175,0.3), transparent 55%);
     }
+
+ .nav-download{ display:inline-flex; align-items:center; gap:8px; }
+
+.nav-download-icon{
+  width:16px; height:16px;
+  background-color: currentColor; /* اللون = لون النص */
+  -webkit-mask: url("assets/icons/download.svg") no-repeat center / contain;
+          mask: url("assets/icons/download.svg") no-repeat center / contain;
+}
+
+@media (max-width:640px){
+  .nav-download-text{ display:none; }
+  .nav-download-icon{ width:18px; height:18px; }
+}
 
     @media (max-width: 860px) {
       .layout-grid { grid-template-columns: minmax(0, 1fr); }
@@ -562,9 +579,53 @@
       .project-gallery-grid { grid-template-columns: minmax(0, 1fr); }
       .project-gallery-img { height: 210px; }
     }
-  </style>
+  
+/* ---------------- BACK BUTTON (Fixed) ----------------
+  الهدف:
+  - زر رجوع ثابت أعلى الصفحة
+  - على اليمين عشان ما يغطيش اللوجو/الاسم على الموبايل
+  - السهم على اليمين (Back →)
+*/
+.back-fab{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9999;
+
+  padding: 10px 16px;
+  border-radius: 12px;
+
+  background: rgba(15,23,42,0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(148,163,184,0.45);
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: transform .15s ease, border-color .15s ease;
+  cursor: pointer;
+}
+.back-fab:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.75);
+}
+@media (max-width: 640px){
+  .back-fab{
+    top: 14px;
+    right: 14px;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+}
+
+</style>
 </head>
 <body>
+<a class="back-fab" id="backBtn" href="../index.html#projects">Back →</a>
+
 <div class="page">
   <header>
     <div class="shell">
@@ -586,8 +647,8 @@
           <a href="../index.html#skills">Skills</a>
           <a href="../index.html#certifications">Certifications</a>
           <a href="../index.html#contact">Contact</a>
-          <a href="../index.html#downloads">Downloads</a>
-        </div>
+          
+</div>
       </nav>
     </div>
   </header>
@@ -730,28 +791,28 @@
           <div class="project-gallery-grid">
             <!-- 1 -->
             <div class="project-gallery-item"
-                 data-title="Main façade and cladding"
-                 data-desc="View of the main villa façade with cladding, glazing and feature elements.">
+                 data-title="Project plane"
+                 data-desc="Villas plane drawing showing layout, landscaping and internal arrangement.">
               <img src="../assets/pr4-1.webp" alt="Main façade and cladding" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Main façade and cladding</div>
+                <div class="project-gallery-title">Project plane</div>
               </div>
             </div>
 
             <!-- 2 -->
             <div class="project-gallery-item"
-                 data-title="Entrance lobby finishing"
+                 data-title="Swimming pool and back façade"
                  data-desc="High-end entrance lobby with flooring, wall finishes and ceiling details.">
               <img src="../assets/pr4-2.webp" alt="Entrance lobby finishing" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Entrance lobby finishing</div>
+                <div class="project-gallery-title">Swimming pool</div>
               </div>
             </div>
 
             <!-- 3 -->
             <div class="project-gallery-item"
                  data-title="Living area interior"
-                 data-desc="Living area showing coordinated finishes, lighting and MEP services.">
+                 data-desc="High-end entrance lobby with flooring, wall finishes and ceiling details.">
               <img src="../assets/pr4-3.webp" alt="Living area interior" class="project-gallery-img">
               <div class="project-gallery-overlay">
                 <div class="project-gallery-title">Living area interior</div>
@@ -760,11 +821,11 @@
 
             <!-- 4 -->
             <div class="project-gallery-item"
-                 data-title="Back façade and outdoor area"
+                 data-title="Boundary wall finishing details"
                  data-desc="Back façade and outdoor area with coordinated finishes and external works.">
               <img src="../assets/pr4-4.webp" alt="Back façade and outdoor area" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Back façade and outdoor area</div>
+                <div class="project-gallery-title">Boundary wall</div>
               </div>
             </div>
           </div>
@@ -782,17 +843,12 @@
       </div>
 
       <!-- BACK -->
-      <div class="back-to-projects">
-        <a href="../index.html#projects" class="back-btn">
-          ← Back to Projects
-        </a>
-      </div>
-    </div>
+</div>
   </main>
 
-  <footer>
-    © <span id="year"></span> Mahmoud Shehata · Abu Dhabi, UAE.
-  </footer>
+ <footer>
+  © <span id="year"></span> Mahmoud Shehata · Civil / Project Engineer. All rights reserved.
+</footer>
 </div>
 
 <script>
@@ -828,5 +884,22 @@
     }
   });
 </script>
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const fromId = params.get("from");
+  const btn = document.getElementById("backBtn");
+  if (!btn) return;
+
+  if (fromId) {
+    btn.href = "../index.html?from=" + encodeURIComponent(fromId);
+    sessionStorage.setItem("lastProjectId", fromId);
+  } else {
+    btn.href = "../index.html#projects";
+  }
+})();
+</script>
+
 </body>
 </html>
