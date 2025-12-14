@@ -408,8 +408,7 @@
 
     .project-gallery-wrapper {
       margin-top: 12px;
-      max-height: 420px;
-      overflow-y: auto;
+     
       padding-right: 4px;
     }
 
@@ -583,12 +582,13 @@
       transform: translateY(-1px);
     }
 
-    footer {
-      margin-top: auto;
-      padding: 20px 16px 26px;
-      font-size: 12px;
-      text-align: center;
-      color: var(--muted);
+    footer{
+      border-top:1px solid rgba(31,41,55,0.9);
+      padding:16px 18px 26px;
+      font-size:11px;
+      color:var(--muted);
+      text-align:center;
+      background:radial-gradient(circle at top, rgba(30,64,175,0.3), transparent 55%);
     }
 
     /* ---------------- RESPONSIVE ---------------- */
@@ -623,9 +623,53 @@
         height: 210px;
       }
     }
-  </style>
+  
+/* ---------------- BACK BUTTON (Fixed) ----------------
+  الهدف:
+  - زر رجوع ثابت أعلى الصفحة
+  - على اليمين عشان ما يغطيش اللوجو/الاسم على الموبايل
+  - السهم على اليمين (Back →)
+*/
+.back-fab{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9999;
+
+  padding: 10px 16px;
+  border-radius: 12px;
+
+  background: rgba(15,23,42,0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(148,163,184,0.45);
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: transform .15s ease, border-color .15s ease;
+  cursor: pointer;
+}
+.back-fab:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.75);
+}
+@media (max-width: 640px){
+  .back-fab{
+    top: 14px;
+    right: 14px;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+}
+
+</style>
 </head>
 <body>
+<a class="back-fab" id="backBtn" href="../index.html#projects">Back →</a>
+
 <div class="page">
   <!-- HEADER -->
   <header>
@@ -650,8 +694,7 @@
           <a href="../index.html#skills">Skills</a>
           <a href="../index.html#certifications">Certifications</a>
           <a href="../index.html#contact">Contact</a>
-          <a href="../index.html#downloads">Downloads</a>
-        </div>
+</div>
       </nav>
     </div>
   </header>
@@ -848,17 +891,12 @@
       </div>
 
       <!-- BACK TO PROJECTS -->
-      <div class="back-to-projects">
-        <a href="../index.html#projects" class="back-btn">
-          ← Back to Projects
-        </a>
-      </div>
-    </div>
+</div>
   </main>
 
   <footer>
-    © <span id="year"></span> Mahmoud Shehata · Abu Dhabi, UAE.
-  </footer>
+  © <span id="year"></span> Mahmoud Shehata · Civil / Project Engineer. All rights reserved.
+</footer>
 </div>
 
 <script>
@@ -898,5 +936,22 @@
     }
   });
 </script>
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const fromId = params.get("from");
+  const btn = document.getElementById("backBtn");
+  if (!btn) return;
+
+  if (fromId) {
+    btn.href = "../index.html?from=" + encodeURIComponent(fromId);
+    sessionStorage.setItem("lastProjectId", fromId);
+  } else {
+    btn.href = "../index.html#projects";
+  }
+})();
+</script>
+
 </body>
 </html>
