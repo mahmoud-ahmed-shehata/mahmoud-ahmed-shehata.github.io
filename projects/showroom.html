@@ -432,8 +432,7 @@
 
     .project-gallery-wrapper {
       margin-top: 12px;
-      max-height: 420px;          /* أقصى ارتفاع للجاليري قبل الـ Scroll الداخلي */
-      overflow-y: auto;
+     
       padding-right: 4px;
     }
 
@@ -662,12 +661,13 @@
       transform: translateY(-1px);
     }
 
-    footer {
-      margin-top: auto;
-      padding: 20px 16px 26px;
-      font-size: 12px; /* أكبر سنة من 11 عشان يبقى مقروء */
-      text-align: center;
-      color: var(--muted);
+    footer{
+      border-top:1px solid rgba(31,41,55,0.9);
+      padding:16px 18px 26px;
+      font-size:11px;
+      color:var(--muted);
+      text-align:center;
+      background:radial-gradient(circle at top, rgba(30,64,175,0.3), transparent 55%);
     }
 
     /* ---------------- RESPONSIVE ---------------- */
@@ -702,9 +702,53 @@
         height: 210px;
       }
     }
-  </style>
+  
+/* ---------------- BACK BUTTON (Fixed) ----------------
+  الهدف:
+  - زر رجوع ثابت أعلى الصفحة
+  - على اليمين عشان ما يغطيش اللوجو/الاسم على الموبايل
+  - السهم على اليمين (Back →)
+*/
+.back-fab{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9999;
+
+  padding: 10px 16px;
+  border-radius: 12px;
+
+  background: rgba(15,23,42,0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(148,163,184,0.45);
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: transform .15s ease, border-color .15s ease;
+  cursor: pointer;
+}
+.back-fab:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.75);
+}
+@media (max-width: 640px){
+  .back-fab{
+    top: 14px;
+    right: 14px;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+}
+
+</style>
 </head>
 <body>
+<a class="back-fab" id="backBtn" href="../index.html#projects">Back →</a>
+
 <div class="page">
   <!-- HEADER -->
   <header>
@@ -729,8 +773,7 @@
           <a href="../index.html#skills">Skills</a>
           <a href="../index.html#certifications">Certifications</a>
           <a href="../index.html#contact">Contact</a>
-          <a href="../index.html#downloads">Downloads</a>
-        </div>
+</div>
       </nav>
     </div>
   </header>
@@ -893,91 +936,91 @@
               - الحجم المستهدف: 150–250 KB
             -->
             <div class="project-gallery-item"
-                 data-title="Main showroom façade"
-                 data-desc="Overall view of the main showroom façade, combining aluminium, glass and steel elements.">
+                 data-title="steel structure"
+                 data-desc="Overall view of the main showroom façade under construction.">
               <img src="../assets/pr3-1.webp" alt="Main showroom façade" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Main showroom façade</div>
+                <div class="project-gallery-title">steel structure</div>
               </div>
             </div>
 
             <!-- صورة 2 -->
             <div class="project-gallery-item"
-                 data-title="Interior showroom finishing"
+                 data-title="Main showroom façade"
                  data-desc="Showroom interior with floor finishes, wall cladding and ceiling works coordinated with MEP services.">
               <img src="../assets/pr3-2.webp" alt="Interior showroom finishing" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Interior showroom finishing</div>
+                <div class="project-gallery-title">Main showroom façade</div>
               </div>
             </div>
 
             <!-- صورة 3 -->
             <div class="project-gallery-item"
-                 data-title="RC & steel structure interface"
-                 data-desc="Interface between reinforced concrete columns and steel beams, showing connection details and alignment.">
-              <img src="../assets/pr3-3.webp" alt="RC & steel structure interface" class="project-gallery-img">
+                 data-title="water features"
+                 data-desc="water features and landscaping at the main entrance area, integrated with the architectural design.">
+              <img src="../assets/pr3-3.webp" alt="water features" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">RC & steel structure interface</div>
+                <div class="project-gallery-title">water features</div>
               </div>
             </div>
 
             <!-- صورة 4 -->
             <div class="project-gallery-item"
-                 data-title="Steel canopies and skylight"
-                 data-desc="View of steel canopies and skylight elements installed at the main entrance of the showroom.">
-              <img src="../assets/pr3-4.webp" alt="Steel canopies and skylight" class="project-gallery-img">
+                 data-title=""
+                 data-desc="">
+              <img src="../assets/pr3-4.webp" alt="" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Steel canopies and skylight</div>
+                <div class="project-gallery-title"></div>
               </div>
             </div>
 
             <!-- صورة 5 -->
             <div class="project-gallery-item"
-                 data-title="Back-of-house service areas"
-                 data-desc="Back-of-house and service areas showing coordination between structure, MEP and finishing works.">
+                 data-title=""
+                 data-desc="">
               <img src="../assets/pr3-5.webp" alt="Back-of-house service areas" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Back-of-house service areas</div>
+                <div class="project-gallery-title"></div>
               </div>
             </div>
 
             <!-- صورة 6 -->
             <div class="project-gallery-item"
-                 data-title="Concrete works and slab finishing"
-                 data-desc="Concrete slab and column works with surface finishing and preparation for subsequent activities.">
-              <img src="../assets/pr3-6.webp" alt="Concrete works and slab finishing" class="project-gallery-img">
+                 data-title=""
+                 data-desc="">
+              <img src="../assets/pr3-6.webp" alt="" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Concrete works and slab finishing</div>
+                <div class="project-gallery-title"></div>
               </div>
             </div>
 
             <!-- صورة 7 -->
             <div class="project-gallery-item"
-                 data-title="Façade support structure"
-                 data-desc="Steel support structure for the façade system, coordinated with RC elements and architectural openings.">
-              <img src="../assets/pr3-7.webp" alt="Façade support structure" class="project-gallery-img">
+                 data-title=""
+                 data-desc="">
+              <img src="../assets/pr3-7.webp" alt="" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Façade support structure</div>
+                <div class="project-gallery-title"></div>
               </div>
             </div>
 
             <!-- صورة 8 -->
             <div class="project-gallery-item"
-                 data-title="Showroom floor tiling"
-                 data-desc="Installation of showroom floor tiles with level checks and alignment at movement joints and thresholds.">
-              <img src="../assets/pr3-8.webp" alt="Showroom floor tiling" class="project-gallery-img">
+                 data-title=""
+                 data-desc="">
+              <img src="../assets/pr3-8.webp" alt="" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Showroom floor tiling</div>
+                <div class="project-gallery-title"></div>
               </div>
             </div>
 
             <!-- صورة 9 -->
             <div class="project-gallery-item"
-                 data-title="Service corridor finishing"
-                 data-desc="Finishing works in service corridors, including blockwork, plaster, paint and MEP coordination.">
-              <img src="../assets/pr3-9.webp" alt="Service corridor finishing" class="project-gallery-img">
+                 data-title=""
+                 data-desc="">
+              <img src="../assets/pr3-9.webp" alt="" class="project-gallery-img">
               <div class="project-gallery-overlay">
-                <div class="project-gallery-title">Service corridor finishing</div>
+                <div class="project-gallery-title">  </div>
               </div>
             </div>
 
@@ -1030,17 +1073,12 @@
       </section>
 
       <!-- BACK TO PROJECTS -->
-      <div class="back-to-projects">
-        <a href="../index.html#projects" class="back-btn">
-          ← Back to Projects
-        </a>
-      </div>
-    </div>
+</div>
   </main>
 
   <footer>
-    © <span id="year"></span> Mahmoud Shehata · Abu Dhabi, UAE.
-  </footer>
+  © <span id="year"></span> Mahmoud Shehata · Civil / Project Engineer. All rights reserved.
+</footer>
 </div>
 
 <script>
@@ -1090,5 +1128,22 @@
     }
   });
 </script>
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const fromId = params.get("from");
+  const btn = document.getElementById("backBtn");
+  if (!btn) return;
+
+  if (fromId) {
+    btn.href = "../index.html?from=" + encodeURIComponent(fromId);
+    sessionStorage.setItem("lastProjectId", fromId);
+  } else {
+    btn.href = "../index.html#projects";
+  }
+})();
+</script>
+
 </body>
 </html>
