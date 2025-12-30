@@ -7,26 +7,12 @@
   <meta name="description" content="Portfolio of Mahmoud Shehata, Civil / Project Engineer based in Abu Dhabi, UAE, specialising in high-end finishing, site management and QA/QC.">
 
   <style>
-
-html{
-  scroll-padding-top: 70px;
-  scroll-behavior: smooth;
-}
-
-section,
-[id]{
-  scroll-margin-top: 70px;
-}
-
-@media (max-width: 640px){
-  html{
-    scroll-padding-top: 80px;
-  }
-  section,
-  [id]{
-    scroll-margin-top: 80px;
-  }
-}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    section,[id]{scroll-margin-top:70px}
+    @media (max-width:640px){
+      html{scroll-padding-top:80px}
+      section,[id]{scroll-margin-top:80px}
+    }
 
     :root{
       --bg:#020617;
@@ -105,6 +91,7 @@ section,
       font-size:13px;
       color:var(--muted);
       flex-wrap:wrap;
+      align-items:center;
     }
     .nav-links a{
       position:relative;
@@ -122,6 +109,15 @@ section,
     }
     .nav-links a:hover{color:var(--text)}
     .nav-links a:hover::after{width:100%}
+
+    .nav-download{display:inline-flex;align-items:center;gap:8px}
+    .nav-download-icon{
+      width:16px;height:16px;display:inline-block;
+      background-color:currentColor;
+      -webkit-mask:url("assets/icons/download.svg") center/contain no-repeat;
+              mask:url("assets/icons/download.svg") center/contain no-repeat;
+      opacity:.95;
+    }
 
     main{flex:1}
     section{margin-top:52px}
@@ -166,13 +162,14 @@ section,
       background:rgba(15,23,42,0.75);
       color:rgba(226,232,240,0.92);
       white-space:nowrap;
-      transition:transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease, box-shadow .16s ease;
+      transition:transform .15s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
     }
     .btn:hover{
       transform:translateY(-1px);
       background:rgba(15,23,42,0.92);
       border-color:rgba(226,232,240,0.7);
       color:var(--text);
+      box-shadow:0 14px 30px rgba(0,0,0,.25);
     }
     .btn.primary{
       border:none;
@@ -182,6 +179,10 @@ section,
     }
     .btn.primary:hover{
       box-shadow:0 22px 46px rgba(37,99,235,0.75);
+    }
+    .btn.ghost{
+      background:rgba(15,23,42,0.35);
+      border:1px solid rgba(148,163,184,0.6);
     }
 
     .home-banner{
@@ -200,6 +201,7 @@ section,
       position:absolute;inset:0;
       background:linear-gradient(to top, rgba(15,23,42,0.96), rgba(15,23,42,0.2));
     }
+
     .home-banner-content{
       position:absolute;
       left:28px; right:28px;
@@ -265,34 +267,12 @@ section,
       color:rgba(203,213,225,0.85);
     }
 
-    .about-wrap{
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-    .about-card{
-      background:rgba(15,23,42,0.92);
-      border:1px solid rgba(31,41,55,0.9);
-      padding:22px;
-    }
-    .about-grid{
-      display:grid;
-      grid-template-columns:minmax(0, 2.1fr) minmax(0, 1.2fr);
-      gap:22px;
-      align-items:center;
-    }
-    .about-text{
-      font-size:16px;
-      line-height:1.85;
-      color:var(--muted);
-    }
+    .about-wrap{border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+    .about-card{background:rgba(15,23,42,0.92);border:1px solid rgba(31,41,55,0.9);padding:22px}
+    .about-grid{display:grid;grid-template-columns:minmax(0, 2.1fr) minmax(0, 1.2fr);gap:22px;align-items:center}
+    .about-text{font-size:16px;line-height:1.85;color:var(--muted)}
     .about-text p + p{margin-top:10px}
-    .pills{
-      margin-top:18px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
+    .pills{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
     .pill{
       font-size:13px;
       padding:7px 16px;
@@ -303,22 +283,15 @@ section,
       font-weight:500;
       transition:transform .18s ease, background .18s ease, border-color .18s ease;
     }
-    .pill:hover{
-      background:rgba(99,102,241,0.28);
-      border-color:rgba(99,102,241,0.9);
-      transform:translateY(-2px);
-    }
-    .about-right{
-      text-align:center;
-    }
-   .about-photo{
-  width:340px;
-  height:425px;           /* 340 × 425 = 4:5 */
-  margin:0 auto 10px;
-  border-radius:22px;
-  background:url("assets/about2.jpeg") center/cover no-repeat;
-  border:3px solid rgba(59,130,246,0.8);
-  box-shadow:0 20px 40px rgba(15,23,42,0.9);
+    .pill:hover{background:rgba(99,102,241,0.28);border-color:rgba(99,102,241,0.9);transform:translateY(-2px)}
+    .about-right{text-align:center}
+    .about-photo{
+      width:340px;height:425px;
+      margin:0 auto 10px;
+      border-radius:22px;
+      background:url("assets/about2.jpeg") center/cover no-repeat;
+      border:3px solid rgba(59,130,246,0.8);
+      box-shadow:0 20px 40px rgba(15,23,42,0.9);
     }
     .about-more-btn{
       margin-top:10px;
@@ -331,12 +304,7 @@ section,
       cursor:pointer;
       transition:transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease;
     }
-    .about-more-btn:hover{
-      transform:translateY(-1px);
-      background:rgba(15,23,42,1);
-      border-color:rgba(226,232,240,0.7);
-      color:#f8fafc;
-    }
+    .about-more-btn:hover{transform:translateY(-1px);background:rgba(15,23,42,1);border-color:rgba(226,232,240,0.7);color:#f8fafc}
     .about-more-box{
       display:none;
       margin-top:14px;
@@ -351,13 +319,7 @@ section,
     }
     .about-more-box strong{color:#fff}
 
-    .projects-grid{
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      gap:18px;
-      width:100%;
-    }
+    .projects-grid{display:flex;flex-direction:column;align-items:flex-start;gap:18px;width:100%}
     .project-card{
       position:relative;
       width:100%;
@@ -372,8 +334,7 @@ section,
       cursor:pointer;
     }
     .project-media{
-      position:absolute;
-      left:0;right:0;top:0;
+      position:absolute;left:0;right:0;top:0;
       height:calc(500px - 150px);
       background-size:cover;
       background-position:center;
@@ -381,17 +342,10 @@ section,
     }
     .project-media::after{
       content:"";
-      position:absolute;
-      inset:0;
+      position:absolute;inset:0;
       background:linear-gradient(to top, rgba(2,6,23,0.55), rgba(2,6,23,0.05));
     }
-    .project-body{
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:flex-end;
-      justify-content:flex-start;
-    }
+    .project-body{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-start}
     .project-bottom{
       width:100%;
       height:150px;
@@ -404,77 +358,36 @@ section,
       backdrop-filter:blur(10px);
       border-top:1px solid rgba(148,163,184,0.22);
     }
-    .project-tag{
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:.15em;
-      color:#e5e7eb;
-      opacity:.92;
-    }
-    .project-title{
-      font-size:16px;
-      font-weight:700;
-      margin:0;
-    }
-    .project-meta{
-      font-size:13px;
-      color:#cbd5f5;
-    }
-    .project-line{
-      font-size: 12.5px;
-      color: rgba(226,232,240,0.92);
-      opacity: 0.95;
-      margin-top: 1px;
-    }
+    .project-tag{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#e5e7eb;opacity:.92}
+    .project-title{font-size:16px;font-weight:700;margin:0}
+    .project-meta{font-size:13px;color:#cbd5f5}
+    .project-line{font-size:12.5px;color:rgba(226,232,240,0.92);opacity:.95;margin-top:1px}
     .project-note{
-      font-size:13px;
-      color:#e5e7eb;
-      max-width:720px;
-      overflow:hidden;
-      margin-top: 1px;
-      display:-webkit-box;
-      -webkit-line-clamp:2;
-      -webkit-box-orient:vertical;
+      font-size:13px;color:#e5e7eb;max-width:720px;overflow:hidden;margin-top:1px;
+      display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
     }
-    .project-footer{
-      margin-top:0px;
-      width:100%;
-      display:flex;
-      justify-content:flex-end;
-      align-items:center;
-    }
+    .project-footer{margin-top:0;width:100%;display:flex;justify-content:flex-end;align-items:center}
     .project-more{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      font-size:12px;
-      font-weight:600;
-      color:#0f172a;
-      padding:7px 14px;
-      border-radius:999px;
-      border:1px solid #d1d5db;
-      background:#f9fafb;
+      display:inline-flex;align-items:center;justify-content:center;
+      font-size:12px;font-weight:600;color:#0f172a;
+      padding:7px 14px;border-radius:999px;border:1px solid #d1d5db;background:#f9fafb;
       transition:transform .15s ease, background .15s ease, border-color .15s ease;
     }
-    .project-more:hover{
-      background:#e5e7eb;
-      border-color:#9ca3af;
-      transform:translateY(-1px);
-    }
-    .project-more.in-media{
-      position:absolute;
-      right:12px;
-      bottom:18px;
-      z-index:3;
-      box-shadow:0 6px 16px rgba(0,0,0,0.3);
-    }
+    .project-more:hover{background:#e5e7eb;border-color:#9ca3af;transform:translateY(-1px)}
+    .project-more.in-media{position:absolute;right:12px;bottom:18px;z-index:3;box-shadow:0 6px 16px rgba(0,0,0,0.3)}
 
-    .skills-grid{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-      max-width:900px;
+    .project-cta{
+      position:absolute;left:20px;top:20px;
+      padding:14px 18px;border-radius:16px;
+      font-weight:800;font-size:14px;letter-spacing:.3px;text-transform:uppercase;
+      background:rgba(15,23,42,0.85);color:#fff;border:2px solid rgba(59,130,246,0.9);
+      box-shadow:0 18px 40px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.05);
+      backdrop-filter:blur(6px);
+      transition:all .25s ease;
     }
+    .project-cta:hover{background:#2563eb;border-color:#60a5fa;transform:translateY(-2px)}
+
+    .skills-grid{display:flex;flex-direction:column;gap:20px;max-width:900px}
     .skills-card{
       background:#0f172a;
       color:#e5e7eb;
@@ -496,26 +409,13 @@ section,
       transition:transform .16s ease, background .16s ease, border-color .16s ease;
       white-space:nowrap;
     }
-    .skill-pill:hover{
-      background:rgba(37,99,235,0.28);
-      border-color:var(--accent-strong);
-      transform:translateY(-1px) scale(1.03);
-    }
+    .skill-pill:hover{background:rgba(37,99,235,0.28);border-color:var(--accent-strong);transform:translateY(-1px) scale(1.03)}
+    .skill-pill--top{background:rgba(255,255,255,0.10);border-color:rgba(226,232,240,0.45);color:#fff}
+    .skill-pill--top:hover{background:rgba(235, 225, 37, 0.36);border-color:rgba(250, 214, 96, 0.95);transform:translateY(-1px) scale(1.04)}
 
-    .extras-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
-      align-items:start;
-    }
+    .extras-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
 
-    .about-list{
-      list-style:none;
-      margin-top:6px;
-      font-size:13.5px;
-      line-height:1.75;
-      color:var(--muted);
-    }
+    .about-list{list-style:none;margin-top:6px;font-size:13.5px;line-height:1.75;color:var(--muted)}
     .about-list li{display:flex;gap:8px;margin-bottom:6px}
     .bullet{color:var(--accent-strong);margin-top:1px}
 
@@ -525,33 +425,19 @@ section,
     .contact-items{font-size:14px}
 
     .contact-item{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      padding:9px 11px;
-      margin-bottom:8px;
-      border-radius:12px;
+      display:flex;justify-content:space-between;align-items:center;gap:10px;
+      padding:9px 11px;margin-bottom:8px;border-radius:12px;
       border:1px solid var(--border);
       background:rgba(15,23,42,0.95);
       color:var(--muted);
     }
-    .contact-left{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      min-width:0;
-    }
+    .contact-left{display:flex;align-items:center;gap:10px;min-width:0}
     .contact-icon{
-      width:32px;height:32px;
-      border-radius:999px;
+      width:32px;height:32px;border-radius:999px;
       border:1px solid rgba(148,163,184,0.8);
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      display:flex;align-items:center;justify-content:center;
       background:rgba(15,23,42,1);
-      flex-shrink:0;
-      overflow:hidden;
+      flex-shrink:0;overflow:hidden;
     }
     .contact-icon img{width:70%;height:70%;object-fit:contain;display:block}
     .contact-labels{display:flex;flex-direction:column;gap:2px}
@@ -559,11 +445,8 @@ section,
     .contact-main{font-size:13px;color:#e5e7eb;word-break:break-all}
 
     .contact-action{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:7px 12px;
-      border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:7px 12px;border-radius:999px;
       border:1px solid rgba(148,163,184,0.8);
       background:rgba(15,23,42,0.96);
       color:var(--text);
@@ -571,12 +454,7 @@ section,
       white-space:nowrap;
       transition:transform .16s ease, background .18s ease, border-color .18s ease, color .18s ease;
     }
-    .contact-action:hover{
-      background:var(--success);
-      border-color:var(--success-soft);
-      color:#020617;
-      transform:translateY(-1px);
-    }
+    .contact-action:hover{background:var(--success);border-color:var(--success-soft);color:#020617;transform:translateY(-1px)}
 
     footer{
       border-top:1px solid rgba(31,41,55,0.9);
@@ -587,49 +465,111 @@ section,
       background:radial-gradient(circle at top, rgba(30,64,175,0.3), transparent 55%);
     }
 
-    @media (max-width: 640px) {
-
-      .home-title { font-size: 22px; }
-      .home-desc { font-size: 13px; }
-      .home-btn { font-size: 12px; padding: 7px 13px; }
-      .home-stats { flex-wrap: nowrap; overflow-x: auto; gap: 2px; }
-      .stat { min-width: 80px; font-size: 11px; }
-      .stat-num { font-size: 14px; }
-      .stat-label { font-size: 11px; }
-      .project-footer { margin-top: auto; justify-content: flex-end; align-items: center; }
-      .project-bottom { height: 150px; padding-bottom: 10px; }
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;will-change:opacity, transform}
+    .reveal.active{opacity:1;transform:translateY(0)}
+    @media (prefers-reduced-motion: reduce){
+      .reveal{opacity:1;transform:none;transition:none}
     }
-   .nav-download{ display:inline-flex; align-items:center; gap:8px; }
 
-.nav-download-icon{
-  width:16px; height:16px;
-  background-color: currentColor; /* اللون = لون النص */
-  -webkit-mask: url("assets/icons/download.svg") no-repeat center / contain;
-          mask: url("assets/icons/download.svg") no-repeat center / contain;
-}
+    .hero-split{
+      left:28px; right:28px;
+      bottom:64px;
+      max-width:980px;
+      display:grid;
+      grid-template-columns: 1.55fr 0.85fr;
+      gap:26px;
+      align-items:end;
+    }
+    .hero-text{max-width:640px; position:relative}
+    .hero-proof{color:rgba(226,232,240,0.95);font-weight:600}
 
-@media (max-width:640px){
-  .nav-download-text{ display:none; }
-  .nav-download-icon{ width:18px; height:18px; }
-}
+    .hero-photo-wrap{
+      display:flex;
+      justify-content:flex-end;
+      align-items:flex-start;
+      margin-top:-54px;
+      min-height:0;
+    }
+    .hero-photo-wrap img{
+      width:190px;height:190px;
+      object-fit:cover;
+      border-radius:999px;
+      border:3px solid rgba(59,130,246,0.85);
+      box-shadow:0 22px 46px rgba(0,0,0,0.55);
+      background:#020617;
+      filter:saturate(1.02) contrast(1.02);
+      transform: translateY(-28px);
+    }
 
-    @media (max-width: 980px){
+    @media (max-width:980px){
       .about-grid{grid-template-columns:1fr}
       .extras-grid{grid-template-columns:1fr}
       .about-photo{width:300px;height:300px}
+      .hero-split{grid-template-columns:1fr;gap:16px;bottom:52px}
+      .hero-photo-wrap{justify-content:flex-start}
+      .hero-photo-wrap img{width:160px;height:160px}
     }
 
-    @media (max-width: 640px){
+    @media (max-width:640px){
       .shell{padding-inline:14px}
       .nav{flex-wrap:wrap;gap:8px}
       .nav-links{flex-wrap:wrap;justify-content:flex-start}
-      .home-title{font-size:26px}
+      .nav-download-text{display:none}
+      .nav-download-icon{width:18px;height:18px}
+
+      .home-banner{min-height:560px}
       .home-banner-content{left:16px;right:16px;bottom:56px}
-      .stat{min-width:140px}
-      .about-photo{width:260px;height:260px}
+      .hero-split{left:16px; right:16px; bottom:44px;grid-template-columns:1fr;gap:12px}
+
+      .home-title{font-size:22px}
+      .home-desc{display:none}
+      .home-actions{gap:10px;margin-top:10px}
+
+      .home-banner-content.hero-split{
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        grid-template-areas:
+          "pill"
+          "title"
+          "actions"
+          "photo"
+          "stats";
+      }
+      .home-banner-content.hero-split .hero-text{display:contents !important}
+      .home-banner-content.hero-split .home-pill{grid-area:pill}
+      .home-banner-content.hero-split .home-title{grid-area:title}
+      .home-banner-content.hero-split .home-actions{grid-area:actions}
+      .home-banner-content.hero-split .hero-photo-wrap{grid-area:photo}
+      .home-banner-content.hero-split .home-stats{grid-area:stats}
+
+      .home-actions{
+        width:100%;
+        display:flex !important;
+        flex-direction:row !important;
+        justify-content:space-between !important;
+      }
+      .home-actions .btn{
+        width:calc(50% - 6px) !important;
+        justify-content:center !important;
+      }
+
+      .hero-photo-wrap{justify-content:center;margin-top:10px}
+      .hero-photo-wrap img{width:140px;height:140px;transform:none;margin:0 auto}
+
+      .home-stats{
+        display:grid !important;
+        grid-template-columns:1fr 1fr !important;
+        gap:10px !important;
+        margin-top:10px !important;
+      }
+      .stat{min-width:0 !important;padding:12px}
+      .stat-num{font-size:16px}
+      .stat-label{font-size:11.5px}
+
       .project-card{height:550px}
       .project-media{height:calc(550px - 150px)}
-      .project-bottom{height:150px}
+      .project-bottom{height:150px;padding-bottom:10px}
+      .about-photo{width:260px;height:260px}
     }
   </style>
 
@@ -662,11 +602,10 @@ section,
             <a href="#skills">Skills</a>
             <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
-           <a href="#downloads" class="nav-download" title="Downloads" aria-label="Downloads">
-              <span class="nav-download-text">Downloads</span>
+            <a href="#downloads" class="nav-download" title="Downloads" aria-label="Downloads">
               <span class="nav-download-icon" aria-hidden="true"></span>
+              <span class="nav-download-text">Downloads</span>
             </a>
-
           </div>
         </nav>
       </div>
@@ -678,45 +617,137 @@ section,
           <div class="home-banner-bg"></div>
           <div class="home-banner-overlay"></div>
 
-          <div class="home-banner-content">
-            <div class="home-pill">Project Engineer | Civil Engineer</div>
+          <div class="home-banner-content hero-split">
+            <div class="hero-text">
+              <div class="home-pill">Project Engineer | Civil Engineer</div>
 
-            <h1 class="home-title">Delivering high-end finishing &amp; site execution with strict QA/QC.</h1>
+              <h1 class="home-title">Project Engineer delivering luxury villas and major builds with strict site control and QA/QC.</h1>
 
-            <p class="home-desc">
-              6+ years across UAE, Egypt &amp; Kenya. Strong in subcontractor coordination, shop drawing review,
-              inspections (WIR/MIR), reporting, and schedule follow-up for residential, commercial and luxury projects.
-            </p>
+              <p class="home-desc">
+                6+ years across UAE, Egypt &amp; Kenya delivering luxury villas and commercial builds. Strong in site execution, subcontractor coordination, QA/QC, and handover readiness.
+              </p>
 
-            <div class="home-actions">
-              <a class="btn primary" href="#projects">View Projects</a>
-              <a class="btn" href="assets/cv/Mahmoud-Shehata-CV.pdf" download>Download CV</a>
-              <a class="btn" href="#contact">Contact</a>
-            </div>
+              <p class="home-desc hero-proof">Proven delivery on a 50M+ AED car showroom in Abu Dhabi.</p>
 
-            <div class="home-stats">
-              <div class="stat">
-                <div class="stat-num">6+</div>
-                <div class="stat-label">Years Experience</div>
+              <div class="home-actions">
+                <a class="btn primary" href="assets/cv/Mahmoud-Shehata-CV.pdf" download data-track="download_cv">Download CV</a>
+                <a class="btn" href="assets/cv/Mahmoud-Shehata-Portfolio.pdf" download data-track="download_portfolio">Download Full Portfolio</a>
               </div>
-              <div class="stat">
-                <div class="stat-num">105M+</div>
-                <div class="stat-label">AED Projects Value</div>
+
+              <div class="hero-photo-wrap reveal" aria-label="Professional profile photo">
+                <img src="assets/hero-profile.png" alt="Mahmoud Shehata – Project Engineer" loading="eager" />
               </div>
-              <div class="stat">
-                <div class="stat-num">UAE • EG • KE</div>
-                <div class="stat-label">Project Locations</div>
+
+              <div class="home-stats">
+                <div class="stat reveal">
+                  <div class="stat-num">6+</div>
+                  <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat reveal">
+                  <div class="stat-num">UAE • EG • KE</div>
+                  <div class="stat-label">Project Locations</div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="about">
-          <div class="section-title">About</div>
-          <div class="section-subtitle">About Mahmoud</div>
+        <section id="projects">
+          <div class="section-title reveal">Projects</div>
+          <div class="section-subtitle reveal">Selected work</div>
+          <p class="section-subtext reveal">
+            A selection of projects I’ve worked on. Each project links to a dedicated page with more details, photos and video (where available).
+          </p>
 
-          <div class="about-wrap">
-            <div class="about-card">
+          <div class="projects-grid">
+            <a class="project-card reveal" id="project-villa" href="projects/villa.html?from=project-villa"
+              aria-label="Open project: High-end private villa" data-track="open_project_villa">
+              <div class="project-media" style="background-image:url('assets/pr4.webp');">
+                <span class="project-cta">Show full project</span>
+              </div>
+              <div class="project-body">
+                <div class="project-bottom">
+                  <div class="project-tag">Private villa · Abu Dhabi</div>
+                  <h3 class="project-title">High-end private villa</h3>
+                  <div class="project-meta">Project Engineer – URUK Construction</div>
+                  <div class="project-line">Luxury finishing, cladding coordination, and QA/QC inspections for premium handover.</div>
+                  <div class="project-footer"></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-card reveal" id="project-showroom" href="projects/showroom.html?from=project-showroom"
+              aria-label="Open project: Baniyas Cars – Rahayl Cars City" data-track="open_project_showroom">
+              <div class="project-media" style="background-image:url('assets/pr3.webp');">
+                <span class="project-cta">Show full project</span>
+              </div>
+              <div class="project-body">
+                <div class="project-bottom">
+                  <div class="project-tag">Car showroom · Abu Dhabi</div>
+                  <h3 class="project-title">Baniyas Cars – Rahayl Cars City</h3>
+                  <div class="project-meta">Project Engineer – URUK Construction</div>
+                  <div class="project-line">RC + steel structure, façade coordination, and controlled progress reporting for delivery.</div>
+                  <div class="project-footer"></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-card reveal" id="project-36-towers" href="projects/36-towers.html?from=project-36-towers"
+              aria-label="Open project: 36 residential towers" data-track="open_project_36_towers">
+              <div class="project-media" style="background-image:url('assets/pr2.webp');">
+                <span class="project-cta">Show full project</span>
+              </div>
+              <div class="project-body">
+                <div class="project-bottom">
+                  <div class="project-tag">Residential towers · 10th of Ramadan</div>
+                  <h3 class="project-title">36 residential towers</h3>
+                  <div class="project-meta">Site Engineer – Makkah Constructions</div>
+                  <div class="project-line">Daily site supervision, QA/QC checks, and subcontractor follow-up across multiple towers.</div>
+                  <div class="project-footer"></div>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-card reveal" id="project-6-towers" href="projects/6-towers.html?from=project-6-towers"
+              aria-label="Open project: 6 residential towers" data-track="open_project_6_towers">
+              <div class="project-media" style="background-image:url('assets/pr1.webp');">
+                <span class="project-cta">Show full project</span>
+              </div>
+              <div class="project-body">
+                <div class="project-bottom">
+                  <div class="project-tag">Residential towers · Eldoret</div>
+                  <h3 class="project-title">6 residential towers</h3>
+                  <div class="project-meta">Site Engineer – Smarkit Company</div>
+                  <div class="project-line">Surveying support, execution follow-up, and quality reporting with local teams.</div>
+                  <div class="project-footer"></div>
+                </div>
+              </div>
+            </a>
+
+            <div class="card" style="margin-top:16px;max-width:900px;">
+              <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
+                <div style="min-width:240px;">
+                  <div style="font-weight:700;">Want the full PDF pack?</div>
+                  <div style="color:var(--muted);font-size:13px;line-height:1.6;margin-top:4px;">
+                    Download the complete CV and full project portfolio to review roles, scope and deliverables.
+                  </div>
+                </div>
+                <div class="downloads-row" style="margin-top:0;">
+                  <a class="btn" href="assets/cv/Mahmoud-Shehata-CV.pdf" download data-track="download_cv">Download CV</a>
+                  <a class="btn primary" href="assets/cv/Mahmoud-Shehata-Portfolio.pdf" download data-track="download_portfolio">Download Full Portfolio</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="about">
+          <div class="section-title reveal">About</div>
+          <div class="section-subtitle reveal">About Mahmoud</div>
+
+          <div class="about-wrap reveal">
+            <div class="about-card reveal">
               <div class="about-grid">
                 <div class="about-text">
                   <p>
@@ -744,7 +775,7 @@ section,
 
                 <div class="about-right">
                   <div class="about-photo"></div>
-                  <button class="about-more-btn" id="more-info-btn" type="button">More information</button>
+                  <button class="about-more-btn" id="more-info-btn" type="button">Show full profile</button>
 
                   <div class="about-more-box" id="more-info-box">
                     <strong>Personal Details:</strong><br><br>
@@ -762,146 +793,66 @@ section,
           </div>
         </section>
 
-        <section id="projects">
-          <div class="section-title">Projects</div>
-          <div class="section-subtitle">Selected work</div>
-          <p class="section-subtext">
-            A selection of projects I’ve worked on. Each project links to a dedicated page with more details, photos and video (where available).
-          </p>
-
-          <div class="projects-grid">
-            <a class="project-card" id="project-villa" href="projects/villa.html?from=project-villa"
-             aria-label="Open project: High-end private villa">
-              <div class="project-media" style="background-image:url('assets/pr4.webp');">
-                <span class="project-more in-media">More details</span>
-              </div>
-              <div class="project-body">
-                <div class="project-bottom">
-                  <div class="project-tag">Private villa · Abu Dhabi</div>
-                  <h3 class="project-title">High-end private villa</h3>
-                  <div class="project-meta">Project Engineer – URUK Construction</div>
-                  <div class="project-line">Luxury finishing, cladding coordination, and QA/QC inspections for premium handover.</div>
-                  <div class="project-footer"></div>
-                </div>
-              </div>
-            </a>
-
-            <a class="project-card" id="project-showroom" href="projects/showroom.html?from=project-showroom"
-             aria-label="Open project: Baniyas Cars – Rahayl Cars City">
-              <div class="project-media" style="background-image:url('assets/pr3.webp');">
-                <span class="project-more in-media">More details</span>
-              </div>
-              <div class="project-body">
-                <div class="project-bottom">
-                  <div class="project-tag">Car showroom · Abu Dhabi</div>
-                  <h3 class="project-title">Baniyas Cars – Rahayl Cars City</h3>
-                  <div class="project-meta">Project Engineer – URUK Construction</div>
-                  <div class="project-line">RC + steel structure, façade coordination, and controlled progress reporting for delivery.</div>
-                  <div class="project-footer"></div>
-                </div>
-              </div>
-            </a>
-
-           <a class="project-card"
-   id="project-36-towers"
-   href="projects/36-towers.html?from=project-36-towers"
-   aria-label="Open project: 36 residential towers">
-
-  <div class="project-media" style="background-image:url('assets/pr2.webp');">
-    <span class="project-more in-media">More details</span>
-  </div>
-
-  <div class="project-body">
-    <div class="project-bottom">
-      <div class="project-tag">Residential towers · 10th of Ramadan</div>
-      <h3 class="project-title">36 residential towers</h3>
-      <div class="project-meta">Site Engineer – Makkah Constructions</div>
-      <div class="project-line">
-        Daily site supervision, QA/QC checks, and subcontractor follow-up across multiple towers.
-      </div>
-      <div class="project-footer"></div>
-    </div>
-  </div>
-</a>
-
-            <a class="project-card" id="project-6-towers" href="projects/6-towers.html?from=project-6-towers"
-             aria-label="Open project: 6 residential towers">
-              <div class="project-media" style="background-image:url('assets/pr1.webp');">
-                <span class="project-more in-media">More details</span>
-              </div>
-              <div class="project-body">
-                <div class="project-bottom">
-                  <div class="project-tag">Residential towers · Eldoret</div>
-                  <h3 class="project-title">6 residential towers</h3>
-                  <div class="project-meta">Site Engineer – Smarkit Company</div>
-                  <div class="project-line">Surveying support, execution follow-up, and quality reporting with local teams.</div>
-                  <div class="project-footer"></div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </section>
-
         <section id="skills">
-          <div class="section-title">Skills</div>
-          <div class="section-subtitle">Skills &amp; tools</div>
-          <p class="section-subtext">
+          <div class="section-title reveal">Skills</div>
+          <div class="section-subtitle reveal">Skills &amp; tools</div>
+          <p class="section-subtext reveal">
             A mix of technical software skills, practical site capabilities and personal skills that support my work as a Project Engineer.
           </p>
 
           <div class="skills-grid">
-            <div class="skills-card">
-              <div class="skills-title">Technical &amp; software skills</div>
-              <div class="skills-subtext">Design and engineering tools used across structural and finishing works.</div>
-              <div class="skills-list">
-                <span class="skill-pill">AutoCAD</span>
-                <span class="skill-pill">SAP2000</span>
-                <span class="skill-pill">ETABS</span>
-                <span class="skill-pill">SAFE</span>
-                <span class="skill-pill">SP Column</span>
-                <span class="skill-pill">Structural detailing</span>
-                <span class="skill-pill">Shop drawing</span>
-                <span class="skill-pill">Quantity take-off &amp; BOQ preparation (PlanSwift)</span>
-                <span class="skill-pill">Shop drawing review &amp; coordination</span>
-                <span class="skill-pill">Microsoft Excel (reports, tracking, logs)</span>
-                <span class="skill-pill">Microsoft Word &amp; PDF documentation</span>
-                <span class="skill-pill">Basic PowerPoint for presentations</span>
-              </div>
-            </div>
-
-            <div class="skills-card">
+            <div class="skills-card reveal">
               <div class="skills-title">Site &amp; project skills</div>
               <div class="skills-subtext">Practical capabilities applied on site to keep work coordinated and on track.</div>
               <div class="skills-list">
-                <span class="skill-pill">Site supervision &amp; coordination</span>
-                <span class="skill-pill">High-end finishing supervision</span>
-                <span class="skill-pill">QA/QC inspections</span>
-                <span class="skill-pill">RFIs, WIRs &amp; MIRs</span>
-                <span class="skill-pill">Structural strengthening &amp; jacketing follow-up</span>
+                <span class="skill-pill skill-pill--top">Site supervision &amp; coordination</span>
+                <span class="skill-pill skill-pill--top">High-end finishing supervision</span>
+                <span class="skill-pill skill-pill--top">QA/QC inspections</span>
+                <span class="skill-pill skill-pill--top">RFIs, WIRs &amp; MIRs</span>
+                <span class="skill-pill skill-pill--top">Subcontractor management &amp; follow-up</span>
                 <span class="skill-pill">Coordination with consultants &amp; client reps</span>
-                <span class="skill-pill">Subcontractor management &amp; follow-up</span>
-                <span class="skill-pill">Short-term (weekly) planning &amp; tracking</span>
-                <span class="skill-pill">Quantity surveying &amp; material requests</span>
                 <span class="skill-pill">Material submittals &amp; approvals</span>
+                <span class="skill-pill">Quantity surveying &amp; material requests</span>
+                <span class="skill-pill">Short-term (weekly) planning &amp; tracking</span>
                 <span class="skill-pill">Monitoring manpower &amp; daily progress</span>
                 <span class="skill-pill">Preparing daily &amp; weekly reports</span>
+                <span class="skill-pill">Structural strengthening &amp; jacketing follow-up</span>
                 <span class="skill-pill">Safety follow-up &amp; site housekeeping</span>
                 <span class="skill-pill">Snagging &amp; de-snagging for handover</span>
               </div>
             </div>
 
-            <div class="skills-card">
+            <div class="skills-card reveal">
+              <div class="skills-title">Technical &amp; software skills</div>
+              <div class="skills-subtext">Design and engineering tools used across structural and finishing works.</div>
+              <div class="skills-list">
+                <span class="skill-pill skill-pill--top">Quantity take-off &amp; BOQs (PlanSwift)</span>
+                <span class="skill-pill skill-pill--top">Shop drawing review &amp; coordination</span>
+                <span class="skill-pill skill-pill--top">Microsoft Excel (reports &amp; tracking)</span>
+                <span class="skill-pill skill-pill--top">AutoCAD</span>
+                <span class="skill-pill skill-pill--top">Shop drawing</span>
+                <span class="skill-pill">Microsoft Word &amp; PDF documentation</span>
+                <span class="skill-pill">Structural detailing</span>
+                <span class="skill-pill">SP Column</span>
+                <span class="skill-pill">ETABS</span>
+                <span class="skill-pill">SAFE</span>
+                <span class="skill-pill">SAP2000</span>
+                <span class="skill-pill">Basic PowerPoint for presentations</span>
+              </div>
+            </div>
+
+            <div class="skills-card reveal">
               <div class="skills-title">Personal &amp; soft skills</div>
               <div class="skills-subtext">Behaviours and attitudes that support project delivery and teamwork.</div>
               <div class="skills-list">
+                <span class="skill-pill skill-pill--top">Clear communication (Arabic &amp; English)</span>
+                <span class="skill-pill skill-pill--top">Working under pressure</span>
+                <span class="skill-pill skill-pill--top">Time management &amp; prioritisation</span>
+                <span class="skill-pill skill-pill--top">Ownership &amp; accountability</span>
+                <span class="skill-pill skill-pill--top">Problem solving on site</span>
                 <span class="skill-pill">Attention to detail</span>
-                <span class="skill-pill">Ownership &amp; accountability</span>
-                <span class="skill-pill">Problem solving on site</span>
-                <span class="skill-pill">Clear communication (Arabic &amp; English)</span>
-                <span class="skill-pill">Working under pressure</span>
                 <span class="skill-pill">Client &amp; consultant interface</span>
                 <span class="skill-pill">Team coordination &amp; support</span>
-                <span class="skill-pill">Time management &amp; prioritisation</span>
                 <span class="skill-pill">Fast learning &amp; adaptability</span>
                 <span class="skill-pill">Positive attitude on site</span>
                 <span class="skill-pill">Flexibility with different cultures (Egypt, Kenya, UAE)</span>
@@ -914,13 +865,13 @@ section,
           <div class="extras-grid">
             <div>
               <div id="certifications">
-                <div class="section-title">Certifications</div>
-                <div class="section-subtitle">Certifications &amp; licenses</div>
-                <p class="section-subtext">
+                <div class="section-title reveal">Certifications</div>
+                <div class="section-subtitle reveal">Certifications &amp; licenses</div>
+                <p class="section-subtext reveal">
                   Key certifications and documents that support my work in design, execution and project management.
                 </p>
 
-                <div class="card">
+                <div class="card reveal">
                   <ul class="about-list">
                     <li><span class="bullet">•</span><span>B.Sc. in Civil Engineering – New Cairo Academy (2019)</span></li>
                     <li><span class="bullet">•</span><span>Benaa Training Diploma – Site &amp; Project Management</span></li>
@@ -935,29 +886,41 @@ section,
               </div>
 
               <div id="downloads" style="margin-top:18px;">
-                <div class="section-title">Downloads</div>
-                <div class="section-subtitle">CV &amp; portfolio</div>
-                <p class="section-subtext">
-                  Download a PDF copy of my CV and a PDF export of this portfolio .
+                <div class="section-title reveal">Downloads</div>
+                <div class="section-subtitle reveal">CV &amp; portfolio</div>
+                <p class="section-subtext reveal">
+                  Download a PDF copy of my CV and a PDF export of this portfolio.
                 </p>
 
                 <div class="card" style="padding:14px;">
                   <div class="downloads-row">
-                    <a class="btn" href="assets/cv/Mahmoud-Shehata-CV.pdf" download>Download CV (PDF)</a>
-                    <a class="btn" href="assets/cv/Mahmoud-Shehata-Portfolio.pdf" download>Download Portfolio (PDF)</a>
+                    <a class="btn" href="assets/cv/Mahmoud-Shehata-CV.pdf" download data-track="download_cv">Download CV (PDF)</a>
+                    <a class="btn" href="assets/cv/Mahmoud-Shehata-Portfolio.pdf" download data-track="download_portfolio">Download Portfolio (PDF)</a>
                   </div>
                 </div>
               </div>
             </div>
 
             <div id="contact">
-              <div class="section-title">Contact</div>
-              <div class="section-subtitle">Let’s connect</div>
-              <p class="section-subtext">
+              <div class="section-title reveal">Contact</div>
+              <div class="section-subtitle reveal">Let’s connect</div>
+              <p class="section-subtext reveal">
                 If you’d like to discuss a role, project or collaboration in the UAE or abroad, feel free to reach out.
               </p>
 
-              <div class="card">
+              <div class="card" style="margin-bottom:14px;background:rgba(15,23,42,0.92);">
+                <div style="font-weight:800;font-size:15px;">Fastest way to reach me</div>
+                <div style="color:var(--muted);font-size:13px;margin-top:6px;line-height:1.6;">
+                  If you are reviewing for a role, shortlist, or project discussion, WhatsApp is the quickest channel.
+                  I can share additional details, drawings context, and availability.
+                </div>
+                <div class="downloads-row" style="margin-top:12px;">
+                  <a data-track="click_whatsapp" class="btn primary" href="https://wa.me/971509952788?text=Hello%20Mahmoud%2C%20I%20visited%20your%20portfolio%20website%20and%20reviewed%20your%20projects.%20I%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you." target="_blank" rel="noopener">Open WhatsApp</a>
+                  <a data-track="click_email" class="btn" href="mailto:m@mahmoudshehata.com">Email me</a>
+                </div>
+              </div>
+
+              <div class="card reveal">
                 <div class="contact-text">
                   I’m particularly interested in Project Engineer and Site Engineer roles where I can support site execution,
                   finishing, coordination and QA/QC.
@@ -972,7 +935,7 @@ section,
                         <div class="contact-main">m@mahmoudshehata.com</div>
                       </div>
                     </div>
-                    <a class="contact-action" href="mailto:m@mahmoudshehata.com">Send email</a>
+                    <a data-track="click_email" class="contact-action" href="mailto:m@mahmoudshehata.com">Send email</a>
                   </div>
 
                   <div class="contact-item">
@@ -980,10 +943,10 @@ section,
                       <div class="contact-icon"><img src="assets/icons/linkedin.svg" alt="LinkedIn" /></div>
                       <div class="contact-labels">
                         <div class="contact-caption">LinkedIn</div>
-                        <div class="contact-main">linkedin.com/in/Mahmoud-Ahmed-Linked</div>
+                        <div class="contact-main">linkedin.com/in/Mahmoud-ASK</div>
                       </div>
                     </div>
-                    <a class="contact-action" href="https://www.linkedin.com/in/Mahmoud-Ahmed-Linked" target="_blank" rel="noopener">View profile</a>
+                    <a class="contact-action" href="https://linkedin.com/in/Mahmoud-ASK" target="_blank" rel="noopener">View profile</a>
                   </div>
 
                   <div class="contact-item">
@@ -994,7 +957,7 @@ section,
                         <div class="contact-main">Direct message from this portfolio</div>
                       </div>
                     </div>
-                    <a class="contact-action" href="https://wa.me/971509952788?text=Hello%20Mahmoud%2C%20I%20visited%20your%20portfolio%20website%20and%20reviewed%20your%20summary%20and%20projects.%20I%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you." target="_blank" rel="noopener">Open chat</a>
+                    <a data-track="click_whatsapp" class="contact-action" href="https://wa.me/971509952788?text=Hello%20Mahmoud%2C%20I%20visited%20your%20portfolio%20website%20and%20reviewed%20your%20summary%20and%20projects.%20I%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you." target="_blank" rel="noopener">Open chat</a>
                   </div>
 
                   <div class="contact-item">
@@ -1005,7 +968,7 @@ section,
                         <div class="contact-main">+971 50 995 2788</div>
                       </div>
                     </div>
-                    <a class="contact-action" href="tel:+971509952788">Call</a>
+                    <a data-track="click_call_uae" class="contact-action" href="tel:+971509952788">Call</a>
                   </div>
 
                   <div class="contact-item">
@@ -1016,7 +979,7 @@ section,
                         <div class="contact-main">+20 101 352 8174</div>
                       </div>
                     </div>
-                    <a class="contact-action" href="tel:+201013528174">Call</a>
+                    <a data-track="click_call_egy" class="contact-action" href="tel:+201013528174">Call</a>
                   </div>
                 </div>
               </div>
@@ -1030,7 +993,6 @@ section,
     <footer>
       © <span id="year"></span> Mahmoud Shehata · Civil / Project Engineer. All rights reserved.
     </footer>
-
   </div>
 
   <script>
@@ -1043,28 +1005,68 @@ section,
       moreBtn.addEventListener("click", () => {
         const isOpen = moreBox.style.display === "block";
         moreBox.style.display = isOpen ? "none" : "block";
-        moreBtn.textContent = isOpen ? "More information" : "Hide information";
+        moreBtn.textContent = isOpen ? "Show full profile" : "Hide information";
       });
     }
   </script>
+
   <script>
-(function () {
-  const params = new URLSearchParams(window.location.search);
-  const fromId = params.get("from");
-  if (!fromId) return;
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const fromId = params.get("from");
+      if (!fromId) return;
 
-  const el = document.getElementById(fromId);
-  if (!el) return;
+      const el = document.getElementById(fromId);
+      if (!el) return;
 
-  const yOffset = 70;
-  const y =
-    el.getBoundingClientRect().top +
-    window.pageYOffset -
-    yOffset;
+      const yOffset = 70;
+      const y = el.getBoundingClientRect().top + window.pageYOffset - yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    })();
+  </script>
 
-  window.scrollTo({ top: y, behavior: "smooth" });
-})();
-</script>
+  <script>
+    (function(){
+      const els = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window) || !els.length) {
+        els.forEach(el => el.classList.add("active"));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14, rootMargin: "0px 0px -10% 0px" });
 
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+
+  <script>
+    (function(){
+      function safeText(el){
+        return (el && (el.getAttribute("aria-label") || el.textContent || "")).trim().slice(0, 120);
+      }
+      document.addEventListener("click", function(e){
+        const a = e.target.closest("a[data-track]");
+        if(!a) return;
+
+        const name = a.getAttribute("data-track") || "link_click";
+        const href = a.getAttribute("href") || "";
+
+        if (typeof window.gtag === "function") {
+          window.gtag("event", name, {
+            link_url: href,
+            link_text: safeText(a),
+            page_location: window.location.href,
+            page_path: window.location.pathname
+          });
+        }
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
