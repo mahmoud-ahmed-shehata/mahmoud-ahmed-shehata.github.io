@@ -205,7 +205,7 @@
     .home-banner-content{
       position:absolute;
       left:28px; right:28px;
-      bottom:70px;
+      bottom:58px;
       z-index:2;
       max-width:620px;
       display:flex;
@@ -324,7 +324,7 @@
       position:relative;
       width:100%;
       max-width:900px;
-      height:500px;
+      height:540px;
       border-radius:18px;
       overflow:hidden;
       border:1px solid rgba(148,163,184,0.35);
@@ -335,7 +335,7 @@
     }
     .project-media{
       position:absolute;left:0;right:0;top:0;
-      height:calc(500px - 150px);
+      height:calc(540px - 150px);
       background-size:cover;
       background-position:center;
       filter:brightness(.78);
@@ -473,7 +473,7 @@
 
     .hero-split{
       left:28px; right:28px;
-      bottom:64px;
+      bottom:44px;
       max-width:980px;
       display:grid;
       grid-template-columns: 1.55fr 0.85fr;
@@ -483,25 +483,25 @@
     .hero-text{max-width:640px; position:relative}
     .hero-proof{color:rgba(226,232,240,0.95);font-weight:600}
 
-    .hero-photo-wrap{
+        .hero-photo-wrap{
       display:flex;
       justify-content:flex-end;
-      align-items:flex-start;
-      margin-top:-54px;
+      align-items:flex-end;
+      margin-top:0;
       min-height:0;
     }
     .hero-photo-wrap img{
-      width:190px;height:190px;
+      width:190px;
+      height:190px;
       object-fit:cover;
       border-radius:999px;
       border:3px solid rgba(59,130,246,0.85);
       box-shadow:0 22px 46px rgba(0,0,0,0.55);
       background:#020617;
       filter:saturate(1.02) contrast(1.02);
-      transform: translateY(-28px);
     }
 
-    @media (max-width:980px){
+@media (max-width:980px){
       .about-grid{grid-template-columns:1fr}
       .extras-grid{grid-template-columns:1fr}
       .about-photo{width:300px;height:300px}
@@ -536,6 +536,8 @@
           "stats";
       }
       .home-banner-content.hero-split .hero-text{display:contents !important}
+  .home-banner-content.hero-split .home-desc,
+  .home-banner-content.hero-split .hero-proof{ display:none !important; }
       .home-banner-content.hero-split .home-pill{grid-area:pill}
       .home-banner-content.hero-split .home-title{grid-area:title}
       .home-banner-content.hero-split .home-actions{grid-area:actions}
@@ -566,8 +568,8 @@
       .stat-num{font-size:16px}
       .stat-label{font-size:11.5px}
 
-      .project-card{height:550px}
-      .project-media{height:calc(550px - 150px)}
+      .project-card{height:590px}
+      .project-media{height:calc(590px - 150px)}
       .project-bottom{height:150px;padding-bottom:10px}
       .about-photo{width:260px;height:260px}
     }
@@ -619,26 +621,21 @@
 
           <div class="home-banner-content hero-split">
             <div class="hero-text">
-              <div class="home-pill">Project Engineer | Civil Engineer</div>
+              <div class="home-pill reveal">Project Engineer | Civil Engineer</div>
 
-              <h1 class="home-title">Project Engineer delivering luxury villas and major builds with strict site control and QA/QC.</h1>
+              <h1 class="home-title reveal">Project Engineer delivering luxury villas and major builds with strict site control and QA/QC.</h1>
 
-              <p class="home-desc">
+              <p class="home-desc reveal">
                 6+ years across UAE, Egypt &amp; Kenya delivering luxury villas and commercial builds. Strong in site execution, subcontractor coordination, QA/QC, and handover readiness.
               </p>
 
-              <p class="home-desc hero-proof">Proven delivery on a 50M+ AED car showroom in Abu Dhabi.</p>
+              <p class="home-desc hero-proof reveal">Proven delivery on a 50M+ AED car showroom in Abu Dhabi.</p>
 
-              <div class="home-actions">
+              <div class="home-actions reveal">
                 <a class="btn primary" href="assets/cv/Mahmoud-Shehata-CV.pdf" download data-track="download_cv">Download CV</a>
                 <a class="btn" href="assets/cv/Mahmoud-Shehata-Portfolio.pdf" download data-track="download_portfolio">Download Full Portfolio</a>
               </div>
-
-              <div class="hero-photo-wrap reveal" aria-label="Professional profile photo">
-                <img src="assets/hero-profile.png" alt="Mahmoud Shehata – Project Engineer" loading="eager" />
-              </div>
-
-              <div class="home-stats">
+<div class="home-stats reveal">
                 <div class="stat reveal">
                   <div class="stat-num">6+</div>
                   <div class="stat-label">Years Experience</div>
@@ -649,6 +646,11 @@
                 </div>
               </div>
             </div>
+
+              <div class="hero-photo-wrap reveal" aria-label="Professional profile photo">
+                <img src="assets/hero-profile.png" alt="Mahmoud Shehata – Project Engineer" loading="eager" />
+              </div>
+
           </div>
         </section>
 
@@ -724,23 +726,7 @@
               </div>
             </a>
 
-            <div class="card" style="margin-top:16px;max-width:900px;">
-              <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
-                <div style="min-width:240px;">
-                  <div style="font-weight:700;">Want the full PDF pack?</div>
-                  <div style="color:var(--muted);font-size:13px;line-height:1.6;margin-top:4px;">
-                    Download the complete CV and full project portfolio to review roles, scope and deliverables.
-                  </div>
-                </div>
-                <div class="downloads-row" style="margin-top:0;">
-                  <a class="btn" href="assets/cv/Mahmoud-Shehata-CV.pdf" download data-track="download_cv">Download CV</a>
-                  <a class="btn primary" href="assets/cv/Mahmoud-Shehata-Portfolio.pdf" download data-track="download_portfolio">Download Full Portfolio</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
+            </section>
 
         <section id="about">
           <div class="section-title reveal">About</div>
