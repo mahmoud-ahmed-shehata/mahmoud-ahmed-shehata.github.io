@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>High-end Private Villa – Abu Dhabi | Mahmoud Shehata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="High-end Private Villa, Abu Dhabi. Project Engineer — URUK Construction. 4-year delay recovered, luxury finishing, structural strengthening and handover delivered."
+    />
+    <meta name="theme-color" content="#080b10" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:site_name"
+      content="Mahmoud Shehata — Project Engineer"
+    />
+    <meta
+      property="og:url"
+      content="https://mahmoudshehata.com/projects/villa.html"
+    />
+    <meta
+      property="og:title"
+      content="High-End Private Villa — Mahmoud Shehata"
+    />
+    <meta
+      property="og:description"
+      content="Civil / Project Engineer based in Abu Dhabi. 6+ years delivering luxury villas, commercial showrooms and large-scale residential towers across UAE, Egypt and Kenya."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <style>
+      /* ── PAGE-SPECIFIC — same token set as showroom.html ── */
+      .back-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--font-label);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        transition: color 0.18s;
+      }
+      .back-link:hover {
+        color: var(--text);
+      }
+      .back-link svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+      }
+      .type-badge {
+        font-family: var(--font-label);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        border-radius: 999px;
+        padding: 3px 11px;
+      }
+      .proj-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+        margin-bottom: 56px;
+      }
+      .proj-eyebrow {
+        font-family: var(--font-label);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
+      .proj-title {
+        font-family: var(--font-serif);
+        font-size: clamp(32px, 5vw, 52px);
+        line-height: 1.08;
+        margin-bottom: 14px;
+      }
+      .proj-title em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .proj-meta-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .meta-chip {
+        font-family: var(--font-label);
+        font-size: 12px;
+        padding: 5px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+      }
+      .meta-chip.gold {
+        border-color: rgba(201, 168, 76, 0.4);
+        background: rgba(201, 168, 76, 0.07);
+        color: var(--gold);
+      }
+      .proj-desc {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.75;
+        max-width: 500px;
+      }
+      .metric-card {
+        background: rgba(201, 168, 76, 0.06);
+        border: 1px solid rgba(201, 168, 76, 0.22);
+        border-radius: 18px;
+        padding: 28px 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .metric-label {
+        font-family: var(--font-label);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .metric-value {
+        font-family: var(--font-serif);
+        font-size: clamp(36px, 6vw, 56px);
+        line-height: 1;
+        color: var(--gold);
+      }
+      .metric-sub {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .metric-divider {
+        width: 40px;
+        height: 1px;
+        background: rgba(201, 168, 76, 0.3);
+        margin: 4px 0;
+      }
+
+      /* Recovery timeline strip */
+      .recovery-strip {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        margin-top: 14px;
+        border-top: 1px solid rgba(201, 168, 76, 0.15);
+        padding-top: 14px;
+      }
+      .rec-step {
+        flex: 1;
+        text-align: center;
+      }
+      .rec-step-num {
+        font-family: var(--font-label);
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--gold);
+      }
+      .rec-step-label {
+        font-size: 11px;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+      .rec-arrow {
+        color: rgba(201, 168, 76, 0.4);
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+
+      .cs-section {
+        margin-bottom: 52px;
+      }
+      .cs-section-label {
+        font-family: var(--font-label);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .cs-section-label::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: rgba(201, 168, 76, 0.15);
+      }
+      .cs-section h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(22px, 3.5vw, 32px);
+        margin-bottom: 16px;
+        line-height: 1.15;
+      }
+      .cs-section h2 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      .challenge-block {
+        background: rgba(8, 11, 16, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-left: 3px solid var(--gold);
+        border-radius: 0 14px 14px 0;
+        padding: 24px 28px;
+        font-size: 15px;
+        color: #c9d0db;
+        line-height: 1.78;
+      }
+
+      .actions-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .action-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+        padding: 16px 18px;
+        font-size: 14px;
+        color: #c9d0db;
+        line-height: 1.6;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .action-num {
+        font-family: var(--font-label);
+        font-size: 11px;
+        color: var(--gold);
+        opacity: 0.7;
+        flex-shrink: 0;
+        padding-top: 2px;
+      }
+
+      .deliveries-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .delivery-card {
+        background: linear-gradient(
+          135deg,
+          rgba(201, 168, 76, 0.07),
+          rgba(201, 168, 76, 0.02)
+        );
+        border: 1px solid rgba(201, 168, 76, 0.18);
+        border-radius: 14px;
+        padding: 20px 20px 18px;
+      }
+      .delivery-icon {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .delivery-title {
+        font-family: var(--font-label);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 6px;
+      }
+      .delivery-text {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+      }
+      .gallery-main {
+        grid-row: 1 / 3;
+      }
+      .gallery-ph {
+        width: 100%;
+        height: 100%;
+        min-height: 220px;
+        border-radius: 14px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.2);
+        font-size: 12px;
+        text-align: center;
+        padding: 12px;
+        position: relative;
+      }
+      .gallery-main .gallery-ph {
+        min-height: 460px;
+      }
+      .gallery-ph-icon {
+        font-size: 28px;
+        opacity: 0.3;
+      }
+      .gallery-ph-label {
+        font-family: var(--font-label);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+
+      .proj-data-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 52px;
+      }
+      .data-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
+        padding: 18px 20px;
+      }
+      .data-card-label {
+        font-family: var(--font-label);
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .data-card-value {
+        font-size: 14px;
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .skills-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .skill-tag {
+        font-family: var(--font-label);
+        font-size: 12px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+      }
+
+      .proj-bottom-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        margin-top: 48px;
+      }
+      .btn-next {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-label);
+        font-size: 13px;
+        color: var(--text);
+        padding: 10px 20px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
+      .btn-next:hover {
+        background: rgba(201, 168, 76, 0.1);
+        border-color: rgba(201, 168, 76, 0.3);
+        color: var(--gold);
+      }
+
+      @media (max-width: 860px) {
+        .proj-hero {
+          grid-template-columns: 1fr;
+        }
+        .actions-grid {
+          grid-template-columns: 1fr;
+        }
+        .deliveries-grid {
+          grid-template-columns: 1fr;
+        }
+        .gallery-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+        .gallery-main {
+          grid-row: auto;
+        }
+        .gallery-main .gallery-ph {
+          min-height: 260px;
+        }
+        .proj-data-row {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        .proj-data-row {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="shell">
+          <nav class="nav">
+            <a href="../index.html" class="logo-wrap" aria-label="Home">
+              <div class="logo-mark"></div>
+              <div>
+                <div class="logo-name">Mahmoud Shehata</div>
+                <div class="logo-sub">
+                  Civil / Project Engineer <span>· Abu Dhabi, UAE</span>
+                </div>
+              </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+              <a href="../index.html#projects">Projects</a>
+              <a href="../index.html#how-i-work">How I Work</a>
+              <a href="../index.html#background">Background</a>
+              <a href="../certificates.html">Certifications</a>
+              <a href="../index.html#contact">Contact</a>
+              <a
+                href="../downloads/MahmoudShehata_CV.pdf"
+                class="nav-cv-btn"
+                download
+                >Download CV</a
+              >
+            </div>
+            <button
+              class="hamburger"
+              id="hamburger"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="shell" style="padding-top: 36px; padding-bottom: 64px">
+          <!-- BACK BAR -->
+          <div class="back-bar reveal">
+            <a href="../index.html#projects" class="back-link">
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M10 3L5 8l5 5" />
+              </svg>
+              Back to projects
+            </a>
+            <span class="type-badge">Private Villa · Abu Dhabi</span>
+          </div>
+
+          <!-- PROJECT HERO -->
+          <div class="proj-hero reveal">
+            <div>
+              <div class="proj-eyebrow">
+                Project Engineer — URUK Construction · 2025 – Present
+              </div>
+              <h1 class="proj-title">High-End<br /><em>Private Villa</em></h1>
+              <div class="proj-meta-row">
+                <span class="meta-chip gold">4 years delay recovered</span>
+                <span class="meta-chip">Abu Dhabi, UAE</span>
+                <span class="meta-chip">Luxury Villa</span>
+              </div>
+              <p class="proj-desc">
+                A luxury private villa project with high-end interior and
+                exterior finishes, stone cladding, structural strengthening and
+                complex MEP interfaces — joined 4 years behind schedule,
+                stabilised, and recovered through to handover.
+              </p>
+            </div>
+
+            <!-- KEY METRIC CARD -->
+            <div class="metric-card">
+              <div class="metric-label">Key metric</div>
+              <div class="metric-value">4 yrs</div>
+              <div class="metric-sub">
+                Behind schedule when joined.<br />Programme recovered — handed
+                over with minimum losses and no legal exposure.
+              </div>
+              <div class="metric-divider"></div>
+              <!-- Recovery steps -->
+              <div class="recovery-strip">
+                <div class="rec-step">
+                  <div class="rec-step-num">Day 1</div>
+                  <div class="rec-step-label">Full scope<br />inventory</div>
+                </div>
+                <div class="rec-arrow">→</div>
+                <div class="rec-step">
+                  <div class="rec-step-num">Stabilise</div>
+                  <div class="rec-step-label">Critical path<br />recovered</div>
+                </div>
+                <div class="rec-arrow">→</div>
+                <div class="rec-step">
+                  <div class="rec-step-num">Handover</div>
+                  <div class="rec-step-label">
+                    Delivered —<br />no legal exposure
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHALLENGE -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Challenge</div>
+            <h2>The <em>situation</em> on site</h2>
+            <div class="challenge-block">
+              Joined the project 4 years behind schedule. The immediate
+              challenge was not just execution — it was understanding exactly
+              what remained, what was approved, what was stuck and what had been
+              verbally agreed but never formally confirmed. Some materials had
+              been "approved" verbally for years and were now disputed. Some
+              required formal re-approval. Some had been installed and needed to
+              be demolished and rebuilt on the owner's instruction because no
+              formal approval existed. On top of this, the critical municipal
+              approval for a post-tension roof extension was outstanding —
+              blocking a large portion of the remaining structural scope. The
+              project needed a full reset: a clear picture of every remaining
+              work item, every pending approval, every stalled delivery and
+              every live risk — before any meaningful recovery could begin.
+            </div>
+          </div>
+
+          <!-- ROLE & ACTIONS -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Role &amp; Actions</div>
+            <h2>What I <em>specifically</em> did</h2>
+            <div class="actions-grid">
+              <div class="action-item">
+                <span class="action-num">01</span>
+                <span
+                  >Full scope inventory on day one — remaining works, pending
+                  approvals, stalled material deliveries, contractor disputes,
+                  and active live risks. That picture determined the recovery
+                  sequence.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">02</span>
+                <span
+                  >Resolved the critical municipal approval for the post-tension
+                  roof extension — the single biggest blocker on the structural
+                  scope. Cleared this to unlock progress on the roof and
+                  remaining structure.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">03</span>
+                <span
+                  >Worked through disputed material approvals — identifying
+                  which could be formally re-approved, which required
+                  workarounds to avoid time loss, and which had to be demolished
+                  and rebuilt per owner instruction.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">04</span>
+                <span
+                  >Implemented zone-based execution planning — running Zone A
+                  and Zone B works in parallel to maximise daily progress across
+                  finishes, MEP interfaces and specialist trades without
+                  congestion.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">05</span>
+                <span
+                  >Supervised daily high-end finishing works room by room —
+                  marble, stone, porcelain, gypsum, wood panels and
+                  architectural details — preparing snag lists and closing items
+                  before client visits.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">06</span>
+                <span
+                  >Coordinated external stone and aluminium cladding — anchoring
+                  details, waterproofing interfaces and façade alignment —
+                  ensuring correct fixing methods and clean interfaces with
+                  structure.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">07</span>
+                <span
+                  >Managed RFIs and technical clarifications with the consultant
+                  for special details, finishes and structural modifications —
+                  keeping the approval chain moving rather than waiting on
+                  outstanding items.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">08</span>
+                <span
+                  >Maintained safety and area protection across a live finishing
+                  environment — protecting completed rooms from ongoing works
+                  and coordinating MEP teams to prevent clashes with ceilings
+                  and decorative elements.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY DELIVERIES -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Key Deliveries</div>
+            <h2>What was <em>delivered</em></h2>
+            <div class="deliveries-grid">
+              <div class="delivery-card">
+                <div class="delivery-icon">🔄</div>
+                <div class="delivery-title">4-year delay recovered</div>
+                <div class="delivery-text">
+                  Joined a project 4 years behind schedule. Stabilised
+                  execution, resolved the critical approval blockers and
+                  recovered the programme — absorbing unavoidable losses to
+                  protect against further delay and legal exposure.
+                </div>
+              </div>
+              <div class="delivery-card">
+                <div class="delivery-icon">🏛️</div>
+                <div class="delivery-title">Municipal approval unblocked</div>
+                <div class="delivery-text">
+                  Resolved the outstanding municipal approval for the
+                  post-tension roof extension — the project's single biggest
+                  structural blocker — clearing the path for significant
+                  remaining works to proceed.
+                </div>
+              </div>
+              <div class="delivery-card">
+                <div class="delivery-icon">✨</div>
+                <div class="delivery-title">
+                  Luxury finishing delivered to standard
+                </div>
+                <div class="delivery-text">
+                  High-end interior and exterior finishes — marble, stone,
+                  joinery, cladding and architectural details — supervised and
+                  snagged to the standard required for luxury villa handover,
+                  despite an extremely distressed starting position.
+                </div>
+              </div>
+              <div class="delivery-card">
+                <div class="delivery-icon">⚖️</div>
+                <div class="delivery-title">
+                  No legal exposure — clean handover
+                </div>
+                <div class="delivery-text">
+                  Programme recovered and project handed over with minimum
+                  financial losses and no legal exposure — a direct result of
+                  the structured scope inventory, approval resolution and
+                  controlled execution approach applied from day one.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT DATA -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Project Data</div>
+            <div class="proj-data-row">
+              <div class="data-card">
+                <div class="data-card-label">Project</div>
+                <div class="data-card-value">High-End Private Villa</div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Location</div>
+                <div class="data-card-value">Abu Dhabi, UAE</div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Role</div>
+                <div class="data-card-value">Project Engineer</div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Company</div>
+                <div class="data-card-value">URUK Construction</div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Type</div>
+                <div class="data-card-value">Luxury Villa · Residential</div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Period</div>
+                <div class="data-card-value">2025 – Present</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GALLERY -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Project Gallery</div>
+            <h2>Site <em>visuals</em></h2>
+            <div class="gallery-grid">
+              <div class="gallery-main">
+                <div class="gallery-ph" style="min-height: 460px">
+                  <img
+                    src="../assets/images/villa-hero.jpg"
+                    alt="villa hero"
+                    loading="eager"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/villa-lobby.jpg"
+                  alt="villa lobby"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/villa-hall-interior.jpg"
+                  alt="villa hall interior"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/villa-corridor.jpg"
+                  alt="villa corridor"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-corridor-2.jpg" alt="villa corridor 2" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-feature-wall.jpg" alt="villa feature wall" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-circular-room.jpg" alt="villa circular room" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-door.jpg" alt="villa door" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-marble-floor.jpg" alt="villa marble floor" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-room-1.jpg" alt="villa room 1" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-room-2.jpg" alt="villa room 2" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-room-3.jpg" alt="villa room 3" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-bathroom.jpg" alt="villa bathroom" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-exterior-day.jpg" alt="villa exterior day" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-pergola.jpg" alt="villa pergola" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-onsite.jpg" alt="villa onsite" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+              <div class="gallery-ph">
+                <img src="../assets/images/villa-workers.jpg" alt="villa workers" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:14px" />
+              </div>
+            </div>
+          </div>
+
+          <!-- SKILLS APPLIED -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Skills Applied</div>
+            <div class="skills-wrap">
+              <span class="skill-tag">Execution recovery</span>
+              <span class="skill-tag">Zone-based planning</span>
+              <span class="skill-tag">High-end finishing supervision</span>
+              <span class="skill-tag">Cladding &amp; façade coordination</span>
+              <span class="skill-tag">Structural strengthening follow-up</span>
+              <span class="skill-tag">MEP interface coordination</span>
+              <span class="skill-tag">RFIs &amp; technical clarifications</span>
+              <span class="skill-tag">Material approvals &amp; mock-ups</span>
+              <span class="skill-tag">Snagging &amp; de-snagging</span>
+              <span class="skill-tag">Municipal approval management</span>
+              <span class="skill-tag">Short-term site planning</span>
+              <span class="skill-tag">Client-facing coordination</span>
+              <span class="skill-tag">QA/QC inspections</span>
+              <span class="skill-tag">WIRs &amp; MIRs</span>
+            </div>
+          </div>
+
+          <!-- BOTTOM NAV -->
+          <div class="proj-bottom-nav reveal">
+            <a href="showroom.html" class="back-link">
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M10 3L5 8l5 5" />
+              </svg>
+              Previous: Baniyas Showroom
+            </a>
+            <a href="36-towers.html" class="btn-next">
+              Next: 36 Towers
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                width="14"
+              >
+                <path d="M6 3l5 5-5 5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="shell">
+          <div class="footer-inner">
+            <span
+              >© <span class="footer-year"></span> Mahmoud Shehata · Civil /
+              Project Engineer</span
+            >
+            <div class="footer-links">
+              <a href="../index.html#projects">Projects</a>
+              <a href="../index.html#contact">Contact</a>
+              <a href="../downloads/MahmoudShehata_CV.pdf" download
+                >Download CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="wa-float" id="waFloat">
+        <a
+          class="wa-btn"
+          href="https://wa.me/971509952788"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="waBtn"
+          aria-label="Chat on WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"
+            />
+          </svg>
+          <span class="wa-label">Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Certificates – Mahmoud Shehata</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Certificates and qualifications of Mahmoud Shehata — Civil / Project Engineer, Abu Dhabi, UAE. BSc Civil Engineering, Benaa Diploma, Structural Design Diploma, UAE Driving License.">
+  <meta name="theme-color" content="#080b10" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mahmoud Shehata — Project Engineer" />
+  <meta property="og:url" content="https://mahmoudshehata.com" />
+  <meta property="og:title" content="Certificates — Mahmoud Shehata" />
+  <meta property="og:description" content="Civil / Project Engineer based in Abu Dhabi. 6+ years delivering luxury villas, commercial showrooms and large-scale residential towers across UAE, Egypt and Kenya." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* Page-specific */
+    .page-eyebrow {
+      font-family: var(--font-label);
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 10px; margin-top: 52px;
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.1; margin-bottom: 12px;
+    }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub {
+      font-size: 15px; color: var(--muted);
+      max-width: 560px; margin-bottom: 48px; line-height: 1.7;
+    }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .cert-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 26px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: border-color 0.2s;
+    }
+    .cert-card:hover {
+      border-color: rgba(201,168,76,0.25);
+    }
+
+    .cert-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .cert-title {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .cert-issuer {
+      font-family: var(--font-label);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .cert-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .cert-meta-chips {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 18px;
+    }
+    .cert-chip {
+      font-family: var(--font-label);
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+    }
+
+    .cert-actions {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+
+    .btn-cert {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-label);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,168,76,0.3);
+      background: rgba(201,168,76,0.07);
+      color: var(--gold);
+      transition: background 0.18s, border-color 0.18s;
+      cursor: pointer;
+    }
+    .btn-cert:hover {
+      background: rgba(201,168,76,0.14);
+      border-color: rgba(201,168,76,0.5);
+    }
+    .btn-cert svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    /* Syndicate / memberships row */
+    .membership-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .membership-card {
+      background: rgba(201,168,76,0.04);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .membership-icon { font-size: 24px; flex-shrink: 0; }
+    .membership-title {
+      font-size: 14px;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .membership-sub { font-size: 12px; color: var(--muted); }
+
+    @media (max-width: 700px) {
+      .certs-grid { grid-template-columns: 1fr; }
+      .membership-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header class="site-header">
+    <div class="shell">
+      <nav class="nav">
+        <a href="index.html" class="logo-wrap" aria-label="Home">
+          <div class="logo-mark"></div>
+          <div>
+            <div class="logo-name">Mahmoud Shehata</div>
+            <div class="logo-sub">Civil / Project Engineer <span>· Abu Dhabi, UAE</span></div>
+          </div>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#how-i-work">How I Work</a>
+          <a href="index.html#background">Background</a>
+          <a href="#certifications">Certifications</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="downloads/MahmoudShehata_CV.pdf" class="nav-cv-btn" download>Download CV</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="certifications">
+    <div class="shell" style="padding-bottom: 72px;">
+
+      <div class="page-eyebrow reveal">Qualifications</div>
+      <h1 class="page-title reveal">Certificates &amp;<br><em>Licences</em></h1>
+      <p class="page-sub reveal">
+        Academic degree, professional training diplomas and supporting documents. Each card links to the relevant document stored in the certificates folder.
+      </p>
+
+      <!-- CERTS GRID -->
+      <div class="certs-grid">
+
+        <!-- 1. Degree -->
+        <article class="cert-card reveal">
+          <div class="cert-icon">🎓</div>
+          <h2 class="cert-title">B.Sc. Civil Engineering</h2>
+          <div class="cert-issuer">New Cairo Academy · Cairo, Egypt</div>
+          <div class="cert-meta-chips">
+            <span class="cert-chip">2019</span>
+            <span class="cert-chip">Grade: Good</span>
+            <span class="cert-chip">Project: Excellent</span>
+          </div>
+          <p class="cert-desc">
+            Bachelor's degree in Civil Engineering from New Cairo Academy, Egypt. Graduation grade: Good. Graduation project grade: Excellent.
+          </p>
+          <div class="cert-actions">
+            <!--
+              UPDATE href to the actual PDF path when file is added:
+              assets/certificates/degree.pdf
+            -->
+            <a class="btn-cert" href="assets/certificates/degree.pdf" download>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 2v9M4 7l4 4 4-4M2 13h12"/>
+              </svg>
+              View / download
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. Benaa Diploma -->
+        <article class="cert-card reveal">
+          <div class="cert-icon">📘</div>
+          <h2 class="cert-title">Benaa Training Diploma</h2>
+          <div class="cert-issuer">Benaa Academy</div>
+          <div class="cert-meta-chips">
+            <span class="cert-chip">Site Management</span>
+            <span class="cert-chip">Technical Office</span>
+            <span class="cert-chip">Project Management</span>
+          </div>
+          <p class="cert-desc">
+            Comprehensive professional training covering site supervision, technical office operations and project management tools, procedures and workflows.
+          </p>
+          <div class="cert-actions">
+            <!--
+              UPDATE href: assets/certificates/benaa-training.pdf
+            -->
+            <a class="btn-cert" href="assets/certificates/benaa-training.pdf" download>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 2v9M4 7l4 4 4-4M2 13h12"/>
+              </svg>
+              View / download
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. Structural Design Diploma -->
+        <article class="cert-card reveal">
+          <div class="cert-icon">🏛️</div>
+          <h2 class="cert-title">Structural Design Diploma</h2>
+          <div class="cert-issuer">Benaa Academy</div>
+          <div class="cert-meta-chips">
+            <span class="cert-chip">High-rise Buildings</span>
+            <span class="cert-chip">Villas</span>
+            <span class="cert-chip">Water Tanks</span>
+          </div>
+          <p class="cert-desc">
+            Structural design training covering high-rise buildings, villas and water tanks — using modern analysis and design software including ETABS, SAFE, SAP2000 and SP Column.
+          </p>
+          <div class="cert-actions">
+            <!--
+              UPDATE href: assets/certificates/structural-design.pdf
+            -->
+            <a class="btn-cert" href="assets/certificates/structural-design.pdf" download>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 2v9M4 7l4 4 4-4M2 13h12"/>
+              </svg>
+              View / download
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. UAE Driving License -->
+        <article class="cert-card reveal">
+          <div class="cert-icon">🚗</div>
+          <h2 class="cert-title">UAE Driving License</h2>
+          <div class="cert-issuer">United Arab Emirates</div>
+          <div class="cert-meta-chips">
+            <span class="cert-chip">Valid since 2024</span>
+            <span class="cert-chip">UAE</span>
+          </div>
+          <p class="cert-desc">
+            Valid UAE driving license — supporting site mobility and supervision across different project locations across Abu Dhabi and the wider UAE.
+          </p>
+          <div class="cert-actions">
+            <!--
+              UPDATE href: assets/certificates/uae-driving-license.pdf
+            -->
+            <a class="btn-cert" href="assets/certificates/uae-driving-license.pdf" download>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 2v9M4 7l4 4 4-4M2 13h12"/>
+              </svg>
+              View / download
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- MEMBERSHIPS -->
+      <div style="margin-top: 40px;" class="reveal">
+        <div style="font-family:var(--font-label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">
+          Memberships
+        </div>
+        <div class="membership-row">
+          <div class="membership-card">
+            <div class="membership-icon">🏗️</div>
+            <div>
+              <div class="membership-title">Egyptian Engineers Syndicate</div>
+              <div class="membership-sub">Active member · Civil Engineering</div>
+            </div>
+          </div>
+          <div class="membership-card">
+            <div class="membership-icon">🎓</div>
+            <div>
+              <div class="membership-title">New Cairo Academy Alumni</div>
+              <div class="membership-sub">BSc Civil Engineering · 2019</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACK LINK -->
+      <div style="margin-top: 52px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07);" class="reveal">
+        <a href="index.html#background" style="display:inline-flex;align-items:center;gap:7px;font-family:var(--font-label);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .18s;" onmouseenter="this.style.color='var(--text)'" onmouseleave="this.style.color='var(--muted)'">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="14"><path d="M10 3L5 8l5 5"/></svg>
+          Back to portfolio
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-inner">
+        <span>© <span class="footer-year"></span> Mahmoud Shehata · Civil / Project Engineer</span>
+        <div class="footer-links">
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="downloads/MahmoudShehata_CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="wa-float" id="waFloat">
+    <a class="wa-btn" href="https://wa.me/971509952788" target="_blank" rel="noopener noreferrer" id="waBtn" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+      </svg>
+      <span class="wa-label">Chat on WhatsApp</span>
+    </a>
+  </div>
+
+</div>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

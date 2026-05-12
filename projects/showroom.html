@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Baniyas Cars – Car Showroom | Mahmoud Shehata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Baniyas Cars – Rahayl Cars City. AED 50M commercial flagship delivered by Mahmoud Shehata, Project Engineer, URUK Construction, Abu Dhabi."
+    />
+    <meta name="theme-color" content="#080b10" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:site_name"
+      content="Mahmoud Shehata — Project Engineer"
+    />
+    <meta
+      property="og:url"
+      content="https://mahmoudshehata.com/projects/showroom.html"
+    />
+    <meta
+      property="og:title"
+      content="Baniyas Cars Showroom — Mahmoud Shehata"
+    />
+    <meta
+      property="og:description"
+      content="Civil / Project Engineer based in Abu Dhabi. 6+ years delivering luxury villas, commercial showrooms and large-scale residential towers across UAE, Egypt and Kenya."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <style>
+      /* ── PAGE-SPECIFIC STYLES ── */
+
+      /* Back bar */
+      .back-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--font-label);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        transition: color 0.18s;
+      }
+      .back-link:hover {
+        color: var(--text);
+      }
+      .back-link svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+      }
+      .type-badge {
+        font-family: var(--font-label);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        border-radius: 999px;
+        padding: 3px 11px;
+      }
+
+      /* Project hero */
+      .proj-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+        margin-bottom: 56px;
+      }
+      .proj-eyebrow {
+        font-family: var(--font-label);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
+      .proj-title {
+        font-family: var(--font-serif);
+        font-size: clamp(32px, 5vw, 52px);
+        line-height: 1.08;
+        margin-bottom: 14px;
+      }
+      .proj-title em {
+        font-style: italic;
+        color: var(--gold);
+      }
+      .proj-meta-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .meta-chip {
+        font-family: var(--font-label);
+        font-size: 12px;
+        padding: 5px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+      }
+      .meta-chip.gold {
+        border-color: rgba(201, 168, 76, 0.4);
+        background: rgba(201, 168, 76, 0.07);
+        color: var(--gold);
+      }
+      .proj-desc {
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.75;
+        max-width: 500px;
+      }
+
+      /* Key metric card */
+      .metric-card {
+        background: rgba(201, 168, 76, 0.06);
+        border: 1px solid rgba(201, 168, 76, 0.22);
+        border-radius: 18px;
+        padding: 28px 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .metric-label {
+        font-family: var(--font-label);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .metric-value {
+        font-family: var(--font-serif);
+        font-size: clamp(36px, 6vw, 56px);
+        line-height: 1;
+        color: var(--gold);
+      }
+      .metric-sub {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .metric-divider {
+        width: 40px;
+        height: 1px;
+        background: rgba(201, 168, 76, 0.3);
+        margin: 4px 0;
+      }
+      .metric-extra {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 4px;
+      }
+      .metric-extra-item {
+      }
+      .metric-extra-num {
+        font-family: var(--font-label);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .metric-extra-label {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      /* Section blocks */
+      .cs-section {
+        margin-bottom: 52px;
+      }
+      .cs-section-label {
+        font-family: var(--font-label);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .cs-section-label::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: rgba(201, 168, 76, 0.15);
+      }
+      .cs-section h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(22px, 3.5vw, 32px);
+        margin-bottom: 16px;
+        line-height: 1.15;
+      }
+      .cs-section h2 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      /* Challenge block */
+      .challenge-block {
+        background: rgba(8, 11, 16, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-left: 3px solid var(--gold);
+        border-radius: 0 14px 14px 0;
+        padding: 24px 28px;
+        font-size: 15px;
+        color: #c9d0db;
+        line-height: 1.78;
+      }
+
+      /* Actions grid */
+      .actions-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .action-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+        padding: 16px 18px;
+        font-size: 14px;
+        color: #c9d0db;
+        line-height: 1.6;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .action-num {
+        font-family: var(--font-label);
+        font-size: 11px;
+        color: var(--gold);
+        opacity: 0.7;
+        flex-shrink: 0;
+        padding-top: 2px;
+      }
+
+      /* Deliveries */
+      .deliveries-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .delivery-card {
+        background: linear-gradient(
+          135deg,
+          rgba(201, 168, 76, 0.07),
+          rgba(201, 168, 76, 0.02)
+        );
+        border: 1px solid rgba(201, 168, 76, 0.18);
+        border-radius: 14px;
+        padding: 20px 20px 18px;
+      }
+      .delivery-icon {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .delivery-title {
+        font-family: var(--font-label);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 6px;
+      }
+      .delivery-text {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      /* Gallery */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+      }
+      .gallery-main {
+        grid-row: 1 / 3;
+      }
+      .gallery-img,
+      .gallery-ph {
+        width: 100%;
+        height: 100%;
+        min-height: 220px;
+        border-radius: 14px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.2);
+        font-size: 12px;
+        text-align: center;
+        padding: 12px;
+        position: relative;
+      }
+      .gallery-main .gallery-ph {
+        min-height: 460px;
+      }
+      .gallery-ph-icon {
+        font-size: 28px;
+        opacity: 0.3;
+      }
+      .gallery-ph-label {
+        font-family: var(--font-label);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+
+      /* Skills tags */
+      .skills-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .skill-tag {
+        font-family: var(--font-label);
+        font-size: 12px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+      }
+
+      /* Project data sidebar row */
+      .proj-data-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 52px;
+      }
+      .data-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
+        padding: 18px 20px;
+      }
+      .data-card-label {
+        font-family: var(--font-label);
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .data-card-value {
+        font-size: 14px;
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      /* Bottom nav */
+      .proj-bottom-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        margin-top: 48px;
+      }
+      .btn-next {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-label);
+        font-size: 13px;
+        color: var(--text);
+        padding: 10px 20px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
+      .btn-next:hover {
+        background: rgba(201, 168, 76, 0.1);
+        border-color: rgba(201, 168, 76, 0.3);
+        color: var(--gold);
+      }
+
+      /* Responsive */
+      @media (max-width: 860px) {
+        .proj-hero {
+          grid-template-columns: 1fr;
+        }
+        .actions-grid {
+          grid-template-columns: 1fr;
+        }
+        .deliveries-grid {
+          grid-template-columns: 1fr;
+        }
+        .gallery-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+        .gallery-main {
+          grid-row: auto;
+        }
+        .gallery-main .gallery-ph {
+          min-height: 260px;
+        }
+        .proj-data-row {
+          grid-template-columns: 1fr 1fr;
+        }
+        .metric-extra {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        .proj-data-row {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- NAV -->
+      <header class="site-header">
+        <div class="shell">
+          <nav class="nav">
+            <a href="../index.html" class="logo-wrap" aria-label="Home">
+              <div class="logo-mark"></div>
+              <div>
+                <div class="logo-name">Mahmoud Shehata</div>
+                <div class="logo-sub">
+                  Civil / Project Engineer <span>· Abu Dhabi, UAE</span>
+                </div>
+              </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+              <a href="../index.html#projects">Projects</a>
+              <a href="../index.html#how-i-work">How I Work</a>
+              <a href="../index.html#background">Background</a>
+              <a href="../certificates.html">Certifications</a>
+              <a href="../index.html#contact">Contact</a>
+              <a
+                href="../downloads/MahmoudShehata_CV.pdf"
+                class="nav-cv-btn"
+                download
+                >Download CV</a
+              >
+            </div>
+            <button
+              class="hamburger"
+              id="hamburger"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="shell" style="padding-top: 36px; padding-bottom: 64px">
+          <!-- BACK BAR -->
+          <div class="back-bar reveal">
+            <a href="../index.html#projects" class="back-link">
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M10 3L5 8l5 5" />
+              </svg>
+              Back to projects
+            </a>
+            <span class="type-badge">Car Showroom · Abu Dhabi</span>
+          </div>
+
+          <!-- PROJECT HERO -->
+          <div class="proj-hero reveal">
+            <div>
+              <div class="proj-eyebrow">
+                Project Engineer — URUK Construction · 2024–2025
+              </div>
+              <h1 class="proj-title">
+                Baniyas <em>Cars</em><br />Rahayl Cars City
+              </h1>
+              <div class="proj-meta-row">
+                <span class="meta-chip gold">≈ AED 50,000,000</span>
+                <span class="meta-chip">Abu Dhabi, UAE</span>
+                <span class="meta-chip">Commercial Flagship</span>
+              </div>
+              <p class="proj-desc">
+                A large-scale car showroom combining reinforced concrete and
+                structural steel, aluminium &amp; glass façades, skylights,
+                steel canopies and high-end interior finishing — delivered as
+                sole site engineer alongside the project manager, from piling
+                completion through to handover.
+              </p>
+            </div>
+
+            <!-- KEY METRIC CARD -->
+            <div class="metric-card">
+              <div class="metric-label">Key metric</div>
+              <div class="metric-value">50M</div>
+              <div class="metric-sub">
+                AED project value — sole site engineer<br />from piling
+                completion to handover
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-extra">
+                <div class="metric-extra-item">
+                  <div class="metric-extra-num">80–150</div>
+                  <div class="metric-extra-label">Workers daily</div>
+                </div>
+                <div class="metric-extra-item">
+                  <div class="metric-extra-num">10+</div>
+                  <div class="metric-extra-label">Active trades</div>
+                </div>
+                <div class="metric-extra-item">
+                  <div class="metric-extra-num">32</div>
+                  <div class="metric-extra-label">NCRs closed</div>
+                </div>
+                <div class="metric-extra-item">
+                  <div class="metric-extra-num">1,092</div>
+                  <div class="metric-extra-label">Solar panels</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHALLENGE -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Challenge</div>
+            <h2>The <em>situation</em> on site</h2>
+            <div class="challenge-block">
+              Joined immediately after piling was complete — as sole site
+              engineer alongside the project manager. The project combined a
+              hybrid RC and structural steel structure with complex aluminium
+              and glass façades, multiple skylight systems, steel canopies, full
+              MEP fit-out and high-end interior finishing across a large
+              commercial footprint. All trades were running simultaneously: at
+              peak, HVAC, electrical, plumbing, fire fighting, gypsum board,
+              aluminium, interlock, painting, snagging and consultant handover
+              inspections were all active at once, with 80–150 workers on site
+              daily. Delivering a clean, inspection-ready handover — with zero
+              open NCRs — required strict sequencing, documentation discipline
+              and constant multi-trade coordination.
+            </div>
+          </div>
+
+          <!-- ROLE & ACTIONS -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Role &amp; Actions</div>
+            <h2>What I <em>specifically</em> did</h2>
+            <div class="actions-grid">
+              <div class="action-item">
+                <span class="action-num">01</span>
+                <span
+                  >Daily supervision of structural, architectural and MEP works
+                  — ensuring all activities followed approved drawings, method
+                  statements and specifications from piling completion to final
+                  handover.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">02</span>
+                <span
+                  >Managed RFIs, WIRs and MIRs with the consultant — ensuring
+                  every inspection was carried out and approved before
+                  subsequent activities proceeded. Closed 32 NCRs at handover
+                  with zero remaining open.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">03</span>
+                <span
+                  >Coordinated RC and structural steel interfaces, aluminium
+                  &amp; glass façades, skylights and steel canopies — resolving
+                  clashes and raising RFIs for missing or unclear details before
+                  they hit the site.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">04</span>
+                <span
+                  >Supervised installation of 1,092 solar panels across the
+                  shading system — generating approximately 52% of the
+                  facility's total energy needs. Coordinated structural
+                  supports, electrical connections and approvals.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">05</span>
+                <span
+                  >Coordinated external works including sanitary drainage
+                  networks, inspection chambers, manholes and stormwater
+                  drainage systems across large external yards and parking
+                  areas.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">06</span>
+                <span
+                  >Prepared weekly look-ahead plans with the project team —
+                  keeping critical activities, material deliveries and handover
+                  milestones tracked and visible across all active trades
+                  simultaneously.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">07</span>
+                <span
+                  >Reviewed shop drawings and coordinated MEP, façade and
+                  structural interfaces — managing technical submissions and
+                  consultant approvals for all major systems throughout the
+                  project.</span
+                >
+              </div>
+              <div class="action-item">
+                <span class="action-num">08</span>
+                <span
+                  >Enabled a partial early handover to the owner while remaining
+                  works continued in parallel on other parts of the site —
+                  demonstrating controlled sequencing and zone management under
+                  live conditions.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY DELIVERIES -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Key Deliveries</div>
+            <h2>What was <em>delivered</em></h2>
+            <div class="deliveries-grid">
+              <div class="delivery-card">
+                <div class="delivery-icon">🏗️</div>
+                <div class="delivery-title">
+                  Full project delivery — piling to handover
+                </div>
+                <div class="delivery-text">
+                  Sole site engineer on an AED 50M commercial flagship, managing
+                  80–150 workers daily across 10+ simultaneous trades from
+                  structural start through to final handover.
+                </div>
+              </div>
+              <div class="delivery-card">
+                <div class="delivery-icon">✅</div>
+                <div class="delivery-title">
+                  32 NCRs closed — zero open at handover
+                </div>
+                <div class="delivery-text">
+                  Full QA/QC compliance maintained across the project. All
+                  non-conformance reports tracked, actioned and closed before
+                  handover — nothing left outstanding.
+                </div>
+              </div>
+              <div class="delivery-card">
+                <div class="delivery-icon">☀️</div>
+                <div class="delivery-title">
+                  1,092 solar panels coordinated &amp; installed
+                </div>
+                <div class="delivery-text">
+                  Coordinated the full solar shading system — 1,092 panels
+                  generating approximately 52% of the facility's energy needs —
+                  including structural supports, cabling and authority
+                  approvals.
+                </div>
+              </div>
+              <div class="delivery-card">
+                <div class="delivery-icon">🔑</div>
+                <div class="delivery-title">
+                  Partial early handover delivered
+                </div>
+                <div class="delivery-text">
+                  Planned and executed zone sequencing to allow partial early
+                  handover to the owner while remaining works continued in
+                  parallel — protecting the client's operations without
+                  compromising quality.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT DATA -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Project Data</div>
+            <div class="proj-data-row">
+              <div class="data-card">
+                <div class="data-card-label">Project</div>
+                <div class="data-card-value">
+                  Baniyas Cars — Rahayl Cars City
+                </div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Location</div>
+                <div class="data-card-value">
+                  Rahayl Cars City, Abu Dhabi, UAE
+                </div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Role</div>
+                <div class="data-card-value">Project Engineer</div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Company</div>
+                <div class="data-card-value">URUK Construction</div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Type</div>
+                <div class="data-card-value">Car Showroom · Commercial</div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-label">Period</div>
+                <div class="data-card-value">2024 – 2025</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GALLERY -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Project Gallery</div>
+            <h2>Site <em>visuals</em></h2>
+            <div class="gallery-grid">
+              <div class="gallery-main">
+                <div class="gallery-ph" style="min-height: 460px">
+                  <img
+                    src="../assets/images/showroom-hero.webp"
+                    alt="showroom hero"
+                    loading="eager"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-floor-overview.jpg"
+                  alt="showroom floor overview"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-floor-alt.jpg"
+                  alt="showroom floor alt"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+            </div>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-top: 10px;
+              "
+            >
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-reception.jpg"
+                  alt="showroom reception"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-reception-detail.jpg"
+                  alt="showroom reception detail"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-interior.jpg"
+                  alt="showroom interior"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-facade-day.webp"
+                  alt="showroom facade day"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-facade-night.webp"
+                  alt="showroom facade night"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-aerial.webp"
+                  alt="showroom aerial"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-solar-wide.jpg"
+                  alt="showroom solar wide"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-solar-aerial.jpg"
+                  alt="showroom solar aerial"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-solar.webp"
+                  alt="showroom solar"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-construction.webp"
+                  alt="showroom construction"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-mahmoud-inside.jpg"
+                  alt="showroom mahmoud inside"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+              <div class="gallery-ph">
+                <img
+                  src="../assets/images/showroom-mahmoud-floor.jpg"
+                  alt="showroom mahmoud floor"
+                  loading="lazy"
+                  style="
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 14px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- VIDEO -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Project Video</div>
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 14px;
+                padding: 28px 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 14px;
+              "
+            >
+              <div>
+                <div
+                  style="
+                    font-size: 15px;
+                    color: var(--text);
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                  "
+                >
+                  Project walkthrough video
+                </div>
+                <div style="font-size: 13px; color: var(--muted)">
+                  Hosted on Google Drive — opens in a new tab.
+                </div>
+              </div>
+              <!--
+            UPDATE href below with the actual Google Drive video link
+          -->
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  font-family: var(--font-label);
+                  font-size: 13px;
+                  padding: 10px 20px;
+                  border-radius: 999px;
+                  background: rgba(201, 168, 76, 0.1);
+                  border: 1px solid rgba(201, 168, 76, 0.3);
+                  color: var(--gold);
+                  white-space: nowrap;
+                "
+              >
+                ▶ Watch project video
+              </a>
+            </div>
+          </div>
+
+          <!-- SKILLS APPLIED -->
+          <div class="cs-section reveal">
+            <div class="cs-section-label">Skills Applied</div>
+            <div class="skills-wrap">
+              <span class="skill-tag">Site supervision</span>
+              <span class="skill-tag"
+                >RC &amp; steel structure coordination</span
+              >
+              <span class="skill-tag">QA/QC inspections</span>
+              <span class="skill-tag">RFIs · WIRs · MIRs</span>
+              <span class="skill-tag">NCR tracking &amp; closure</span>
+              <span class="skill-tag">Façade &amp; skylight coordination</span>
+              <span class="skill-tag">MEP interface management</span>
+              <span class="skill-tag">Solar panel coordination</span>
+              <span class="skill-tag">Shop drawing review</span>
+              <span class="skill-tag">Short-term look-ahead planning</span>
+              <span class="skill-tag">Multi-trade sequencing</span>
+              <span class="skill-tag">Subcontractor management</span>
+              <span class="skill-tag">Technical reporting</span>
+              <span class="skill-tag">Safety follow-up</span>
+              <span class="skill-tag">Partial handover planning</span>
+            </div>
+          </div>
+
+          <!-- BOTTOM NAV -->
+          <div class="proj-bottom-nav reveal">
+            <a href="../index.html#projects" class="back-link">
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M10 3L5 8l5 5" />
+              </svg>
+              All projects
+            </a>
+            <a href="villa.html" class="btn-next">
+              Next: Private Villa
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                width="14"
+              >
+                <path d="M6 3l5 5-5 5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="shell">
+          <div class="footer-inner">
+            <span
+              >© <span class="footer-year"></span> Mahmoud Shehata · Civil /
+              Project Engineer</span
+            >
+            <div class="footer-links">
+              <a href="../index.html#projects">Projects</a>
+              <a href="../index.html#contact">Contact</a>
+              <a href="../downloads/MahmoudShehata_CV.pdf" download
+                >Download CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- WHATSAPP FLOAT -->
+      <div class="wa-float" id="waFloat">
+        <a
+          class="wa-btn"
+          href="https://wa.me/971509952788"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="waBtn"
+          aria-label="Chat on WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"
+            />
+          </svg>
+          <span class="wa-label">Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
