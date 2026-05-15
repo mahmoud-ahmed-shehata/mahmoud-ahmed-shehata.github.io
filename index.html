@@ -180,11 +180,9 @@
 
       /* Hero right — image */
       .hero-right {
-        position: absolute;
-        inset: 0;
+        position: relative;
         height: 100%;
         min-height: 520px;
-        z-index: 0;
       }
 
       .hero-img-wrap {
@@ -229,9 +227,9 @@
         left: 0;
         top: 0;
         bottom: 0;
-        width: 60%;
-        background: linear-gradient(to right, var(--bg), rgba(8, 11, 16, 0.4) 40%, transparent);
-        z-index: 3;
+        width: 40%;
+        background: linear-gradient(to right, var(--bg), transparent);
+        z-index: 2;
         pointer-events: none;
       }
 
@@ -854,6 +852,7 @@
           grid-template-columns: 1fr;
           gap: 0;
           min-height: auto;
+          position: relative;
         }
         .hero-right {
           position: absolute;
@@ -861,6 +860,11 @@
           height: 100%;
           min-height: auto;
           z-index: 0;
+        }
+        .hero-right::before {
+          width: 60%;
+          background: linear-gradient(to right, var(--bg), rgba(8, 11, 16, 0.4) 40%, transparent);
+          z-index: 3;
         }
         .hero-left {
           padding-block: clamp(60px, 8vh, 100px);
