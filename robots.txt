@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /downloads/private/
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
+
+# Sitemap location for search engines
+Sitemap: https://mahmoudshehata.com/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Disallow: /assets/

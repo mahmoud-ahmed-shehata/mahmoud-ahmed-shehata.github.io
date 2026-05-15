@@ -300,6 +300,11 @@
         line-height: 1.4;
       }
 
+      .proof-sub-label {
+        font-size: 0.55em;
+        color: var(--muted);
+      }
+
       /* ── PROJECTS ── */
       #projects {
         padding-block: clamp(64px, 8vw, 104px);
@@ -769,6 +774,11 @@
         margin-top: 36px;
       }
 
+      .downloads-grid--single {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+      }
+
       .dl-card {
         background: var(--bg-card);
         border: 1px solid var(--border);
@@ -1026,9 +1036,11 @@
             <div class="hero-img-wrap">
               <img
                 src="assets/images/hero-profile.png"
-                alt="Mahmoud Shehata"
+                alt="Mahmoud Shehata - Civil and Project Engineer with 6+ years of experience delivering AED 50M commercial flagship projects in Abu Dhabi, UAE"
                 loading="eager"
-                style="width: 100%; height: 100%; object-fit: cover"
+                width="600"
+                height="800"
+                decoding="async"
               />
             </div>
           </div>
@@ -1058,7 +1070,7 @@
 
         <div class="proof-item reveal reveal-delay-3">
           <div class="proof-num">
-            4 <span style="font-size: 0.55em; color: var(--muted)">yrs</span>
+            4 <span class="proof-sub-label">yrs</span>
           </div>
           <div class="proof-label">Schedule delay<br />recovered · villa</div>
         </div>
@@ -1087,21 +1099,38 @@
             <div class="proj-img">
               <img
                 src="assets/images/showroom-card.webp"
-                alt="Showroom exterior under construction — URUK Construction"
+                alt="Baniyas Cars Showroom - AED 50M commercial flagship with reinforced concrete structure, solar panels, and luxury finishing in Abu Dhabi"
                 loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover"
+                width="800"
+                height="600"
+                decoding="async"
               />
             </div>
             <div class="proj-content">
-              <div class="proj-meta">
-                <span class="proj-num">01</span>
-                <span class="proj-metric-badge"
-                  >AED 50M · Sole site engineer</span
-                >
-                <span class="proj-type"
-                  >Car Showroom · Abu Dhabi · 2024–2025</span
-                >
-              </div>
+          <div class="proj-metric-badge"
+            >AED 50M · Sole site engineer</span
+          >
+          <span class="proj-type"
+            >Car Showroom · Abu Dhabi · 2024–2025</span
+          >
+        </div>
+        <h3 class="proj-title">Baniyas Cars<br />Rahayl Cars City</h3>
+        <p class="proj-company">Project Engineer — URUK Construction</p>
+        <p class="proj-desc">
+          Commercial flagship combining reinforced concrete and structural
+          steel, aluminium & glass façades, skylights, steel canopies and
+          high-end interior finishing. Managed 80–150 workers daily across
+          10+ active trades — sole site engineer alongside the PM, from
+          piling completion to handover. 32 NCRs closed at handover, zero
+          open.
+        </p>
+        <div class="proj-tags">
+          <span class="tag">RC & Steel Structure</span>
+          <span class="tag">Façade Systems</span>
+          <span class="tag tag-gold">1,092 Solar Panels</span>
+          <span class="tag">RFIs · WIRs · MIRs</span>
+          <span class="tag">MEP Coordination</span>
+        </div>
               <h3 class="proj-title">Baniyas Cars<br />Rahayl Cars City</h3>
               <p class="proj-company">Project Engineer — URUK Construction</p>
               <p class="proj-desc">
@@ -1130,9 +1159,11 @@
             <div class="proj-img">
               <img
                 src="assets/images/villa-hero.jpg"
-                alt="Private villa exterior — high-end finishing and renovations"
+                alt="High-end private villa exterior in Abu Dhabi - luxury finishing with 4-year delay recovery delivered by project engineer Mahmoud Shehata"
                 loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover"
+                width="800"
+                height="600"
+                decoding="async"
               />
             </div>
             <div class="proj-content">
@@ -1171,9 +1202,11 @@
             <div class="proj-img">
               <img
                 src="assets/images/towers-egypt-card.webp"
-                alt="Overview of the 36 residential towers — construction progress"
+                alt="36 residential towers in 10th of Ramadan, Egypt - multi-tower construction site under supervision of project engineer Mahmoud Shehata"
                 loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover"
+                width="800"
+                height="600"
+                decoding="async"
               />
             </div>
             <div class="proj-content">
@@ -1213,9 +1246,11 @@
             <div class="proj-img">
               <img
                 src="assets/images/kenya-hero.webp"
-                alt="kenya hero"
+                alt="6 residential towers in Eldoret, Kenya - international multi-storey construction with reinforced concrete structure supervised by site engineer Mahmoud Shehata"
                 loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover"
+                width="800"
+                height="600"
+                decoding="async"
               />
             </div>
             <div class="proj-content">
@@ -1544,18 +1579,12 @@
         <h2 class="section-heading reveal reveal-delay-1">
           CV &amp; Portfolio
         </h2>
-        <p
-          class="section-subtext reveal reveal-delay-2"
-          style="margin-top: 10px"
-        >
+        <p class="section-subtext reveal reveal-delay-2">
           Download a PDF copy of my CV and full portfolio for offline review or
           forwarding.
         </p>
 
-        <div
-          class="downloads-grid"
-          style="grid-template-columns: 1fr; max-width: 520px"
-        >
+        <div class="downloads-grid downloads-grid--single">
           <a
             href="downloads/MahmoudShehata_CV.pdf"
             download

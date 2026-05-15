@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home page -->
+  <url>
+    <loc>https://mahmoudshehata.com/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Certificates page -->
+  <url>
+    <loc>https://mahmoudshehata.com/certificates.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Project: Baniyas Cars Showroom -->
+  <url>
+    <loc>https://mahmoudshehata.com/projects/showroom.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project: Private Villa -->
+  <url>
+    <loc>https://mahmoudshehata.com/projects/villa.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project: 6 Towers Kenya -->
+  <url>
+    <loc>https://mahmoudshehata.com/projects/6-towers.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project: 36 Towers Egypt -->
+  <url>
+    <loc>https://mahmoudshehata.com/projects/36-towers.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

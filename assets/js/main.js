@@ -12,10 +12,35 @@
     document.querySelector(".site-header") ||
     document.querySelector("header");
   if (siteNav) {
+    function throttle(fn, delay) {
+      let lastCall = 0;
+      let timeout = null;
+      return function (...args) {
+        const now = Date.now();
+        const remaining = delay - (now - lastCall);
+        if (remaining <= 0) {
+          if (timeout) {
+            clearTimeout(timeout);
+            timeout = null;
+          }
+          lastCall = now;
+          fn.apply(this, args);
+        } else if (!timeout) {
+          timeout = setTimeout(() => {
+            lastCall = Date.now();
+            timeout = null;
+            fn.apply(this, args);
+          }, remaining);
+        }
+      };
+    }
+
     const onScroll = () => {
       siteNav.classList.toggle("scrolled", window.scrollY > 30);
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", throttle(onScroll, 100), {
+      passive: true,
+    });
     onScroll();
   }
 
@@ -62,14 +87,18 @@
 
   function openDrawer() {
     hamburger?.classList.add("open");
+    hamburger?.setAttribute("aria-expanded", "true");
     drawer?.classList.add("open");
+    drawer?.setAttribute("aria-hidden", "false");
     overlay?.classList.add("open");
     document.body.style.overflow = "hidden";
   }
 
   function closeDrawer() {
     hamburger?.classList.remove("open");
+    hamburger?.setAttribute("aria-expanded", "false");
     drawer?.classList.remove("open");
+    drawer?.setAttribute("aria-hidden", "true");
     overlay?.classList.remove("open");
     document.body.style.overflow = "";
   }
